@@ -1,5 +1,5 @@
 <?php
-
+require ('../controller/frontend.php');
 $page = 'home';
 
 if (isset($_GET['action'])) {
@@ -8,7 +8,7 @@ if (isset($_GET['action'])) {
 
 switch ($page) {
     case 'home':
-        require ('../view/home.php');
+        listPost();
         break;
 
     default:
