@@ -34,7 +34,7 @@ function addComment()
     }
     else
     {
-        header('Location:index.php?action=article&id=');
+        header('Location:index.php?action=article&id='.$postId);
     }
 
 }

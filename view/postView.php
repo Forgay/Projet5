@@ -35,7 +35,7 @@
             ?>
         </div>
     </div>
-    <form action="../web/index.php?action=ajoutComment&amp;id=<?=$_GET['id']?>" method="POST">
+    <form action="../web/index.php?action=ajoutComment&amp;id=<?= $_GET['id'] ?>" method="POST">
         <div class="row">
             <div class="input-field col s6">
                 <input id=nom type="text" class="validate">
