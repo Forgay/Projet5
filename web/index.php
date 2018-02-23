@@ -1,5 +1,5 @@
 <?php
-require ('../controller/frontend.php');
+require('../controller/frontend.php');
 $page = 'home';
 
 if (isset($_GET['action'])) {
@@ -8,11 +8,30 @@ if (isset($_GET['action'])) {
 
 switch ($page) {
     case 'home':
-        listPost();
+        listPosts();
+        break;
+
+    case 'article':
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+
+            post();
+
+        } else {
+            echo 'Erreur : Aucun identifiant de l\'article';
+        }
+        break;
+    case 'ajoutCommnent':
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+            if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['comment'])) {
+                addComment($_POST['nom'], $_POST['email'], $_POST['comment']);
+            } else {
+                echo 'Attention : Tous les champs ne sont pas remplis !';
+            }
+        }
         break;
 
     default:
         header('HTTP/1.0 404 Not Found');
-        require ('../view/404.php');
+        require('../view/404.php');
         break;
 }
