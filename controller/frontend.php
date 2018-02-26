@@ -32,3 +32,9 @@ function addComment($nom, $email, $comment, $postId)
     }
 
 }
+function addContact($nom,$email,$message)
+{
+
+var_dump($nom,$email,$message);
+
+}
