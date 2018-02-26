@@ -38,17 +38,17 @@
     <form action="../web/index.php?action=ajoutComment&amp;id=<?= $_GET['id'] ?>" method="POST">
         <div class="row">
             <div class="input-field col s6">
-                <input id=nom type="text" class="validate">
+                <input id="nom" type="text" class="validate">
                 <label for="nom">Nom</label>
             </div>
             <div class="input-field col s6">
-                <input id=email type="text" class="validate">
+                <input id="email" type="text" class="validate">
                 <label for="email">Email</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <textarea id=comment class="materialize-textarea"></textarea>
+                <textarea id="comment" class="materialize-textarea"></textarea>
                 <label for="comment">Votre commentaire</label>
             </div>
         </div>

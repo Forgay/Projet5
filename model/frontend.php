@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 
 function getPosts()
 {
@@ -21,9 +23,9 @@ function getPost($id)
 function getComments($id)
 {
     $db = dbConnect();
-    $req = $db->prepare('SELECT id,nom,email,comment,DATE_FORMAT(date,\'%d/%m /%Y à %Hh%imin%ss\') AS date_fr FROM comments WHERE  post_id=? ORDER BY date DESC ');
-    $req->execute(array($id));
-    $comments= $req->fetch();
+    $comments = $db->prepare("SELECT id,nom,email,comment,DATE_FORMAT(date,\'%d/%m /%Y à %Hh%imin%ss\') AS date_fr FROM comments WHERE  post_id='{$_GET['id']}' ORDER BY date DESC");
+    $comments->execute(array($id));
+
     return $comments;
 
 }
@@ -31,7 +33,7 @@ function getComments($id)
 function postComment($nom, $email, $comment, $postId)
 {
     $db = dbConnect();
-    $comments = $db->prepare('INSERT INTO comments (nom,email,comment,postId,date) VALUES (?,?,?,?,NOW() )');
+    $comments = $db->prepare('INSERT INTO comments (nom,email,comment,postId,date,seen) VALUES (?,?,?,?,NOW(),0)');
     $affectComment = $comments->execute(array($nom, $email, $comment, $postId));
     return $affectComment;
 }

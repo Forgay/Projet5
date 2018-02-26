@@ -1,6 +1,6 @@
 <?php
 
-require ('../model/frontend.php');
+require('../model/frontend.php');
 
 function listPosts()
 {
@@ -16,25 +16,19 @@ function post()
     $post = getPost($_GET['id']);
     $comments = getComments($_GET['id']);
 
-    require ('../view/postView.php');
+    require('../view/postView.php');
 }
 
-function addComment()
+function addComment($nom, $email, $comment, $postId)
 {
-    $nom = $_POST['nom'];
-    $email = $_POST['email'];
-    $comment = $_POST['comment'];
-    $postId = $_GET['id'];
 
-    $affectComment=postComment($nom,$email,$comment,$postId);
 
-    if ($affectComment === false)
-    {
+    $affectComment = postComment($nom, $email, $comment, $postId);
+
+    if ($affectComment === false) {
         die('impossible d\'ajouter un commentaire');
-    }
-    else
-    {
-        header('Location:index.php?action=article&id='.$postId);
+    } else {
+        header('Location:index.php?action=article&id=' . $postId);
     }
 
 }
