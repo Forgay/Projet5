@@ -1,6 +1,7 @@
 <?php
-require('../controller/frontend.php');
-require('../controller/backend.php');
+require '../controller/frontend.php';
+require '../controller/backend.php';
+
 $page = 'home';
 
 if (isset($_GET['action'])) {
@@ -23,6 +24,7 @@ switch ($page) {
         break;
 
     case 'ajoutComment':
+
         if (isset($_GET['id']) && $_GET['id'] > 0) {
             if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['comment'])) {
 
@@ -32,6 +34,10 @@ switch ($page) {
                 echo 'Attention : Tous les champs ne sont pas remplis !';
             }
         }
+        break;
+    case 'contact':
+
+
         break;
 
 

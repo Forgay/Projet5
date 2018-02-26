@@ -9,13 +9,14 @@
                 <h4><?= htmlspecialchars($post['title']) ?> </h4>
                 <p class="left-align light"><?= htmlspecialchars($post['content']) ?></p>
                 <h5><?= htmlspecialchars($post['writer']) ?></h5>
-                <h6>le <?= htmlspecialchars(date("d/m/Y à H:i",strtotime($post['date'])))?></h6>
+                <h6>le <?= htmlspecialchars(date("d/m/Y à H:i", strtotime($post['date']))) ?></h6>
             </div>
 
         </div>
 
     </div>
     <form action="../web/index.php?action=ajoutComment&amp;id=<?= $_GET['id'] ?>" method="POST">
+
         <div class="row">
             <div class="input-field col s6">
                 <input id="nom" type="text" class="validate">
@@ -34,7 +35,7 @@
         </div>
         <a>
             <button class="btn waves-effect waves-ripple" type="submit" name="action">
-                <i class="material-icons right">Envoyer</i>
+                Envoyer
             </button>
         </a>
     </form>
@@ -43,6 +44,7 @@
         <div class="row">
             <?php
             while ($comment = $comments->fetch()) {
+
                 ?>
                 <div class="col s12 m4">
                     <div class="icon-block">
