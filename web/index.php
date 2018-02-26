@@ -21,18 +21,20 @@ switch ($page) {
             echo 'Erreur : Aucun identifiant de l\'article';
         }
         break;
+
     case 'ajoutComment':
         if (isset($_GET['id']) && $_GET['id'] > 0) {
             if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['comment'])) {
+
                 addComment($_POST['nom'], $_POST['email'], $_POST['comment'], $_GET['id']);
+
             } else {
                 echo 'Attention : Tous les champs ne sont pas remplis !';
             }
         }
         break;
-    case 'login':
-        getAdmin();
-        break;
+
+
     case 'error':
         require('../view/404.php');
         break;
