@@ -1,8 +1,8 @@
 <?php
-    if(isset($_SESSION ['admin'])){
-        header("Location:index.php....");
-    }
- ob_start(); ?>
+if (isset($_SESSION ['admin'])) {
+    header("Location:index.php....");
+}
+ob_start(); ?>
 
     <div class="section">
 
@@ -18,38 +18,37 @@
                 <h4 class="center-align">Se Connecter</h4>
 
 
-
-               <?php
+                <?php
                 /**
                  * verifier que l'utilisateur a cliquer sur submit, securiser les données email et password (securise la transmission sans espaces)
                  */
-                    if(isset($_POST['submit'])){
+                if (isset($_POST['submit'])) {
 
-                        $email = htmlspecialchars(trim($_POST['email']));
-                        $password =htmlspecialchars(trim($_POST['password']));
-                        $errors = [];
-                        if (empty($email) || empty($password)){
-                            $errors=['empty']= "Tous les champs n'ont pas été remplis!";
-                    }else if(isAdmin($email,$password) == 0){
-                        $errors['exist']  = "Cet administrateur n'existe pas";
+                    $email = htmlspecialchars(trim($_POST['email']));
+                    $password = htmlspecialchars(trim($_POST['password']));
+                    $errors = [];
+                    if (empty($email) || empty($password)) {
+                        $errors = ['empty'] = "Tous les champs n'ont pas été remplis!";
+                    } else if (isAdmin($email, $password) == 0) {
+                        $errors['exist'] = "Cet administrateur n'existe pas";
                     }
-                   if(!empty($errors)){
-                ?>
-                <div class="card red">
-                    <div class="card-content white-text">
-                        <?php
-                        foreach ($errors as $error) {
-                            echo $error . "<br/>";
-                        }
+                    if (!empty($errors)) {
                         ?>
-                    </div>
-                </div>
-                <?php
-                }else{
-                            $_SESSION['admin']= $email;
+                        <div class="card red">
+                            <div class="card-content white-text">
+                                <?php
+                                foreach ($errors as $error) {
+                                    echo $error . "<br/>";
+                                }
+                                ?>
+                            </div>
+                        </div>
+                        <?php
+                    } else {
+                        $_SESSION['admin'] = $email;
 
-                        }
                     }
+                }
 
 
                 ?>
@@ -78,5 +77,5 @@
 
         </div>
     </div>
-<?php $content = ob_get_clean();?>
+<?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>
