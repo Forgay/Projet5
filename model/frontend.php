@@ -4,14 +4,14 @@
 function getPosts()
 {
     $db = dbConnect();
-    $req = $db->query('SELECT id,title,content,writer,image,DATE_FORMAT(date,\'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM posts WHERE posted = 1 ORDER BY id DESC');
+    $req = $db->query('SELECT * FROM posts WHERE posted = 1 ORDER BY id DESC');
     return $req;
 }
 
 function getPost($id)
 {
     $db = dbConnect();
-    $req = $db->prepare('SELECT id,title,content,writer,image,DATE_FORMAT(date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM posts WHERE posted=1 AND id = ?');
+    $req = $db->prepare("SELECT * FROM posts WHERE posted=1 AND id = {$_GET['id']}");
     $req->execute(array($id));
     $post = $req->fetch();
     return $post;
@@ -21,9 +21,9 @@ function getPost($id)
 function getComments($id)
 {
     $db = dbConnect();
-    $req = $db->prepare('SELECT id,nom,email,comment,DATE_FORMAT(date,\'%d/%m /%Y à %Hh%imin%ss\') AS date_fr FROM comments WHERE  post_id=? ORDER BY date DESC ');
-    $req->execute(array($id));
-    $comments= $req->fetch();
+    $comments = $db->prepare("SELECT * AS date_fr FROM comments WHERE  post_id='{$_GET['id']}' ORDER BY date DESC");
+    $comments->execute(array($id));
+
     return $comments;
 
 }
@@ -31,7 +31,7 @@ function getComments($id)
 function postComment($nom, $email, $comment, $postId)
 {
     $db = dbConnect();
-    $comments = $db->prepare('INSERT INTO comments (nom,email,comment,postId,date) VALUES (?,?,?,?,NOW() )');
+    $comments = $db->prepare('INSERT INTO comments (nom,email,comment,postId,date,seen) VALUES (?,?,?,?,NOW(),0)');
     $affectComment = $comments->execute(array($nom, $email, $comment, $postId));
     return $affectComment;
 }
