@@ -11,11 +11,11 @@ ob_start(); ?>
         <div class="col s12 m4">
             <div class="icon-block">
                 <div class="card-image">
-                    <img src="/vendor/img/<?= ($data['image']) ?>.jpg" width="200px"/>
+                    <img src="/vendor/img/<?= $data['image'] ?>.jpg" width="200px"/>
                 </div>
                 <h5 class="center"><?= htmlspecialchars($data['title']) ?></h5>
 
-                <p class="light"><?= htmlspecialchars($data['content']) ?></p>
+                <p class="light"><?= $data['content'] ?></p>
                 <em><a href="../web/index.php?action=article&amp;id=<?= $data['id']?>">Voir l'article</a></em>
             </div>
         </div>

@@ -14,7 +14,7 @@ function post()
 
 
     $post = getPost($_GET['id']);
-    $comments = getComments($_GET['id']);
+    $postcomment = getComments($_GET['id']);
 
     require('../view/postView.php');
 }
@@ -35,6 +35,6 @@ function addComment($nom, $email, $comment, $postId)
 function addContact($nom,$email,$message)
 {
 
-var_dump($nom,$email,$message);
+
 
 }

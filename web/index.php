@@ -25,18 +25,22 @@ switch ($page) {
 
     case 'ajoutComment':
 
-        if (isset($_GET['id']) && $_GET['id'] > 0) {
+        if (isset($_GET['id']) && $_GET['id'] > 0)
+        {
             if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['comment'])) {
 
-                addComment($_POST['nom'], $_POST['email'], $_POST['comment'], $_GET['id']);
+
+            addComment($_POST['nom'], $_POST['email'], $_POST['comment'], $_GET['id']);
 
             } else {
                 echo 'Attention : Tous les champs ne sont pas remplis !';
+
             }
         }
         break;
-    case 'contact':
 
+    case 'login':
+        require ('../view/loginView.php');
 
         break;
 

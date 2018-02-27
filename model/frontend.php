@@ -21,17 +21,17 @@ function getPost($id)
 function getComments($id)
 {
     $db = dbConnect();
-    $comments = $db->prepare("SELECT * AS date_fr FROM comments WHERE  post_id='{$_GET['id']}' ORDER BY date DESC");
-    $comments->execute(array($id));
-
-    return $comments;
+    $req = $db->prepare("SELECT * FROM comments WHERE post_id={$_GET['id']} ORDER BY date_comment DESC");
+    $req->execute(array($id));
+    $postcomment = $req;
+    return $postcomment;
 
 }
 
 function postComment($nom, $email, $comment, $postId)
 {
     $db = dbConnect();
-    $comments = $db->prepare('INSERT INTO comments (nom,email,comment,postId,date,seen) VALUES (?,?,?,?,NOW(),0)');
+    $comments = $db->prepare("INSERT INTO comments(nom,email,comment,post_id,date_comment) VALUES (?, ?, ?, ?, NOW())");
     $affectComment = $comments->execute(array($nom, $email, $comment, $postId));
     return $affectComment;
 }
