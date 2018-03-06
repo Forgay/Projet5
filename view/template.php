@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -7,19 +8,21 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../vendor/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="../vendor/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../web/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="../web/index.php?action=home" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="../web/index.php?action=login">login</a></li>
+            <li><a href="../web/index.php?action=login">Se connecter</a></li>
+            <li><a href="../web/index.php?action=login">Se connecter</a></li>
         </ul>
-
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="../web/index.php?action=login">login</a></li>
+            <li><a href="../web/index.php?action=login">Se connecter</a></li>
+            <li><a href="../web/index.php?action=login">Se connecter</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -29,9 +32,9 @@
     <div class="section no-pad-bot">
         <div class="container">
             <br><br>
-            <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+            <h1 class="header center teal-text text-lighten-2"></h1>
             <div class="row center">
-                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+                <h5 class="header col s12 light">« Créer, c’est vivre deux fois », Albert Camus</h5>
             </div>
             <div class="row center">
                 <a href="http://materializecss.com/getting-started.html" id="download-button"
@@ -41,7 +44,7 @@
 
         </div>
     </div>
-    <div class="parallax"><img src="../vendor/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="../web/background1.jpg" alt="Unsplashed background img 1"></div>
 </div>
 
 
@@ -91,8 +94,8 @@
 
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="/vendor/js/materialize.js"></script>
-<script src="/vendor/js/init.js"></script>
+<script src="/web/js/materialize.js"></script>
+<script src="/web/js/init.js"></script>
 
 </body>
 </html>

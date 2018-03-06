@@ -32,9 +32,3 @@ function addComment($nom, $email, $comment, $postId)
     }
 
 }
-function addContact($nom,$email,$message)
-{
-
-
-
-}
