@@ -7,7 +7,7 @@
             <div class="col s12 center">
                 <h3><i class="mdi-content-send brown-text"></i></h3>
                 <div class="card-image">
-                    <img src="/vendor/img/<?= ($post['image']) ?>.jpg" width="200px"/>
+                    <img src="/web/img/<?= ($post['image']) ?>.jpg" width="50%"/>
                 </div>
                 <h4><?= htmlspecialchars($post['title']) ?> </h4>
                 <p class="left-align light"><?=nl2br($post['content']) ?></p>

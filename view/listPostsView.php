@@ -1,27 +1,34 @@
 <?php
-session_start();
+
 ob_start(); ?>
 
 <div class="section">
     <div class="row">
         <?php
-        while ($data = $posts->fetch())
-        {
-        ?>
-        <div class="col s12 m4">
-            <div class="icon-block">
-                <div class="card-image">
-                    <img src="/vendor/img/<?= $data['image'] ?>.jpg" width="200px"/>
+        foreach($posts as $post){
+            ?>
+            <div class="col l6 m6 s12">
+                <div class="card">
+                    <div class="card-content">
+                        <h5 class="grey-text text-darken-2"><?= $post->title ?></h5>
+                        <h6 class="grey-text">Le <?= date("d/m/Y à H:i",strtotime($post->date)); ?> par <?= $post->writer ?></h6>
+                    </div>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="../web/img/<?= $post->image ?>.jpg" class="activator" alt="<?= $post->title ?>"/>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                        <p><a href="index.php?action=article&amp;id=<?= $post->id ?>">Voir l'article complet</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><?= $post->title ?> <i class="material-icons right">close</i></span>
+                        <p><?= substr(nl2br($post->content),0,1000); ?>...</p>
+                    </div>
                 </div>
-                <h5 class="center"><?= htmlspecialchars($data['title']) ?></h5>
-
-                <p class="light"><?= $data['content'] ?></p>
-                <em><a href="../web/index.php?action=article&amp;id=<?= $data['id']?>">Voir l'article</a></em>
             </div>
-        </div>
-       <?php
+            <?php
         }
-        $posts->closeCursor();
+
         ?>
     </div>
 </div>
@@ -32,7 +39,8 @@ ob_start(); ?>
 </div>
 
 <?php unset($_SESSION['errors']);  endif;?>
-<form action="../model/contact.php" method="POST">
+
+<form action="../web/index.php?action=contact" method="POST">
     <div class="row">
         <div class="input-field col s6">
             <input id="nom" type="text" class="validate">
