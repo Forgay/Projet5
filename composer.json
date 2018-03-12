@@ -1,5 +1,20 @@
 {
-    "require": {
-        "swiftmailer/swiftmailer": "^6.0"
+  "name": "GuillaumeT",
+  "authors": [
+    {
+      "name": "GuillaumeT",
+      "email": "gthareau1@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "controller\\": "controller/",
+      "model\\": "model/",
+      "vendor\\": "vendor",
+      "view\\": "view"
+    }
+  },
+  "require": {
+    "swiftmailer/swiftmailer": "^6.0"
+  }
 }

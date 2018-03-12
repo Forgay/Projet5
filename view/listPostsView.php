@@ -14,11 +14,11 @@ ob_start(); ?>
                         <h6 class="grey-text">Le <?= date("d/m/Y à H:i",strtotime($post->date)); ?> par <?= $post->writer ?></h6>
                     </div>
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img src="../web/img/<?= $post->image ?>.jpg" class="activator" alt="<?= $post->title ?>"/>
+                        <img src="../web/img/posts/<?= $post->image ?>.jpg" class="activator" alt="<?= $post->title ?>"/>
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-                        <p><a href="index.php?action=article&amp;id=<?= $post->id ?>">Voir l'article complet</a></p>
+                        <p><a href="../web/index.php?action=article&amp;id=<?= $post->id ?>">Voir l'article complet</a></p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4"><?= $post->title ?> <i class="material-icons right">close</i></span>
@@ -65,5 +65,5 @@ ob_start(); ?>
 </form>
 
 <?php $content = ob_get_clean();?>
-<?php require ('template.php'); ?>
+<?php require('template.php'); ?>
 

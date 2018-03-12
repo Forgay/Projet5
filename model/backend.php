@@ -21,25 +21,23 @@
  {
      global $db;
 
-     $q ="SELECT pseudo FROM admins WHERE pseudo =:pseudo";
-     $req = $db->prepare($q);
-     $exist = $req->execute($pseudo);
-
-     return $exist;
-
+     $reqpseudo= $db ->prepare('SELECT pseudo FROM admins WHERE pseudo = ?');
+     $reqpseudo->execute(array($pseudo));
+     $verifpseudo = $reqpseudo->fetch();
+        return $verifpseudo;
  }
 function verifEmail($email)
 {
     global $db;
 
-    $sql ="SELECT email FROM admins WHERE email =:email";
-    $req = $db->prepare($sql);
-    $exist = $req->execute($email);
+    $reqemail= $db->prepare( "SELECT email FROM admins WHERE email = ?");
+    $reqemail->execute(array($email));
+    $verifemail = $reqemail->fetch();
 
-    return $exist;
+    return $verifemail;
 
 }
-function isInscrip($pseudo,$email,$password)
+function addAdmin ($pseudo,$email,$password)
 {
     global $db;
 
@@ -54,7 +52,11 @@ function isInscrip($pseudo,$email,$password)
     return $confirinscription;
 }
 
-
+/**
+ * @param $pseudo
+ * @param $email
+ * @return mixed
+ */
 
 function isConnect($pseudo,$email)
 {
@@ -66,19 +68,24 @@ function isConnect($pseudo,$email)
     return $verifpass;
 }
 
+/**
+ * @param $pseudo
+ * @return mixed
+ */
 function isPass($pseudo)
 {
     global $db;
-    $req = $db->query("SELECT password FROM admins WHERE pseudo =$pseudo");
-    $results = [];
-    while($rows = $req->fetchObject()){
-        $results[] = $rows;
-    }
+    $req = $db->prepare("SELECT password FROM admins WHERE pseudo=?");
+    $req->execute(array($pseudo));
+    $results=$req->fetch();
     return $results;
-
 
 }
 
+/**
+ * @param $table
+ * @return mixed
+ */
 function inTable($table)
 {
 
@@ -113,23 +120,77 @@ function get_comments(){
     }
     return $results;
 }
-function get_post(){
 
-    global $db;
-
-    $req = $db->query("SELECT * FROM posts WHERE posted = '0' ORDER BY date ASC");
-
-    $results = [];
-    while($rows = $req->fetchObject()){
-        $results[] = $rows;
-    }
-    return $results;
-}
-function validPost($id)
+/**
+ * @param $id
+ * @return bool
+ */
+function validCom($id)
 {
     global  $db;
-    $sql = "UPDATE posts SET  date=NOW(), posted='1' WHERE id = $id";
-    $req = $db->prepare($sql);
-    $req->execute();
+    $req = $db->prepare("UPDATE comments SET  seen='1' WHERE id=?" );
+    $valid=$req->execute(array($id));
+    return $valid;
 }
 
+function delCom($id)
+{
+    global $db;
+    $req = $db->prepare("DELETE FROM comments WHERE id=? ");
+    $req->execute(array($id));
+
+}
+function postAd($title,$content,$posted)
+{
+    global $db;
+    $p=[
+        'title'     => $title,
+        'content'   => $content,
+        'posted'    => $posted
+    ];
+    $sql = "INSERT INTO posts(title,content,writer,date,posted) VALUES (:title,:content,'admin',NOW(),:posted)";
+    $req = $db->prepare($sql);
+    $req ->execute($p);
+}
+
+function postImg($tmpname,$extension)
+{
+    global  $db;
+    $id = $db->lastInsertId();
+    $i = [
+        'id'    => $id,
+        'image' => $id.$extension
+    ];
+    $sql = "UPDATE posts SET image=:image WHERE id=:id";
+    $req = $db->prepare($sql);
+    $req->execute($i);
+    move_uploaded_file($tmpname,"../web/img/posts/".$id.$extension);
+}
+
+function edit($title,$content,$posted,$id)
+{
+    global $db;
+    $a=[
+        'title'     => $title,
+        'content'   => $content,
+        'posted'    => $posted,
+        'id'        => $id
+    ];
+    $sql = "UPDATE posts SET title=:title, content=:content, datemodify=NOW(), posted=:posted WHERE id=:id";
+    $req = $db->prepare($sql);
+    $req->execute($a);
+}
+
+/**
+ * @param $id
+ * @return bool
+ */
+function adgetPost($id)
+{
+    global $db;
+    $req = $db->prepare("SELECT title,content FROM posts WHERE id =?");
+    $req->execute(array($id));
+    $results=$req->fetch();
+    return $results;
+
+}
