@@ -29,80 +29,6 @@ ob_start();
     }
     ?>
 </div>
-
-<h4>Articles</h4>
-<?php
-$posts = get_post();
-
-?>
-<table>
-    <thead>
-    <tr>
-        <th>Article</th>
-        <th>Contenu</th>
-        <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-    if (!empty($posts)) {
-        foreach ($posts as $post) {
-            ?>
-            <tr id="article_<?= $post->id ?>">
-                <td><?= $post->title ?></td>
-                <td><?= substr($post->content, 0, 100); ?>...</td>
-                <td>
-                    <a href="../web/index.php?action=posted&amp;<?= $post->id ?>"
-                       class="btn-floating btn-small waves-effect waves-light green see_comment"><i
-                                class="material-icons">done</i></a>
-                    <a href="#" id="<?= $post->id ?>"
-                       class="btn-floating btn-small waves-effect waves-light red delete_comment"><i
-                                class="material-icons">delete</i></a>
-                    <a href="#comment_<?= $post->id ?>"
-                       class="btn-floating btn-small waves-effect waves-light blue modal-trigger"><i
-                                class="material-icons">more_vert</i></a>
-
-                    <div class="modal" id="comment_<?= $post->id ?>">
-                        <div class="modal-content">
-                            <h4><?= $post->title ?></h4>
-
-                            <p>Commentaire posté par
-                                <strong><?= $post->name . " (" . $post->email . ")</strong><br/>Le " . date("d/m/Y à H:i", strtotime($post->date)) ?>
-                            </p>
-                            <hr/>
-                            <p><?= nl2br($post->comment) ?></p>
-
-                        </div>
-                        <div class="modal-footer">
-                            <a href="#" id="<?= $post->id ?>"
-                               class="modal-action modal-close waves-effect waves-red btn-flat delete_comment"><i
-                                        class="material-icons">delete</i></a>
-                            <a href="#" id="<?= $post->id ?>"
-                               class="modal-action modal-close waves-effect waves-green btn-flat see_comment"><i
-                                        class="material-icons">done</i></a>
-                        </div>
-
-
-                    </div>
-
-
-                </td>
-            </tr>
-
-            <?php
-        }
-    } else {
-        ?>
-        <tr>
-            <td></td>
-            <td>>Aucun commentaire à valider></td>
-        </tr>
-        <?php
-    }
-    ?>
-    </tbody>
-</table>
-
 <h4>Commentaires non lus</h4>
 <?php
 $comments = getsComment();
@@ -125,13 +51,13 @@ $comments = getsComment();
                 <td><?= $comment->title ?></td>
                 <td><?= substr($comment->comment, 0, 100); ?>...</td>
                 <td>
-                    <a href="#" id="<?= $comment->id ?>"
+                    <a href="../web/index.php?action=posted&amp;id=<?= $comment->id ?>"
                        class="btn-floating btn-small waves-effect waves-light green see_comment"><i
                                 class="material-icons">done</i></a>
-                    <a href="#" id="<?= $comment->id ?>"
+                    <a href="../web/index.php?action=delete&amp;id=<?= $comment->id ?>"
                        class="btn-floating btn-small waves-effect waves-light red delete_comment"><i
                                 class="material-icons">delete</i></a>
-                    <a href="#comment_<?= $comment->id ?>"
+                    <a href="../web/index.php?action=viewComment&amp;id=<?= $comment->id ?>"
                        class="btn-floating btn-small waves-effect waves-light blue modal-trigger"><i
                                 class="material-icons">more_vert</i></a>
 
@@ -178,5 +104,5 @@ $comments = getsComment();
 
 
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('backend/template.php'); ?>
 

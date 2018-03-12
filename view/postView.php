@@ -7,7 +7,7 @@
             <div class="col s12 center">
                 <h3><i class="mdi-content-send brown-text"></i></h3>
                 <div class="card-image">
-                    <img src="/web/img/<?= ($post['image']) ?>.jpg" width="50%"/>
+                    <img src="../web/img/posts/<?=$post['image']?>.jpg" width="50%"/>
                 </div>
                 <h4><?= htmlspecialchars($post['title']) ?> </h4>
                 <p class="left-align light"><?=nl2br($post['content']) ?></p>
@@ -61,4 +61,4 @@
     </div>
 
     <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('frontend/template.php'); ?>

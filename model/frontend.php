@@ -13,9 +13,9 @@ try {
 function getPosts()
 {
     global $db;
-    $req = $db->query('SELECT * FROM posts WHERE posted = 1 ORDER BY id DESC');
+    $req = $db->query('SELECT * FROM posts ORDER BY id DESC');
     $results = array();
-    while ($rows = $req->fetchObject()) {
+    while ($rows = $req->fetchAll()) {
         $results[] = $rows;
     }
     return $results;
@@ -36,12 +36,10 @@ function getComments($id)
     global $db;
     $req = $db->prepare("SELECT * FROM comments WHERE post_id={$_GET['id']} AND seen=1  ORDER BY date_comment DESC");
     $req->execute(array($id));
-    $postcomment = $req;
-    return $postcomment;
 
 }
 
-function postComment($nom, $email, $comment, $postId)
+function adComment($nom, $email, $comment, $postId)
 {
     global $db;
     $comments = $db->prepare("INSERT INTO comments(nom,email,comment,post_id,date_comment) VALUES (?, ?, ?, ?, NOW())");

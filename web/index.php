@@ -1,7 +1,5 @@
 <?php
-require '../controller/frontend.php';
-require '../controller/backend.php';
-require '../controller/contact.php';
+require_once '../vendor/autoload.php';
 
 $page = 'home';
 
@@ -30,8 +28,12 @@ switch ($page) {
         if (isset($_GET['id']) && $_GET['id'] > 0) {
             if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['comment'])) {
 
+                $nom = htmlspecialchars($_POST['nom']);
+                $email = htmlspecialchars($_POST['email']);
+                $comment = htmlspecialchars($_POST['comment']);
+                $postId = htmlspecialchars($_GET['id']);
 
-                addComment($_POST['nom'], $_POST['email'], $_POST['comment'], $_GET['id']);
+                addComment($nom, $email, $comment, $postId);
 
             } else {
                 echo 'Attention : Tous les champs ne sont pas remplis !';
@@ -58,6 +60,10 @@ switch ($page) {
 
     case 'login':
 
+        if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+            addConnect();
+        }
+
         require('../view/logonView.php');
 
         break;
@@ -65,7 +71,7 @@ switch ($page) {
     case 'inscription':
         if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['passwordverif'])) {
 
-            addInscription($_POST['pseudo'], $_POST['email'], $_POST['password'], $_POST['passwordverif']);
+            addInscription();
 
         } else {
             echo 'Attention : Tous les champs ne sont pas remplis !';
@@ -83,30 +89,65 @@ switch ($page) {
             include('../view/adlistPostsView.php');
 
 
-
         } else {
 
             echo 'Attention : Tous les champs ne sont pas remplis !';
         }
 
         break;
+    case 'logout':
 
+        logout();
+
+
+        break;
     case 'posted':
+
+        validComment();
+
+        include('../view/adlistPostsView.php');
+
+        break;
+
+
+    case 'delete':
+
+        delComment();
+
+        include('../view/adlistPostsView.php');
+
+        break;
+
+    case 'write':
+
+        if (!empty($_POST['post'])) {
+
+            writePost();
+        } else {
+            include('../view/writePostView.php');
+        }
+        break;
+    case 'list':
+
+    include('../view/showPostView.php');
+
+    break;
+
+    case 'post':
 
         if (isset($_GET['id']) && $_GET['id'] > 0) {
 
-            validArticle();
-            echo 'article validée';
-            include ('../view/adlistPostsView.php');
+            adpost();
 
         } else {
             echo 'Erreur : Aucun identifiant de l\'article';
         }
-
         break;
 
     case 'error':
+
         require('../view/404.php');
+
         break;
 
     default:
