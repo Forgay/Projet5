@@ -7,26 +7,10 @@ namespace gthareau;
 class Manager
 {
 
-    protected $db;
+    protected $dao;
 
-    public function __construct()
+    public function __construct($dao)
     {
-        try {
-            $this->setDb(new \PDO('mysql:dbname=blog; host=localhost', 'root', '', array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION)));
-        } catch (Exception $e) {
-            die('erreur :' . $e->getMessage());
-        }
-
+        $this->dao = $dao;
     }
-
-    public function setDb()
-    {
-        return $this->db;
-    }
-
-    public function getDb($db)
-    {
-        return $this->$db;
-    }
-
 }
