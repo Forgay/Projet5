@@ -4,42 +4,51 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit14f533a3a38472dc0c6490da7f127ed7
+class ComposerStaticInit9c36075426dc1e963220d485312da190
 {
-    public static $files = array (
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
+        'g' => 
+        array (
+            'gthareau\\' => 9,
+        ),
+        'M' => 
+        array (
+            'Model\\' => 6,
+        ),
         'E' => 
         array (
-            'Egulias\\EmailValidator\\' => 23,
+            'Entity\\' => 7,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Egulias\\EmailValidator\\' => 
+        'gthareau\\' => 
         array (
-            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+            0 => __DIR__ . '/../..' . '/lib/gthareau',
         ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'D' => 
+        'Model\\' => 
         array (
-            'Doctrine\\Common\\Lexer\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
-            ),
+            0 => __DIR__ . '/../..' . '/lib/Model',
+        ),
+        'Entity\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/lib/Entity',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/App',
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit14f533a3a38472dc0c6490da7f127ed7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit14f533a3a38472dc0c6490da7f127ed7::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit14f533a3a38472dc0c6490da7f127ed7::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9c36075426dc1e963220d485312da190::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9c36075426dc1e963220d485312da190::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

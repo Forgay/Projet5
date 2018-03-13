@@ -8,11 +8,11 @@
   ],
   "autoload": {
     "psr-4": {
-      "controller\\": "controller/",
-      "model\\": "model/",
-      "vendor\\": "vendor",
-      "view\\": "view"
-    }
+      "App\\": "App",
+      "gthareau\\": "lib/gthareau/",
+      "Model\\": "lib/Model/",
+      "Entity\\": "lib/Entity/"
+      }
   },
   "require": {
     "swiftmailer/swiftmailer": "^6.0"
