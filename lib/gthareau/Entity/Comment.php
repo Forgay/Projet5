@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\model\comment;
+namespace gthareau\Entity;
 
 
 class Comment

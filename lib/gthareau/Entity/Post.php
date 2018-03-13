@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\model\post;
+namespace gthareau\Entity;
 
 
 class Post

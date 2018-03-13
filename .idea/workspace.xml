@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8949500e-e58b-4fc6-a42b-d465941e82fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/gthareau/Managers.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/gthareau/PDOFactory.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/gthareau/Config.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Manager.php" afterPath="$PROJECT_DIR$/lib/gthareau/Manager.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Admins.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity/Admins.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Comment.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity/Comment.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PDOFactory.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/gthareau/PDOFactory.php">
+      <file leaf-file-name="frontendController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/controller/frontendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,10 +43,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controller/frontend.php" />
-        <option value="$PROJECT_DIR$/web/.htaccess" />
-        <option value="$PROJECT_DIR$/controller/frontendController.php" />
-        <option value="$PROJECT_DIR$/controller/Routes.php" />
         <option value="$PROJECT_DIR$/model/Admins.php" />
         <option value="$PROJECT_DIR$/model/AdminsManager.php" />
         <option value="$PROJECT_DIR$/model/Comment.php" />
@@ -93,6 +90,10 @@
         <option value="$PROJECT_DIR$/lib/gthareau/PDOFactory.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Manager.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Managers.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Config.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Entity/Admins.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Entity/Comment.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" />
       </list>
     </option>
   </component>
@@ -245,12 +246,12 @@
       <workItem from="1520498193493" duration="12358000" />
       <workItem from="1520758238787" duration="399000" />
       <workItem from="1520761217179" duration="8382000" />
-      <workItem from="1520842445675" duration="25831000" />
+      <workItem from="1520842445675" duration="27023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190160000" />
+    <option name="totallyTimeSpent" value="191352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -287,7 +288,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/materialize.css" />
     <entry file="file://$PROJECT_DIR$/LICENSE" />
     <entry file="file://$PROJECT_DIR$/Projet5-master/view/postView.php" />
     <entry file="file://$PROJECT_DIR$/Projet5-master/model/contact.php" />
@@ -500,14 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/controller/frontendController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gthareau/Model/AdminsManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -535,30 +527,6 @@
             <marker date="1520927404287" expanded="true" signature="1396:1490" ph="UPDATE posts... " />
             <marker date="1520927404287" expanded="true" signature="1607:1635" ph="DELETE FROM comments... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Admins.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,14 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="50" column="66" lean-forward="false" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gthareau/Manager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -654,6 +614,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Admins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/controller/frontendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>

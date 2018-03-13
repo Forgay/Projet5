@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\model\admin;
+namespace gthareau\Entity;
 
 
 class Admins
