@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8949500e-e58b-4fc6-a42b-d465941e82fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/gthareau/Config.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/gthareau/Page.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Admins.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity/Admins.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Comment.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity/Comment.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/adlistPostsView.php" afterPath="$PROJECT_DIR$/App/view/adlistPostsView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/backend/template.php" afterPath="$PROJECT_DIR$/App/Modules/Templates/Backendtemplate.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/frontend/template.php" afterPath="$PROJECT_DIR$/App/Modules/Templates/Frontendtemplate.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/frontend/top_bar.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/view/logonView.php" afterPath="$PROJECT_DIR$/App/view/logonView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/postView.php" afterPath="$PROJECT_DIR$/App/view/postView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/showPostView.php" afterPath="$PROJECT_DIR$/App/view/showPostView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/upPostView.php" afterPath="$PROJECT_DIR$/App/view/upPostView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/writePostView.php" afterPath="$PROJECT_DIR$/App/view/writePostView.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Backcontroller.php" afterPath="$PROJECT_DIR$/lib/gthareau/Backcontroller.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Config.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" afterPath="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="frontendController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/controller/frontendController.php">
+      <file leaf-file-name="Backendtemplate.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Modules/Templates/Backendtemplate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="-408">
+              <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -43,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model/Admins.php" />
         <option value="$PROJECT_DIR$/model/AdminsManager.php" />
         <option value="$PROJECT_DIR$/model/Comment.php" />
         <option value="$PROJECT_DIR$/model/CommentManager.php" />
@@ -77,12 +86,9 @@
         <option value="$PROJECT_DIR$/App/model/admin/Admins.php" />
         <option value="$PROJECT_DIR$/App/model/post/PostManager.php" />
         <option value="$PROJECT_DIR$/App/model/admin/AdminsManager.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/Entity.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/lib/gthareau/ApplicationComponent.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/Backcontroller.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/HttpRequest.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Route.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Router.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Application.php" />
@@ -94,6 +100,10 @@
         <option value="$PROJECT_DIR$/lib/gthareau/Entity/Admins.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Entity/Comment.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Entity.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Page.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Backcontroller.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
       </list>
     </option>
   </component>
@@ -148,13 +158,20 @@
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
@@ -166,20 +183,6 @@
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -199,11 +202,11 @@
       <recent name="C:\wamp64\www\Projet5\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Projet5\App\Modules\Templates" />
+      <recent name="C:\wamp64\www\Projet5\App" />
+      <recent name="C:\wamp64\www\Projet5\App\Frontend" />
       <recent name="C:\wamp64\www\Projet5\lib\gthareau" />
       <recent name="C:\wamp64\www\Projet5\lib\gthareau\Entity" />
-      <recent name="C:\wamp64\www\Projet5\lib\gthareau\Model" />
-      <recent name="C:\wamp64\www\Projet5\App\model\post" />
-      <recent name="C:\wamp64\www\Projet5\App\model\comment" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -246,18 +249,17 @@
       <workItem from="1520498193493" duration="12358000" />
       <workItem from="1520758238787" duration="399000" />
       <workItem from="1520761217179" duration="8382000" />
-      <workItem from="1520842445675" duration="27023000" />
+      <workItem from="1520842445675" duration="32760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191352000" />
+    <option name="totallyTimeSpent" value="197089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16863587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3705693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -266,7 +268,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.257379" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.257379" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -288,7 +290,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LICENSE" />
     <entry file="file://$PROJECT_DIR$/Projet5-master/view/postView.php" />
     <entry file="file://$PROJECT_DIR$/Projet5-master/model/contact.php" />
     <entry file="file://$PROJECT_DIR$/view/frontend/topbar.php" />
@@ -314,24 +315,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/backend/topbar.php" />
-    <entry file="file://$PROJECT_DIR$/App/view/frontend/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-797">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="838" column="13" lean-forward="true" selection-start-line="838" selection-start-column="13" selection-end-line="838" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/backend/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -469,14 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/config/routes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -530,41 +509,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gthareau/ApplicationComponent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Backcontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/HttpResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
           <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding />
         </state>
@@ -618,14 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gthareau/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-448">
@@ -660,8 +599,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/controller/frontendController.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Backcontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/HttpResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/config/routes.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Modules/Templates/Frontendtemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Modules/Templates/Backendtemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding />
         </state>
       </provider>

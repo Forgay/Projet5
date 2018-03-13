@@ -54,4 +54,4 @@ ob_start();
 
     </div>
 <?php $content = ob_get_clean(); ?>
-<?php require('backend/template.php'); ?>
+<?php require('backend/Backendtemplate.php'); ?>

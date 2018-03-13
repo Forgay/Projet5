@@ -20,13 +20,18 @@ class HttpResponse extends ApplicationComponent
 
     public function redirect($location)
     {
-        header('Location: '.$location);
+        header('Location: ' . $location);
         exit;
     }
 
     public function redirect404()
     {
+        $this->page = new Page($this->page);
+        $this->page->setContentFile(__DIR__ . '/../../Errors/404.html');
 
+        $this->addHeader('HTPP/1.0 404 Not Found');
+
+        $this->send();
     }
 
     public function send()

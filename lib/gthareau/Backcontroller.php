@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Guillaume
- * Date: 12/03/2018
- * Time: 19:24
- */
+
 
 namespace gthareau;
 
@@ -20,6 +15,7 @@ abstract class Backcontroller extends ApplicationComponent
     {
         parent::__construct($app);
 
+        $this->managers =new Managers('PDO', PDOFactory::getMysqlConnexion());
         $this->page = new Page($app);
 
         $this->setModule($module);
@@ -72,5 +68,7 @@ abstract class Backcontroller extends ApplicationComponent
         }
 
         $this->view = $view;
+
+        $this->page->setContentFile(__DIR__.'/../../App'.$this->app->name().'/Modules/'.$this->module.'/Views/'.$this->view.'.php' );
     }
 }

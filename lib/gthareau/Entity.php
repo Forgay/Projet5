@@ -4,15 +4,35 @@
 namespace gthareau;
 
 
-abstract class Entity
+abstract class Entity implements \ArrayAccess
 {
-    protected $errors = [];
+    protected $errors = [],$id;
 
     public function __construct(array $data = [])
     {
         if (!empty($data)) {
             $this->hydrate($data);
         }
+    }
+
+    public function isNew()
+    {
+        return empty($this->id);
+    }
+
+    public function errors()
+    {
+        return $this->errors;
+    }
+
+    public function id()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     public function hydrate(array $data)
@@ -26,18 +46,31 @@ abstract class Entity
         }
     }
 
-    public function getErrorMessage()
+    public function offsetGet($var)
     {
-        $errors = $this->getErrors();
-        $message = '';
-        foreach ($errors as $error) {
-            $message .= ($error . '<br/>');
+        if(isset($this->$var) && is_callable([$this,$var]))
+        {
+            return $this->$var();
         }
-        Session::getInstance()->setFlash('danger',$message);
     }
 
-    public function getErrors()
+    public function offsetSet($var, $value)
     {
-        return $this->errors;
+        $method ='set'.ucfirst($var);
+
+        if(isset($this->$var) && is_callable([$this,$method]))
+        {
+            $this->$method($value);
+        }
+    }
+
+    public function offsetExists($var)
+    {
+       return isset($this->$var) && is_callable([$this,$var]);
+    }
+
+    public function offsetUnset($var)
+    {
+     throw new \Exception('impossible de supprimer une quelconque valeur');
     }
 }
