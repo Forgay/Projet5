@@ -4,10 +4,11 @@
 namespace gthareau;
 
 
-class Page extends ApplicationComponent
+class Page extends Application
 {
     protected $contentFile;
     protected $vars = [];
+    protected $layout;
 
     public function addVar($var, $value)
     {
@@ -17,7 +18,7 @@ class Page extends ApplicationComponent
         $this->vars[$var] = $value;
     }
 
-    public function getGeneratedPage()
+    public function getPage()
     {
         if (!file_exists($this->contentFile)) {
             throw new \RuntimeException('la vus spécifié n\'existe pas');
@@ -25,21 +26,25 @@ class Page extends ApplicationComponent
         extract($this->vars);
 
         ob_start();
-        require $this->contentFile;
+        include $this->contentFile;
         $content = ob_get_clean();
 
         ob_start();
-        require __DIR__.'/../../App/'.$this->app->name().'/Templates/layout.php';
+        include $this->layout;
         return ob_get_clean();
 
     }
 
     public function setContentFile($contentFile)
     {
-        if(!is_string($contentFile)|| empty($contentFile))
-        {
+        if (!is_string($contentFile) || empty($contentFile)) {
             throw new \InvalidArgumentException('La vue spécifiée est invalide');
         }
         $this->contentFile = $contentFile;
+    }
+
+    Public function setLayout($layout)
+    {
+        $this->layout = $layout;
     }
 }

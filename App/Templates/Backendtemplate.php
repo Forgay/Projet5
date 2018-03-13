@@ -8,21 +8,25 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../../../web/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="../../../web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../../web/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../../web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="../../../web/index1.php?action=home" class="brand-logo">Logo</a>
+        <a id="logo-container" href="../../web/index1.php?action=home" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="../../../web/index1.php?action=login">Se connecter</a></li>
-            
+
+            <li><a href="../../web/index1.php?action=write">Ajouter un article</a></li>
+            <li><a href="../../web/index1.php?action=list">liste des articles</a></li>
+            <li><a href="../../web/index1.php?action=logout">Se déconnecter</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="../../../web/index1.php?action=login">Se connecter</a></li>
-            
+
+            <li><a href="../../web/index1.php?action=write">Ajouter un article</a></li>
+            <li><a href="../../web/index1.php?action=list">liste des articles</a></li>
+            <li><a href="../../web/index1.php?action=logout">Se déconnecter</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -44,7 +48,7 @@
 
         </div>
     </div>
-    <div class="parallax"><img src="../../../web/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="../../web/background1.jpg" alt="Unsplashed background img 1"></div>
 </div>
 
 

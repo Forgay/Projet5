@@ -71,6 +71,6 @@ abstract class Entity implements \ArrayAccess
 
     public function offsetUnset($var)
     {
-     throw new \Exception('impossible de supprimer une quelconque valeur');
+     throw new Exception('impossible de supprimer une quelconque valeur');
     }
 }

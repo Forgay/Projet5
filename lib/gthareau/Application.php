@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Guillaume
- * Date: 12/03/2018
- * Time: 19:08
- */
+
 
 namespace gthareau;
 
 
-abstract class Application
+class Application
 {
     protected $httpRequest;
     protected $httpResponse;
@@ -21,39 +16,34 @@ abstract class Application
         $this->httpResponse = new HttpResponse($this);
         $this->name = '';
     }
+
     public function getController()
     {
         $router = new Router;
 
         $xml = new \DOMDocument;
-        $xml->load(__DIR__ . '/../../App/' .$this->name.'/config/routes.xml');
+        $xml->load(__DIR__ .'/../../App/config/routes.xml');
 
         $routes = $xml->getElementsByTagName('route');
 
         // On parcourt les routes du fichier XML.
-        foreach ($routes as $route)
-        {
+        foreach ($routes as $route) {
             $vars = [];
 
             // On regarde si des variables sont présentes dans l'URL.
-            if ($route->hasAttribute('vars'))
-            {
+            if ($route->hasAttribute('vars')) {
                 $vars = explode(',', $route->getAttribute('vars'));
             }
 
-            // On ajoute la route au routeur.
-            $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'), $route->getAttribute('action'), $vars));
+            // On ajoute la route au routeu
+            $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'), $route->getAttribute('action'),$route->getAttribute('layout'), $vars));
         }
 
-        try
-        {
+        try {
             // On récupère la route correspondante à l'URL.
             $matchedRoute = $router->getRoute($this->httpRequest->requestURI());
-        }
-        catch (\RuntimeException $e)
-        {
-            if ($e->getCode() == Router::NO_ROUTE)
-            {
+        } catch (\RuntimeException $e) {
+            if ($e->getCode() == Router::NO_ROUTE) {
                 // Si aucune route ne correspond, c'est que la page demandée n'existe pas.
                 $this->httpResponse->redirect404();
             }
@@ -63,28 +53,31 @@ abstract class Application
         $_GET = array_merge($_GET, $matchedRoute->vars());
 
         // On instancie le contrôleur.
-        $controllerClass = 'App\\'.$this->name.'\\Modules\\'.$matchedRoute->module().'\\'.$matchedRoute->module().'Controller';
+        $controllerClass = 'App\\Modules\\' . $matchedRoute->module() . '\\' . $matchedRoute->module() . 'Controller';
         return new $controllerClass($this, $matchedRoute->module(), $matchedRoute->action());
     }
 
 
+    public function run()
+    {
+        $controller = $this->getController();
+        $controller->execute();
 
+        $this->httpResponse->setPage($controller->getPage());
+        $this->httpResponse->send();
+    }
 
-
-
-    abstract public function run();
-
-    public function httpRequest()
+    public function gethttpRequest()
     {
         return $this->httpRequest;
     }
 
-    public function httpResponse()
+    public function gethttpResponse()
     {
         return $this->httpResponse;
     }
 
-    public function name()
+    public function getName()
     {
         return $this->name;
     }

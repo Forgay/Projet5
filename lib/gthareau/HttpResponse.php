@@ -9,7 +9,7 @@
 namespace gthareau;
 
 
-class HttpResponse extends ApplicationComponent
+class HttpResponse
 {
     protected $page;
 
@@ -26,7 +26,7 @@ class HttpResponse extends ApplicationComponent
 
     public function redirect404()
     {
-        $this->page = new Page($this->page);
+        $this->page = new Page();
         $this->page->setContentFile(__DIR__ . '/../../Errors/404.html');
 
         $this->addHeader('HTPP/1.0 404 Not Found');
@@ -37,7 +37,7 @@ class HttpResponse extends ApplicationComponent
     public function send()
     {
 
-        exit($this->page->getGeneratedPage());
+        exit($this->page->getPage());
     }
 
     public function setPage(Page $page)

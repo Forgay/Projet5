@@ -6,9 +6,9 @@ namespace gthareau;
 
 class Route
 {
-    protected $action;
-    protected $module;
     protected $url;
+    protected $module;
+    protected $action;
     protected $varsNames;
     protected $vars = [];
 
