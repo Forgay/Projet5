@@ -4,7 +4,9 @@
 namespace Entity;
 
 
-class Admins
+use Gthareau\Entity;
+
+class Admins extends Entity
 {
     protected $id;
     protected $pseudo;
