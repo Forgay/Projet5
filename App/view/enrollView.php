@@ -9,7 +9,7 @@ ob_start(); ?>
         <div class="col l4 m6 s12 offset-l4 offset-m3">
             <div class="card-panel">
                 <div class="row">
-                    <img src="../../web/img/admin.png" alt="administrateur" width="50%"/>
+                    <img src="../../Web/img/admin.png" alt="administrateur" width="50%"/>
                 </div>
                 <h4 class="center-align">S'inscrire</h4>
                 <?php if (!empty($errors)) {
@@ -25,7 +25,7 @@ ob_start(); ?>
                 } ?>
 
 
-                <form action="../../web/index1.php?action=inscription" method="POST">
+                <form action="../../Web/index1.php?action=inscription" method="POST">
                     <div class="row">
                         <div class="input-field col s12">
                             <input type="text" id="pseudo" name="pseudo"/>

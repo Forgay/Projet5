@@ -5,7 +5,7 @@ namespace App\Modules\Post;
 
 use Gthareau\Controller;
 use Gthareau\HttpRequest;
-use Gthareau\Entity\Post;
+use Entity\Post;
 
 
 class PostController extends Controller

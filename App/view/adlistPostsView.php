@@ -51,13 +51,13 @@ $comments = getsComment();
                 <td><?= $comment->title ?></td>
                 <td><?= substr($comment->comment, 0, 100); ?>...</td>
                 <td>
-                    <a href="../../web/index1.php?action=posted&amp;id=<?= $comment->id ?>"
+                    <a href="../../Web/index1.php?action=posted&amp;id=<?= $comment->id ?>"
                        class="btn-floating btn-small waves-effect waves-light green see_comment"><i
                                 class="material-icons">done</i></a>
-                    <a href="../../web/index1.php?action=delete&amp;id=<?= $comment->id ?>"
+                    <a href="../../Web/index1.php?action=delete&amp;id=<?= $comment->id ?>"
                        class="btn-floating btn-small waves-effect waves-light red delete_comment"><i
                                 class="material-icons">delete</i></a>
-                    <a href="../../web/index1.php?action=viewComment&amp;id=<?= $comment->id ?>"
+                    <a href="../../Web/index1.php?action=viewComment&amp;id=<?= $comment->id ?>"
                        class="btn-floating btn-small waves-effect waves-light blue modal-trigger"><i
                                 class="material-icons">more_vert</i></a>
 

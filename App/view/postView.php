@@ -18,7 +18,7 @@
         </div>
 
     </div>
-    <form action="../../web/index1.php?action=ajoutComment&amp;id=<?= $_GET['id'] ?>" method="POST">
+    <form action="../../Web/index1.php?action=ajoutComment&amp;id=<?= $_GET['id'] ?>" method="POST">
 
         <div class="row">
             <div class="input-field col s6">

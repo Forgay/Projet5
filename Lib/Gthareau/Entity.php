@@ -6,7 +6,7 @@ namespace Gthareau;
 
 abstract class Entity implements \ArrayAccess
 {
-    protected $errors = [],$id;
+    protected $errors = [], $id;
 
     public function __construct(array $data = [])
     {
@@ -46,31 +46,39 @@ abstract class Entity implements \ArrayAccess
         }
     }
 
+    public function getErrorMessage()
+    {
+        $errors = $this->getErrors();
+        $message = '';
+        foreach ($errors as $error){
+        $message = ($error . '<br/>');
+    }
+    Session::getInstance()->setFlash('erreur', $message);
+    }
+
     public function offsetGet($var)
     {
-        if(isset($this->$var) && is_callable([$this,$var]))
-        {
+        if (isset($this->$var) && is_callable([$this, $var])) {
             return $this->$var();
         }
     }
 
     public function offsetSet($var, $value)
     {
-        $method ='set'.ucfirst($var);
+        $method = 'set' . ucfirst($var);
 
-        if(isset($this->$var) && is_callable([$this,$method]))
-        {
+        if (isset($this->$var) && is_callable([$this, $method])) {
             $this->$method($value);
         }
     }
 
     public function offsetExists($var)
     {
-       return isset($this->$var) && is_callable([$this,$var]);
+        return isset($this->$var) && is_callable([$this, $var]);
     }
 
     public function offsetUnset($var)
     {
-     throw new Exception('impossible de supprimer une quelconque valeur');
+        throw new Exception('impossible de supprimer une quelconque valeur');
     }
 }

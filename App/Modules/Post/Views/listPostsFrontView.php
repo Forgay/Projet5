@@ -16,7 +16,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-                        <p><a href="../../../../web/index1.php?action=article&amp;id=<?= $post->getId() ?>">Voir l'article complet</a></p>
+                        <p><a href="../../../../Web/index1.php?action=article&amp;id=<?= $post->getId() ?>">Voir l'article complet</a></p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4"><?= $post->getTitle() ?> <i class="material-icons right">close</i></span>
@@ -30,15 +30,8 @@
         ?>
     </div>
 </div>
-<?php if (array_key_exists('errors',$_SESSION)):?>
 
-<div class="alert alert-danger">
-    <?=implode('<br>', $_SESSION['errors']); ?>
-</div>
-
-<?php unset($_SESSION['errors']);  endif;?>
-
-<form action="../../../../web/index1.php?action=contact" method="POST">
+<form action="../../../../Web/index1.php?action=contact" method="POST">
     <div class="row">
         <div class="input-field col s6">
             <input id="nom" type="text" class="validate">

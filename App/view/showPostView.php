@@ -21,7 +21,7 @@ foreach($posts as $post){
                 <div class="col s12 m6 l4">
                     <img src="../web/img/posts/<?= $post->image ?>" class="materialboxed responsive-img" alt="<?= $post->title ?>"/>
                     <br/><br/>
-                    <a class="btn light-blue waves-effect waves-light" href="../../web/index1.php?action=post&amp;id=<?= $post->id ?>">Lire l'article complet</a>
+                    <a class="btn light-blue waves-effect waves-light" href="../../Web/index1.php?action=post&amp;id=<?= $post->id ?>">Lire l'article complet</a>
                 </div>
             </div>
         </div>
