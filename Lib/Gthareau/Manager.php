@@ -1,7 +1,7 @@
 <?php
 
 
-namespace gthareau;
+namespace Gthareau;
 
 
 class Manager

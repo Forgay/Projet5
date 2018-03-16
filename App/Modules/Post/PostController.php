@@ -3,14 +3,14 @@
 
 namespace App\Modules\Post;
 
-use gthareau\Controller;
-use gthareau\HttpRequest;
-use gthareau\Entity\Post;
+use Gthareau\Controller;
+use Gthareau\HttpRequest;
+use Gthareau\Entity\Post;
 
 
 class PostController extends Controller
 {
-    public function listPosts()
+    public function executeListPostsFront()
     {
     $listPosts = $this->manager->getManagerOf('Post')->getPosts();
     $this->page->addVar('listPosts',$listPosts);

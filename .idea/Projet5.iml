@@ -3,11 +3,31 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/App" isTestSource="false" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/lib/Entity" isTestSource="false" packagePrefix="Entity\" />
-      <sourceFolder url="file://$MODULE_DIR$/lib/gthareau" isTestSource="false" packagePrefix="gthareau\" />
-      <sourceFolder url="file://$MODULE_DIR$/lib/Model" isTestSource="false" packagePrefix="Model\" />
+      <sourceFolder url="file://$MODULE_DIR$/Lib/Gthareau/Model" isTestSource="false" packagePrefix="Model\" />
+      <sourceFolder url="file://$MODULE_DIR$/Lib/Gthareau/Entity" isTestSource="false" packagePrefix="Entity\" />
+      <sourceFolder url="file://$MODULE_DIR$/Lib/Gthareau" isTestSource="false" packagePrefix="Gthareau\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+          <root url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
+          <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+          <root url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
+          <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

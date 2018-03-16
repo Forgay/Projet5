@@ -1,7 +1,7 @@
 <?php
 
 
-namespace gthareau;
+namespace Gthareau;
 
 
 class Router
@@ -31,7 +31,7 @@ class Router
                     // On crée un nouveau tableau clé/valeur
                     // (clé = nom de la variable, valeur = sa valeur)
                     foreach ($varsValues as $key => $match) {
-                        // La première valeur contient entièrement la chaine capturée (voir la doc sur preg_match)
+                        // La première valeur contient entièrement la chaine capturée
                         if ($key !== 0) {
                             $listVars[$varsNames[$key - 1]] = $match;
                         }

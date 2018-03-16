@@ -1,7 +1,10 @@
 <?php
 
 
-namespace App\model\comment;
+namespace Model;
+
+use Gthareau\Manager;
+use Gthareau\Entity\Comment;
 
 
 class CommentManager extends Manager

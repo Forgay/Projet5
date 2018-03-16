@@ -1,7 +1,7 @@
 <?php
 
 
-namespace gthareau;
+namespace Gthareau;
 
 
 class Application
@@ -12,8 +12,8 @@ class Application
 
     public function __construct()
     {
-        $this->httpRequest = new HttpRequest($this);
-        $this->httpResponse = new HttpResponse($this);
+        $this->httpRequest = new HttpRequest();
+        $this->httpResponse = new HttpResponse();
         $this->name = '';
     }
 
@@ -22,7 +22,7 @@ class Application
         $router = new Router;
 
         $xml = new \DOMDocument;
-        $xml->load(__DIR__ .'/../../App/config/routes.xml');
+        $xml->load(__DIR__ . '/../../App/config/routes.xml');
 
         $routes = $xml->getElementsByTagName('route');
 
@@ -35,8 +35,8 @@ class Application
                 $vars = explode(',', $route->getAttribute('vars'));
             }
 
-            // On ajoute la route au routeu
-            $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'), $route->getAttribute('action'),$route->getAttribute('layout'), $vars));
+            // On ajoute la route
+            $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'), $route->getAttribute('action'), $route->getAttribute('layout'), $vars));
         }
 
         try {
@@ -50,11 +50,11 @@ class Application
         }
 
         // On ajoute les variables de l'URL au tableau $_GET.
-        $_GET = array_merge($_GET, $matchedRoute->vars());
+        $_GET = array_merge($_GET, $matchedRoute->getVars());
 
         // On instancie le contrôleur.
-        $controllerClass = 'App\\Modules\\' . $matchedRoute->module() . '\\' . $matchedRoute->module() . 'Controller';
-        return new $controllerClass($this, $matchedRoute->module(), $matchedRoute->action());
+        $controllerClass = 'App\\Modules\\' . $matchedRoute->getModule() . '\\' . $matchedRoute->getModule() . 'Controller';
+        return new $controllerClass($this, $matchedRoute->getModule(), $matchedRoute->getAction(), $matchedRoute->getLayout());
     }
 
 
@@ -67,12 +67,12 @@ class Application
         $this->httpResponse->send();
     }
 
-    public function gethttpRequest()
+    public function getHttpRequest()
     {
         return $this->httpRequest;
     }
 
-    public function gethttpResponse()
+    public function getHttpResponse()
     {
         return $this->httpResponse;
     }

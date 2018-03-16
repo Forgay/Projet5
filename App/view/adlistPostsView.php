@@ -104,5 +104,5 @@ $comments = getsComment();
 
 
 <?php $content = ob_get_clean(); ?>
-<?php require('backend/Backendtemplate.php'); ?>
+<?php require('backend/AdminsLayout.php'); ?>
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace gthareau\Entity;
+namespace Entity;
 
 
 class Post

@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Guillaume
- * Date: 12/03/2018
- * Time: 18:53
- */
-
-namespace gthareau;
 
 
-class HttpRequest extends ApplicationComponent
+namespace Gthareau;
+
+
+class HttpRequest
 {
 
     public function getData($key)

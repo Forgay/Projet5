@@ -94,8 +94,8 @@
 
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="/web/js/materialize.js"></script>
-<script src="/web/js/init.js"></script>
+<script src="../../web/js/materialize.js"></script>
+<script src="../../web/js/init.js"></script>
 
 </body>
 </html>

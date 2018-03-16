@@ -2,25 +2,446 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8949500e-e58b-4fc6-a42b-d465941e82fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/App/Modules/Post/PostController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/gthareau/Controller.php" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projet5.iml" afterPath="$PROJECT_DIR$/.idea/Projet5.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/App/Modules/Templates/Backendtemplate.php" afterPath="$PROJECT_DIR$/App/Templates/Backendtemplate.php" />
-      <change beforePath="$PROJECT_DIR$/App/Modules/Templates/Frontendtemplate.php" afterPath="$PROJECT_DIR$/App/Templates/Frontendtemplate.php" />
-      <change beforePath="$PROJECT_DIR$/App/config/routes.xml" afterPath="$PROJECT_DIR$/App/Config/routes.xml" />
-      <change beforePath="$PROJECT_DIR$/App/view/listPostsView.php" afterPath="$PROJECT_DIR$/App/Modules/Post/Views/listPostsView.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Application.php" afterPath="$PROJECT_DIR$/lib/gthareau/Application.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/ApplicationComponent.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Backcontroller.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity.php" afterPath="$PROJECT_DIR$/lib/gthareau/Entity.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" afterPath="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Manager.php" afterPath="$PROJECT_DIR$/lib/gthareau/Manager.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/PDOFactory.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Page.php" afterPath="$PROJECT_DIR$/lib/gthareau/Page.php" />
-      <change beforePath="$PROJECT_DIR$/lib/gthareau/Route.php" afterPath="$PROJECT_DIR$/lib/gthareau/Route.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change beforePath="$PROJECT_DIR$/App/Config/routes.xml" afterPath="$PROJECT_DIR$/App/Config/routes.xml" />
+      <change beforePath="$PROJECT_DIR$/App/Modules/Post/PostController.php" afterPath="$PROJECT_DIR$/App/Modules/Post/PostController.php" />
+      <change beforePath="$PROJECT_DIR$/App/Modules/Post/Views/listPostsView.php" afterPath="$PROJECT_DIR$/App/Modules/Post/Views/listPostsFrontView.php" />
+      <change beforePath="$PROJECT_DIR$/App/Templates/Backendtemplate.php" afterPath="$PROJECT_DIR$/App/Templates/AdminsLayout.php" />
+      <change beforePath="$PROJECT_DIR$/App/Templates/Frontendtemplate.php" afterPath="$PROJECT_DIR$/App/Templates/FrontLayout.php" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/autoload.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/ClassLoader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/autoload_classmap.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/autoload_files.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/autoload_namespaces.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/autoload_real.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/autoload_static.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/composer/installed.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/doctrine/lexer/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/doctrine/lexer/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/doctrine/lexer/composer.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/EmailLexer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/EmailParser.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/EmailValidator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/AtextAfterCFWS.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/CRLFAtTheEnd.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/CRLFX2.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/CRNoLF.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/CharNotAllowed.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/CommaInDomain.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ConsecutiveAt.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ConsecutiveDot.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/DomainHyphened.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/DotAtEnd.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/DotAtStart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ExpectingAT.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ExpectingATEXT.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ExpectingCTEXT.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ExpectingDTEXT.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ExpectingDomainLiteralClose.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/ExpectingQPair.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/InvalidEmail.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/NoDNSRecord.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/NoDomainPart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/NoLocalPart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/UnclosedComment.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/UnclosedQuotedString.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Exception/UnopenedComment.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Parser/DomainPart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Parser/LocalPart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Parser/Parser.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/DNSCheckValidation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/EmailValidation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/Error/RFCWarnings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/Error/SpoofEmail.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/Exception/EmptyValidationList.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/MultipleErrors.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/MultipleValidationWithAnd.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/NoRFCWarningsValidation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/RFCValidation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Validation/SpoofCheckValidation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/AddressLiteral.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/CFWSNearAt.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/CFWSWithFWS.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/Comment.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/DeprecatedComment.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/DomainLiteral.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/DomainTooLong.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/EmailTooLong.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/IPV6BadChar.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/IPV6ColonEnd.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/IPV6ColonStart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/IPV6Deprecated.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/IPV6DoubleColon.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/IPV6GroupCount.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/IPV6MaxGroups.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/LabelTooLong.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/LocalTooLong.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/NoDNSMXRecord.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/ObsoleteDTEXT.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/QuotedPart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/QuotedString.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/TLD.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/EmailValidator/Warning/Warning.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/composer.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/composer.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/egulias/email-validator/phpunit.xml.dist" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/.gitattributes" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/.github/ISSUE_TEMPLATE.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/.github/PULL_REQUEST_TEMPLATE.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/.php_cs.dist" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/.travis.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/CHANGES" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/README" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/composer.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/doc/headers.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/doc/index.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/doc/introduction.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/doc/japanese.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/doc/messages.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/doc/plugins.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/doc/sending.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Attachment.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/ArrayByteStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/FileByteStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/TemporaryFileByteStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/GenericFixedWidthReader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/UsAsciiReader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/Utf8Reader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReaderFactory.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReaderFactory/SimpleCharacterReaderFactory.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/ArrayCharacterStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/NgCharacterStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ConfigurableSpool.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/DependencyContainer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/DependencyException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/EmbeddedFile.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Base64Encoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/QpEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Rfc2231Encoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/CommandEvent.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/CommandListener.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/Event.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventDispatcher.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventListener.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventObject.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/ResponseEvent.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/ResponseListener.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SendEvent.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SendListener.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SimpleEventDispatcher.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportChangeEvent.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportChangeListener.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportExceptionEvent.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportExceptionListener.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FailoverTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FileSpool.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FileStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Filterable.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/IdGenerator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Image.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/InputByteStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/IoException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/ArrayKeyCache.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/DiskKeyCache.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/KeyCacheInputStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/NullKeyCache.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/SimpleKeyCacheInputStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/LoadBalancedTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/ArrayRecipientIterator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/RecipientIterator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MemorySpool.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Message.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Attachment.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/CharsetObserver.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoderProxy.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/EmbeddedFile.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/EncodingObserver.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Header.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/AbstractHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/DateHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/IdentificationHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/MailboxHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/OpenDKIMHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/ParameterizedHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/PathHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/UnstructuredHeader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/IdGenerator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimePart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderFactory.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderSet.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMessage.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMimeEntity.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MimePart.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/NullTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/OutputByteStream.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/AntiFloodPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/BandwidthMonitorPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Decorator/Replacements.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/DecoratorPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ImpersonatePlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Logger.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/LoggerPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/MessageLogger.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Connection.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Exception.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/RedirectingPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporter.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ReporterPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HitReporter.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Sleeper.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ThrottlerPlugin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Timer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Preferences.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ReplacementFilterFactory.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/RfcComplianceException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SendmailTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/BodySigner.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DKIMSigner.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DomainKeySigner.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/HeaderSigner.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/OpenDKIMSigner.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/SMimeSigner.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SmtpTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Spool.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SpoolTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilter.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilter.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilterFactory.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SwiftException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Authenticator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpHandler.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/FailoverTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/IoBuffer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/LoadBalancedTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/NullTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SendmailTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SmtpAgent.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SpoolTransport.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/classes/Swift/TransportException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/dependency_maps/cache_deps.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/dependency_maps/message_deps.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/dependency_maps/mime_deps.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/dependency_maps/transport_deps.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/mime_types.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/preferences.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/swift_required.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/phpunit.xml.dist" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/IdenticalBinaryConstraint.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/StreamCollector.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/SwiftMailerSmokeTestCase.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/SwiftMailerTestCase.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/iso-2022-jp/one.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/iso-8859-1/one.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/utf-8/one.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/utf-8/three.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/utf-8/two.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/dkim/dkim.test.priv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/dkim/dkim.test.pub" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/files/data.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/files/swiftmailer.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/files/textfile.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/CA.srl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/ca.crt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/ca.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/create-cert.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt.crt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt2.crt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt2.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/intermediate.crt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/intermediate.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign.crt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign2.crt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign2.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance.conf.php.default" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/AttachmentAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/ByteStream/FileByteStreamAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/CharacterReaderFactory/SimpleCharacterReaderFactoryAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/DependencyContainerAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/EmbeddedFileAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Encoder/Base64EncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Encoder/QpEncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Encoder/Rfc2231EncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/KeyCache/ArrayKeyCacheAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/KeyCache/DiskKeyCacheAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/MessageAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/AttachmentAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/Base64ContentEncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/NativeQpContentEncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/PlainContentEncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/QpContentEncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/EmbeddedFileAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/HeaderEncoder/Base64HeaderEncoderAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/MimePartAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/SimpleMessageAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/MimePartAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/AbstractStreamBufferAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/BasicSocketAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/ProcessAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SocketTimeoutTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SslSocketAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/TlsSocketAcceptanceTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bootstrap.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug111Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug118Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug206Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug274Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug34Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug35Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug38Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug518Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug51Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug534Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug650Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug71Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug76Test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/bug/Swift/BugFileByteStreamConsecutiveReadCallsTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/fixtures/MimeEntityFixture.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/smoke.conf.php.default" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/AttachmentSmokeTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/BasicSmokeTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/HtmlWithAttachmentSmokeTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/InternationalSmokeTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/ByteStream/ArrayByteStreamTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterReader/GenericFixedWidthReaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterReader/UsAsciiReaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterReader/Utf8ReaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterStream/ArrayCharacterStreamTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/DependencyContainerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Encoder/Base64EncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Encoder/QpEncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Encoder/Rfc2231EncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/CommandEventTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/EventObjectTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/ResponseEventTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SendEventTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SimpleEventDispatcherTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportChangeEventTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportExceptionEventTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/ArrayKeyCacheTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/SimpleKeyCacheInputStreamTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mailer/ArrayRecipientIteratorTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/MailerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/MessageTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/AbstractMimeEntityTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/AttachmentTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/Base64ContentEncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/PlainContentEncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/QpContentEncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/EmbeddedFileTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/HeaderEncoder/Base64HeaderEncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/HeaderEncoder/QpHeaderEncoderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/DateHeaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/IdentificationHeaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/MailboxHeaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/ParameterizedHeaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/PathHeaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/UnstructuredHeaderTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/IdGeneratorTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/MimePartTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderFactoryTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderSetTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleMessageTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleMimeEntityTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/AntiFloodPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/BandwidthMonitorPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/DecoratorPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/LoggerPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Loggers/ArrayLoggerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Loggers/EchoLoggerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/PopBeforeSmtpPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/RedirectingPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/ReporterPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HitReporterTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HtmlReporterTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/ThrottlerPluginTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/DKIMSignerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/OpenDKIMSignerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/SMimeSignerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/StreamFilters/ByteArrayReplacementFilterTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/StreamFilters/StringReplacementFilterFactoryTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/StreamFilters/StringReplacementFilterTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/AbstractSmtpEventSupportTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/AbstractSmtpTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/CramMd5AuthenticatorTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/LoginAuthenticatorTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/NTLMAuthenticatorTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/PlainAuthenticatorTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/AuthHandlerTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/EsmtpTransport/ExtensionSupportTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/EsmtpTransportTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/FailoverTransportTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/LoadBalancedTransportTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/SendmailTransportTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/StreamBufferTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/App/view/adlistPostsView.php" afterPath="$PROJECT_DIR$/App/view/adlistPostsView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/logonView.php" afterPath="$PROJECT_DIR$/App/view/logonView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/postView.php" afterPath="$PROJECT_DIR$/App/view/postView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/showPostView.php" afterPath="$PROJECT_DIR$/App/view/showPostView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/upPostView.php" afterPath="$PROJECT_DIR$/App/view/upPostView.php" />
+      <change beforePath="$PROJECT_DIR$/App/view/writePostView.php" afterPath="$PROJECT_DIR$/App/view/writePostView.php" />
+      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Application.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Application.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Controller.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Controller.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Entity.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Admins.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Entity/Admins.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Comment.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Entity/Comment.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Entity/Post.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/HttpRequest.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/HttpRequest.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/HttpResponse.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Manager.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Manager.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Managers.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Model/AdminsManager.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Model/AdminsManager.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Model/CommentManager.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Model/CommentManager.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Model/PostManager.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Model/PostManager.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Page.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Page.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Route.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Route.php" />
+      <change beforePath="$PROJECT_DIR$/lib/gthareau/Router.php" afterPath="$PROJECT_DIR$/Lib/Gthareau/Router.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
       <change beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
@@ -34,45 +455,30 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <executablePath>composer</executablePath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.32596043">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="Post.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Post.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/App/Modules/Post/PostController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-                  <folding>
-                    <element signature="e#37#61#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="listPostsFrontView.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Modules/Post/Views/listPostsFrontView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>text</find>
+      <find>action()</find>
     </findStrings>
+    <replaceStrings>
+      <replace>getAction()</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,23 +486,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model/PostManager.php" />
-        <option value="$PROJECT_DIR$/controller/Route.php" />
-        <option value="$PROJECT_DIR$/controller/Router.php" />
-        <option value="$PROJECT_DIR$/src/controller/frontendController.php" />
-        <option value="$PROJECT_DIR$/src/model/Admins.php" />
-        <option value="$PROJECT_DIR$/src/model/AdminsManager.php" />
-        <option value="$PROJECT_DIR$/src/model/Comment.php" />
-        <option value="$PROJECT_DIR$/src/model/CommentManager.php" />
-        <option value="$PROJECT_DIR$/src/model/Manager.php" />
-        <option value="$PROJECT_DIR$/src/model/Post.php" />
-        <option value="$PROJECT_DIR$/src/model/PostManager.php" />
-        <option value="$PROJECT_DIR$/src/controller/HTTPResquest.php" />
-        <option value="$PROJECT_DIR$/src/controller/Httpreponse.php" />
-        <option value="$PROJECT_DIR$/src/controller/HttpResponse.php" />
-        <option value="$PROJECT_DIR$/src/controller/HttpResquest.php" />
-        <option value="$PROJECT_DIR$/src/controller/ApplicationComponent.php" />
-        <option value="$PROJECT_DIR$/src/config/routes.xml" />
         <option value="$PROJECT_DIR$/src/controller/Router.php" />
         <option value="$PROJECT_DIR$/src/controller/Route.php" />
         <option value="$PROJECT_DIR$/src/controller/Application.php" />
@@ -107,10 +496,7 @@
         <option value="$PROJECT_DIR$/App/model/admin/Admins.php" />
         <option value="$PROJECT_DIR$/App/model/post/PostManager.php" />
         <option value="$PROJECT_DIR$/App/model/admin/AdminsManager.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/lib/gthareau/ApplicationComponent.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/HttpRequest.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/Router.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Model/PDOFactory.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/PDOFactory.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Managers.php" />
@@ -120,17 +506,37 @@
         <option value="$PROJECT_DIR$/lib/gthareau/Entity/Post.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Backcontroller.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Manager.php" />
-        <option value="$PROJECT_DIR$/web/index.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/Controller.php" />
-        <option value="$PROJECT_DIR$/App/Modules/Post/PostController.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Entity.php" />
         <option value="$PROJECT_DIR$/App/config/routes.xml" />
         <option value="$PROJECT_DIR$/App/Templates/Frontendtemplate.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/Route.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/Application.php" />
-        <option value="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/Page.php" />
         <option value="$PROJECT_DIR$/App/Modules/Post/Views/listPostsView.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Router.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Model/AdminsManager.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/lib/gthareau/HttpRequest.php" />
+        <option value="$PROJECT_DIR$/App/Config/routes.xml" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Route.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Model/PostManager.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Model/CommentManager.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Application.php" />
+        <option value="$PROJECT_DIR$/lib/gthareau/Controller.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Application.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Entity.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Route.php" />
+        <option value="$PROJECT_DIR$/web/index.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Model/CommentManager.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Model/AdminsManager.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Entity/Admins.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Entity/Comment.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Entity/Post.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Manager.php" />
+        <option value="$PROJECT_DIR$/Lib/Gthareau/Model/PostManager.php" />
+        <option value="$PROJECT_DIR$/App/Modules/Post/Views/listPostsFrontView.php" />
+        <option value="$PROJECT_DIR$/App/Modules/Post/PostController.php" />
+        <option value="$PROJECT_DIR$/App/Templates/FrontLayout.php" />
       </list>
     </option>
   </component>
@@ -170,6 +576,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,12 +595,6 @@
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
@@ -219,49 +621,48 @@
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lib" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,16 +671,16 @@
     <property name="SearchEverywhereHistoryKey" value="directory&#9;ACTION&#9;NewDir&#10;windo&#9;ACTION&#9;HideActiveWindow" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Projet5\view\backend" />
-      <recent name="C:\wamp64\www\Projet5\view" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Projet5\Lib\Gthareau\Model" />
+      <recent name="C:\wamp64\www\Projet5\Lib\Gthareau" />
       <recent name="C:\wamp64\www\Projet5\App\Modules\Post\Views" />
       <recent name="C:\wamp64\www\Projet5\App" />
       <recent name="C:\wamp64\www\Projet5\App\Modules\Templates" />
-      <recent name="C:\wamp64\www\Projet5\App\Frontend" />
-      <recent name="C:\wamp64\www\Projet5\lib\gthareau" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Projet5\view\backend" />
+      <recent name="C:\wamp64\www\Projet5\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,27 +723,28 @@
       <workItem from="1520498193493" duration="12358000" />
       <workItem from="1520758238787" duration="399000" />
       <workItem from="1520761217179" duration="8382000" />
-      <workItem from="1520842445675" duration="49708000" />
+      <workItem from="1520842445675" duration="49838000" />
+      <workItem from="1521014589215" duration="21872000" />
+      <workItem from="1521100657411" duration="10531000" />
+      <workItem from="1521187699785" duration="373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214037000" />
+    <option name="totallyTimeSpent" value="246943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2391" y="-9" width="2118" height="1281" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15866797" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19588639" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20092593" sideWeight="0.50195885" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18063754" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20092593" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25555557" sideWeight="0.49804112" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -350,11 +752,38 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18055555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -364,14 +793,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/frontend/topbar.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/password/password.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -379,13 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/frontend/top_bar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/App/view/frontend/top_bar.php" />
     <entry file="file://$PROJECT_DIR$/view/backend/topbar.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -448,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -459,27 +873,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/backend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="82" column="1" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/model/backend.php" />
+    <entry file="file://$PROJECT_DIR$/model/frontend.php" />
     <entry file="file://$PROJECT_DIR$/App/controller/backend.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2221">
           <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Httpreponse.php" />
+    <entry file="file://$PROJECT_DIR$/App/vendor/autoload.php" />
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Config.php" />
+    <entry file="file://$PROJECT_DIR$/App/Templates/AdminsLayout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/PDOFactory.php" />
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/ApplicationComponent.php" />
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Backcontroller.php" />
+    <entry file="file://$PROJECT_DIR$/App/controller/frontendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/view/postView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gthareau/Managers.php" />
+    <entry file="file://$PROJECT_DIR$/web/index1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Entity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/HttpRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/HttpResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="100" column="31" lean-forward="true" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Config/routes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Model/CommentManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Model/AdminsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Entity/Admins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Entity/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Model/PostManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Entity/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Modules/Post/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Templates/FrontLayout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -491,282 +1066,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Httpreponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Model/CommentManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding>
-            <marker date="1520927404280" expanded="true" signature="166:540" ph="SELECT comme... comments" />
-            <marker date="1520927404280" expanded="true" signature="780:869" ph="SELECT * FRO... comments" />
-            <marker date="1520927404280" expanded="true" signature="1074:1161" ph="INSERT INTO comments... " />
-            <marker date="1520927404280" expanded="true" signature="1365:1395" ph="SELECT COUNT... comments" />
-            <marker date="1520927404280" expanded="true" signature="1532:1572" ph="UPDATE comments... " />
-            <marker date="1520927404280" expanded="true" signature="1731:1762" ph="DELETE FROM comments... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Model/AdminsManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <marker date="1520927404274" expanded="true" signature="372:457" ph="SELECT * FRO... admins" />
-            <marker date="1520927404274" expanded="true" signature="837:939" ph="INSERT INTO admins... " />
-            <marker date="1520927404274" expanded="true" signature="1157:1184" ph="SELECT COUNT... posts" />
-            <marker date="1520927404274" expanded="true" signature="1325:1367" ph="SELECT passw... admins" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Admins.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Templates/Backendtemplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Managers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/PDOFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/ApplicationComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Model/PostManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <marker date="1520927404287" expanded="true" signature="170:206" ph="SELECT * FRO... posts" />
-            <marker date="1520927404287" expanded="true" signature="434:479" ph="SELECT * FRO... posts" />
-            <marker date="1520927404287" expanded="true" signature="434:482" ph="SELECT * FRO... posts" />
-            <marker date="1520927404287" expanded="true" signature="697:719" ph="SELECT COUNT... ${$table}" />
-            <marker date="1520927404287" expanded="true" signature="697:724" ph="SELECT COUNT... posts" />
-            <marker date="1520927404287" expanded="true" signature="1001:1099" ph="INSERT INTO posts... " />
-            <marker date="1520927404287" expanded="true" signature="1396:1490" ph="UPDATE posts... " />
-            <marker date="1520927404287" expanded="true" signature="1607:1635" ph="DELETE FROM comments... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="12" />
-          <folding />
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Templates/Frontendtemplate.php">
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="35">
+          <caret line="23" column="73" lean-forward="true" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Backcontroller.php">
+    <entry file="file://$PROJECT_DIR$/App/Modules/Post/Views/listPostsFrontView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+        <state relative-caret-position="216">
+          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/HttpRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/HttpResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/controller/frontendController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Entity/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Modules/Post/Views/listPostsView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Config/routes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/postView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gthareau/Page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Modules/Post/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="e#37#61#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

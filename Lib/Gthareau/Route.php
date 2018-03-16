@@ -1,7 +1,7 @@
 <?php
 
 
-namespace gthareau;
+namespace Gthareau;
 
 
 class Route
@@ -9,14 +9,16 @@ class Route
     protected $url;
     protected $module;
     protected $action;
+    protected $layout;
     protected $varsNames;
     protected $vars = [];
 
-    public function __construct($url, $module, $action, array $varsNames)
+    public function __construct($url, $module, $action, $layout, array $varsNames)
     {
         $this->setUrl($url);
         $this->setModule($module);
         $this->setAction($action);
+        $this->setLayout($layout);
         $this->setVarsNames($varsNames);
     }
 
@@ -71,23 +73,38 @@ class Route
         $this->vars = $vars;
     }
 
-    public function action()
+    Public function setLayout($layout)
+    {
+        $this->layout =$layout;
+    }
+
+    public function getAction()
     {
         return $this->action;
     }
 
-    public function module()
+    public function getModule()
     {
         return $this->module;
     }
 
-    public function vars()
+    public function getVars()
     {
         return $this->vars;
     }
 
-    public function varsNames()
+    public function getVarsNames()
     {
         return $this->varsNames;
+    }
+
+    public function getLayout()
+    {
+        return $this->layout;
+    }
+
+    public function getUrl()
+    {
+        return $this->url;
     }
 }

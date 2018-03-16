@@ -6,8 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'gthareau\\' => array($baseDir . '/lib/gthareau'),
-    'Model\\' => array($baseDir . '/lib/Model'),
-    'Entity\\' => array($baseDir . '/lib/Entity'),
+    'Model\\' => array($baseDir . '/Lib/Gthareau/Model'),
+    'Gthareau\\' => array($baseDir . '/Lib/Gthareau'),
+    'Entity\\' => array($baseDir . '/Lib/Gthareau/Entity'),
+    'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),
     'App\\' => array($baseDir . '/App'),
 );

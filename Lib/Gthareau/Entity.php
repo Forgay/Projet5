@@ -1,7 +1,7 @@
 <?php
 
 
-namespace gthareau;
+namespace Gthareau;
 
 
 abstract class Entity implements \ArrayAccess
@@ -15,17 +15,17 @@ abstract class Entity implements \ArrayAccess
         }
     }
 
-    public function isNew()
+    public function getIsNew()
     {
         return empty($this->id);
     }
 
-    public function errors()
+    public function getErrors()
     {
         return $this->errors;
     }
 
-    public function id()
+    public function getId()
     {
         return $this->id;
     }

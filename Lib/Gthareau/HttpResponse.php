@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Guillaume
- * Date: 12/03/2018
- * Time: 19:01
- */
 
-namespace gthareau;
+
+namespace Gthareau;
 
 
 class HttpResponse

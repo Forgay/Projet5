@@ -8,10 +8,10 @@
   ],
   "autoload": {
     "psr-4": {
-      "App\\": "App",
-      "gthareau\\": "lib/gthareau/",
-      "Model\\": "lib/Model/",
-      "Entity\\": "lib/Entity/"
+      "App\\": "App/",
+      "Gthareau\\": "Lib/Gthareau/",
+      "Model\\": "Lib/Gthareau/Model/",
+      "Entity\\": "Lib/Gthareau/Entity/"
       }
   },
   "require": {

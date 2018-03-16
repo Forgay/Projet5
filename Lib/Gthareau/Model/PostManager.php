@@ -1,16 +1,17 @@
 <?php
 
 
-namespace App\model\post;
+namespace Model;
 
-use gthareau\Manager;
+use Gthareau\Manager;
+
 
 class PostManager extends Manager
 {
 
     public function getPosts()
     {
-        $req = $this->setDb()->query('SELECT * FROM posts ORDER BY id DESC');
+        $req = $this->getDb()->query('SELECT * FROM posts ORDER BY id DESC');
         $results = array();
         while ($rows = $req->fetchAll()) {
             $results[] = $rows;
@@ -20,7 +21,7 @@ class PostManager extends Manager
 
     public function getPost($id)
     {
-        $req = $this->setDb()->prepare("SELECT * FROM posts WHERE posted= 1 AND id = :id");
+        $req = $this->getDb()->prepare("SELECT * FROM posts WHERE posted= 1 AND id = :id");
         $req->bindValue(':id', $id);
         $req->execute(array($id));
         $post = $req->fetch();
@@ -30,7 +31,7 @@ class PostManager extends Manager
     public function CountPost()
     {
 
-        $query = $this->setDb()->query("SELECT COUNT(id) FROM posts");
+        $query = $this->getDb()->query("SELECT COUNT(id) FROM posts");
         return $nombre = $query->fetch();
     }
 
@@ -41,7 +42,7 @@ class PostManager extends Manager
             'content' => $content,
             'posted' => $posted
         ];
-        $req = $this->setDb()->prepare("INSERT INTO posts(title,content,writer,date,posted) VALUES (:title,:content,'admin',NOW(),:posted)");
+        $req = $this->getDb()->prepare("INSERT INTO posts(title,content,writer,date,posted) VALUES (:title,:content,'admin',NOW(),:posted)");
         $req->execute($p);
 
     }
@@ -54,13 +55,13 @@ class PostManager extends Manager
             'posted' => $posted,
             'id' => $id
         ];
-        $req = $this->setDb()->prepare("UPDATE posts SET title=:title, content=:content, datemodify=NOW(), posted=:posted WHERE id=:id");
+        $req = $this->getDb()->prepare("UPDATE posts SET title=:title, content=:content, datemodify=NOW(), posted=:posted WHERE id=:id");
         $req->execute($a);
     }
 
     public function delPost($id)
     {
-        $req = $this->setDb()->prepare("DELETE FROM posts WHERE id=? ");
+        $req = $this->getDb()->prepare("DELETE FROM posts WHERE id=? ");
         $req->execute(array($id));
 
     }

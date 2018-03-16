@@ -1,7 +1,7 @@
 <?php
 
 
-namespace gthareau;
+namespace Gthareau;
 
 
 class Controller
@@ -44,7 +44,7 @@ class Controller
             throw new \InvalidArgumentException('La vue doit être une chaine de caractères non nulle.');
         }
         $this->view = $view;
-        $this->page->setContentFile(__DIR__.'/../../App/Modules/'.$this->module.'/Views/'.$this->view.'view.php');
+        $this->page->setContentFile(__DIR__.'/../../App/Modules/'.$this->module.'/Views/'.$this->view.'View.php');
     }
 
     public function setLayout($layout)

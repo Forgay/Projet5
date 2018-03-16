@@ -1,11 +1,9 @@
-<?php
 
-ob_start(); ?>
 
 <div class="section">
     <div class="row">
         <?php
-        foreach($listpost as $post){
+        foreach($listposts as $post){
             ?>
             <div class="col l6 m6 s12">
                 <div class="card">
@@ -64,6 +62,5 @@ ob_start(); ?>
     </a>
 </form>
 
-<?php $content = ob_get_clean();?>
-<?php require('template.php'); ?>
+
 
