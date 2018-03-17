@@ -7,6 +7,7 @@ use Gthareau\Manager;
 use Entity\Post;
 
 
+
 class PostManager extends Manager
 {
 

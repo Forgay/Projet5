@@ -66,7 +66,7 @@ switch ($page) {
             addConnect();
         }
 
-        require('../view/logonView.php');
+        require('../View/logonView.php');
 
         break;
 
@@ -88,7 +88,7 @@ switch ($page) {
             getsComment();
 
 
-            include('../view/adlistPostsView.php');
+            include('../View/adlistPostsView.php');
 
 
         } else {
@@ -107,7 +107,7 @@ switch ($page) {
 
         validComment();
 
-        include('../view/adlistPostsView.php');
+        include('../View/adlistPostsView.php');
 
         break;
 
@@ -116,7 +116,7 @@ switch ($page) {
 
         delComment();
 
-        include('../view/adlistPostsView.php');
+        include('../View/adlistPostsView.php');
 
         break;
 
@@ -126,12 +126,12 @@ switch ($page) {
 
             writePost();
         } else {
-            include('../view/writePostView.php');
+            include('../View/writePostView.php');
         }
         break;
     case 'list':
 
-    include('../view/showPostView.php');
+    include('../View/showPostView.php');
 
     break;
 
@@ -148,12 +148,12 @@ switch ($page) {
 
     case 'error':
 
-        require('../view/404.php');
+        require('../View/404.php');
 
         break;
 
     default:
         header('HTTP/1.0 404 Not Found');
-        require('../view/404.php');
+        require('../View/404.php');
         break;
 }

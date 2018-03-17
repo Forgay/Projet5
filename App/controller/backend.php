@@ -12,7 +12,7 @@ function addInscription()
 
     if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) {
 
-        require('../view/adlistPostsView.php');
+        require('../View/adlistPostsView.php');
     }
     if (isset($pseudo) && isset($email) && isset($password) && isset($passwordverif)) {
 
@@ -26,7 +26,7 @@ function addInscription()
             addAdmin($_POST['pseudo'], $_POST['email'], $_POST['password']);
 
             $confirinscription = "L'inscription s'est bien passé !Connectez vous";
-            header('location:../view/logonView.php');
+            header('location:../View/logonView.php');
         }
         if ($pseudo == $verifpseudo && $email == $verifemail && $password != $passwordverif) {
 
@@ -73,7 +73,7 @@ function addConnect()
 
     if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) {
 
-        require('../view/adlistPostsView.php');
+        require('../View/adlistPostsView.php');
     }
     if (isset($pseudo) && isset($email) && isset($password)) {
 
@@ -83,7 +83,7 @@ function addConnect()
         if (!$isPasswordCorrect) {
             $errors ['baspassword'] = "Votre mot de passe est erronée";
         } else {
-            require('../view/adlistPostsView.php');
+            require('../View/adlistPostsView.php');
         }
     }
 
@@ -95,7 +95,7 @@ function logout()
     session_start();
     $_SESSION = array();
     session_destroy();
-    header('Location:../view/listPostView.php');
+    header('Location:../View/listPostView.php');
 }
 
 function addTable($tables)
@@ -117,7 +117,7 @@ function validComment()
     if (isset($_GET['id'])) {
         $valid = validCom($_GET['id']);
 
-        require("../view/adlistPostsView.php");
+        require("../View/adlistPostsView.php");
     } else {
         echo "pas bon";
     }
@@ -127,7 +127,7 @@ function delComment()
 {
     if (isset($_GET['id'])) {
         $delete = delCom($_GET['id']);
-        require("../view/adlistPostsView.php");
+        require("../View/adlistPostsView.php");
     }
 
 }
@@ -178,7 +178,7 @@ function adpost()
         $postad = adgetPost($_GET['id']);
 
 
-        require('../view/upPostView.php');
+        require('../View/upPostView.php');
 
 
         if (isset($_POST['submit'])) {

@@ -3,6 +3,7 @@
 
 namespace Entity;
 
+use Gthareau\Entity;
 
 class Post
 {

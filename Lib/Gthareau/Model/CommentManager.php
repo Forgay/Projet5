@@ -4,7 +4,7 @@
 namespace Model;
 
 use Gthareau\Manager;
-use Gthareau\Entity\Comment;
+use Entity\Comment;
 
 
 class CommentManager extends Manager

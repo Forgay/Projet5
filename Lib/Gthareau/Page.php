@@ -2,7 +2,7 @@
 
 
 namespace Gthareau;
-
+use Gthareau\Application;
 
 class Page extends Application
 {

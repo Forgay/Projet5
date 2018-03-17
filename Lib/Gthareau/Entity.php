@@ -3,6 +3,7 @@
 
 namespace Gthareau;
 
+use Gthareau\Session;
 
 abstract class Entity implements \ArrayAccess
 {

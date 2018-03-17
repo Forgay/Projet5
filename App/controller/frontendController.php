@@ -10,7 +10,7 @@ function listPost()
     $posts = new PostManager();
     $this->getPosts();
 
-    require('../view/listPostsView.php');
+    require('../View/listPostsView.php');
 }
 
 function post()
@@ -20,7 +20,7 @@ function post()
     $post = getPost($_GET['id']);
     $postcomment = getComments($_GET['id']);
 
-    require('../view/postView.php');
+    require('../View/postView.php');
 }
 
 function addComment($nom, $email, $comment, $postId)

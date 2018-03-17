@@ -12,7 +12,7 @@
                         <h6 class="grey-text">Le <?= date_format(date_create($post->getDate()),'d/m/Y à M:i'); ?> par <?= $post->getWriter() ?></h6>
                     </div>
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img src="../web/img/posts/<?= $post->getImage() ?>.jpg" class="activator" alt="<?= $post->getTitle()?>"/>
+                        <img src="../../web/img/posts/<?= $post->getImage() ?>.jpg" class="activator" alt="<?= $post->getTitle()?>"/>
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>

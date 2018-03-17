@@ -3,6 +3,8 @@
 
 namespace Gthareau;
 
+use Entity\Admins;
+use Gthareau\Session;
 
 class Application
 {
@@ -22,7 +24,7 @@ class Application
         $router = new Router;
 
         $xml = new \DOMDocument;
-        $xml->load(__DIR__ . '/../../App/config/routes.xml');
+        $xml->load(__DIR__ . '/../../App/Config/routes.xml');
 
         $routes = $xml->getElementsByTagName('route');
 

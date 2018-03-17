@@ -54,7 +54,7 @@ class Controller
             throw new \InvalidArgumentException('le layout doit etre une chaine de caractéres.');
         }
         $this->layout=$layout;
-        $this->page->setLayout(__DIR__.'/../../App/Templates/' . $this->layout . 'Layout.php');
+        $this->page->setLayout(__DIR__ . '/../../App/Templates/' . $this->layout . 'Layout.php');
     }
 
     public function getApp()

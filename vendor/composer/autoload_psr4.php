@@ -6,8 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Twig\\' => array($vendorDir . '/twig/twig/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Src\\' => array($baseDir . '/Src'),
     'Model\\' => array($baseDir . '/Lib/Gthareau/Model'),
-    'Gthareau\\' => array($baseDir . '/Lib/Gthareau'),
     'Entity\\' => array($baseDir . '/Lib/Gthareau/Entity'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),
     'App\\' => array($baseDir . '/App'),

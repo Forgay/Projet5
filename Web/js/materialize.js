@@ -4178,13 +4178,13 @@ if (Vel) {
         right = left + jWindow.width(),
         bottom = top + jWindow.height();
 
-    // determine which elements are in view
+    // determine which elements are in View
     var intersections = findElements(top + offset.top + scrollOffset || 200, right + offset.right, bottom + offset.bottom, left + offset.left);
     $.each(intersections, function (i, element) {
 
       var lastTick = element.data('scrollSpy:ticks');
       if (typeof lastTick != 'number') {
-        // entered into view
+        // entered into View
         element.triggerHandler('scrollSpy:enter');
       }
 
@@ -4192,17 +4192,17 @@ if (Vel) {
       element.data('scrollSpy:ticks', ticks);
     });
 
-    // determine which elements are no longer in view
+    // determine which elements are no longer in View
     $.each(elementsInView, function (i, element) {
       var lastTick = element.data('scrollSpy:ticks');
       if (typeof lastTick == 'number' && lastTick !== ticks) {
-        // exited from view
+        // exited from View
         element.triggerHandler('scrollSpy:exit');
         element.data('scrollSpy:ticks', null);
       }
     });
 
-    // remember elements in view for next tick
+    // remember elements in View for next tick
     elementsInView = intersections;
   }
 
@@ -6534,7 +6534,7 @@ if (Vel) {
           }
 
           // Pass focus to the root element’s jQuery object.
-          // * Workaround for iOS8 to bring the picker’s root into view.
+          // * Workaround for iOS8 to bring the picker’s root into View.
           P.$root.eq(0).focus();
 
           // Bind the document events.
@@ -7415,7 +7415,7 @@ if (Vel) {
     calendar.set('min', settings.min).set('max', settings.max).set('now');
 
     // When there’s a value, set the `select`, which in turn
-    // also sets the `highlight` and `view`.
+    // also sets the `highlight` and `View`.
     if (valueString) {
       calendar.set('select', valueString, { format: formatString });
     }
@@ -7665,8 +7665,8 @@ if (Vel) {
         targetDate = +value[2];
       }
 
-      // If we’re navigating months but the view is in a different
-      // month, navigate to the view’s year and month.
+      // If we’re navigating months but the View is in a different
+      // month, navigate to the View’s year and month.
       if (options && options.nav && viewsetObject && viewsetObject.month !== targetMonth) {
         targetYear = viewsetObject.year;
         targetMonth = viewsetObject.month;
@@ -8450,7 +8450,7 @@ if (Vel) {
 
             return [_.node('div', targetDate.date, function (klasses) {
 
-              // Add the `infocus` or `outfocus` classes based on month in view.
+              // Add the `infocus` or `outfocus` classes based on month in View.
               klasses.push(viewsetObject.month == targetDate.month ? settings.klass.infocus : settings.klass.outfocus);
 
               // Add the `today` class if needed.
@@ -8722,7 +8722,7 @@ if (Vel) {
         radian,
         radius;
 
-    // Hours view
+    // Hours View
     if (options.twelvehour) {
       for (i = 1; i < 13; i += 1) {
         tick = tickTpl.clone();
@@ -8752,7 +8752,7 @@ if (Vel) {
       }
     }
 
-    // Minutes view
+    // Minutes View
     for (i = 0; i < 60; i += 5) {
       tick = tickTpl.clone();
       radian = i / 30 * Math.PI;
@@ -8765,7 +8765,7 @@ if (Vel) {
       tick.on(mousedownEvent, mousedown);
     }
 
-    // Clicking on minutes view space
+    // Clicking on minutes View space
     plate.on(mousedownEvent, function (e) {
       if ($(e.target).closest('.clockpicker-tick').length === 0) {
         mousedown(e, true);
@@ -8783,7 +8783,7 @@ if (Vel) {
           z = Math.sqrt(dx * dx + dy * dy),
           moved = false;
 
-      // When clicking on minutes view space, check the mouse position
+      // When clicking on minutes View space, check the mouse position
       if (space && (z < outerRadius - tickRadius || z > outerRadius + tickRadius)) {
         return;
       }
@@ -8977,7 +8977,7 @@ if (Vel) {
       });
       this.isAppended = true;
     }
-    // Toggle to hours view
+    // Toggle to hours View
     this.toggleView('hours');
     // Set position
     this.locate();
@@ -9013,7 +9013,7 @@ if (Vel) {
     this.popover.hide();
     raiseCallback(this.options.afterHide);
   };
-  // Toggle to hours or minutes view
+  // Toggle to hours or minutes View
   ClockPicker.prototype.toggleView = function (view, delay) {
     var raiseAfterHourSelect = false;
     if (view === 'minutes' && $(this.hoursView).css("visibility") === "visible") {
