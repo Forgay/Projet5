@@ -3,6 +3,7 @@
 
 namespace Core\Routing;
 
+use Core\Routing\Route;
 
 class Router
 {
@@ -16,28 +17,28 @@ class Router
 
     public function loadRoutes()
     {
-        $route = require __DIR__.'./../../Config/routes.php';
+        $route = require __DIR__ . './../../Config/routes.php';
 
-        foreach ($route as $route)
-        {
-            $this->routes[] = new Route ($route['path'], $route['action'],$route['params']);
+        foreach ($route as $route) {
+            $this->routes[] = new Route ($route['path'], $route['action'], $route['params']);
         }
     }
 
     public function catchParams(string $request, array $params)
     {
         $params = preg_match($params, $request, $results);
-        //... si le paramètre correspond au besoin, récupére le paramètre.
-        $route->setPath($path);
+        if ($results) {
+            $route->getParams($params);
+        } else {
+            $route->setPath($path);
+        }
     }
 
     public function handleResquest(string $request)
     {
-        foreach ($this->routes as $route)
-        {
-            $this->catchParams($request,$route->getParams());
-            if ($route->getPath()=== $request)
-            {
+        foreach ($this->routes as $route) {
+            $this->catchParams($request, $route->getParams());
+            if ($route->getPath() === $request) {
                 $action = $this->actionResolver->create($route->getAction());
                 return $action;
             }
