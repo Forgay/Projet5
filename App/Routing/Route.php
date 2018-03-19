@@ -3,6 +3,7 @@
 
 namespace Core\Routing;
 
+use Core\Routing\ActionResolver;
 
 class Route
 {

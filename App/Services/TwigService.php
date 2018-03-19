@@ -12,7 +12,7 @@ abstract class TwigService
     {
         if (TwigService::$twig === null)
         {
-            $loader = new Twig_Loader_Filesystem('../src/View');
+            $loader = new Twig_Loader_Filesystem('./View');
             TwigService::$twig = new Twig_Environment($loader, [
                 'cache' => false //'../var/twig',
             ]);

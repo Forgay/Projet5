@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Entity;
+namespace App\Models;
 
-use Gthareau\Entity;
+use App\Manager\PostManager ;
 
 class Post
 {

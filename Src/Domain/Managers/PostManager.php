@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Model;
+namespace App\Manager;
 
-use Gthareau\Manager;
+use Core\Bdd\Manager;
 use Entity\Post;
 
 
@@ -13,7 +13,7 @@ class PostManager extends Manager
 
     public function getPosts()
     {
-        $req = $this->getDb()->query('SELECT * FROM posts ORDER BY id DESC');
+        $req = $this->getConnexion()->query('SELECT * FROM posts ORDER BY id DESC');
         $results = array();
         while ($rows = $req->fetchAll()) {
             $results[] = $rows;
@@ -23,7 +23,7 @@ class PostManager extends Manager
 
     public function getPost($id)
     {
-        $req = $this->getDb()->prepare("SELECT * FROM posts WHERE posted= 1 AND id = :id");
+        $req = $this->getConnexion()->prepare("SELECT * FROM posts WHERE posted= 1 AND id = :id");
         $req->bindValue(':id', $id);
         $req->execute(array($id));
         $post = $req->fetch();
@@ -33,7 +33,7 @@ class PostManager extends Manager
     public function CountPost()
     {
 
-        $query = $this->getDb()->query("SELECT COUNT(id) FROM posts");
+        $query = $this->getConnexion()->query("SELECT COUNT(id) FROM posts");
         return $nombre = $query->fetch();
     }
 
@@ -44,7 +44,7 @@ class PostManager extends Manager
             'content' => $content,
             'posted' => $posted
         ];
-        $req = $this->getDb()->prepare("INSERT INTO posts(title,content,writer,date,posted) VALUES (:title,:content,'admin',NOW(),:posted)");
+        $req = $this->getConnexion()->prepare("INSERT INTO posts(title,content,writer,date,posted) VALUES (:title,:content,'admin',NOW(),:posted)");
         $req->execute($p);
 
     }
@@ -57,13 +57,13 @@ class PostManager extends Manager
             'posted' => $posted,
             'id' => $id
         ];
-        $req = $this->getDb()->prepare("UPDATE posts SET title=:title, content=:content, datemodify=NOW(), posted=:posted WHERE id=:id");
+        $req = $this->getConnexion()->prepare("UPDATE posts SET title=:title, content=:content, datemodify=NOW(), posted=:posted WHERE id=:id");
         $req->execute($a);
     }
 
     public function delPost($id)
     {
-        $req = $this->getDb()->prepare("DELETE FROM posts WHERE id=? ");
+        $req = $this->getConnexion()->prepare("DELETE FROM posts WHERE id=? ");
         $req->execute(array($id));
 
     }

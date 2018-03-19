@@ -11,12 +11,12 @@ class Manager
     public function __construct()
     {
         $this->loadConf();
-        $this->getConnection();
+        $this->getConnexion();
     }
 
     public function loadConf()
     {
-        $this->conf = require __DIR__.'./../Config/confDb.php';
+        $this->conf = require __DIR__.'./../../Config/confDb.php';
     }
 
     public function getConnexion()
