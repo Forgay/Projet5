@@ -21,13 +21,8 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Src\\' => 4,
         ),
-        'M' => 
-        array (
-            'Model\\' => 6,
-        ),
         'E' => 
         array (
-            'Entity\\' => 7,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'A' => 
@@ -48,14 +43,6 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
         'Src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Src',
-        ),
-        'Model\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Lib/Gthareau/Model',
-        ),
-        'Entity\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Lib/Gthareau/Entity',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

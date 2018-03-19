@@ -9,9 +9,7 @@
   "autoload": {
     "psr-4": {
       "App\\": "App/",
-      "Src\\": "Src/",
-      "Model\\": "Lib/Gthareau/Model/",
-      "Entity\\": "Lib/Gthareau/Entity/"
+      "Src\\": "Src/"
       }
   },
   "require": {

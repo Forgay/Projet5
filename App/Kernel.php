@@ -1,9 +1,10 @@
 <?php
 
 
-namespace Core;
+namespace App;
 
 
+use App\Routing\Router;
 
 class Kernel
 {

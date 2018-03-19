@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Core\Routing;
+namespace App\Routing;
 
-use Core\Routing\ActionResolver;
+use App\Routing\ActionResolver;
 
 class Route
 {

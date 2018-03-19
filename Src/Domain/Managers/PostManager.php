@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Manager;
+namespace Src\Managers;
 
-use Core\Bdd\Manager;
-use Entity\Post;
+use App\Bdd\Manager;
+
 
 
 

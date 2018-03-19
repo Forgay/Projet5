@@ -9,8 +9,6 @@ return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Src\\' => array($baseDir . '/Src'),
-    'Model\\' => array($baseDir . '/Lib/Gthareau/Model'),
-    'Entity\\' => array($baseDir . '/Lib/Gthareau/Entity'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),
     'App\\' => array($baseDir . '/App'),
 );

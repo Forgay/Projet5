@@ -3,6 +3,8 @@
 
 namespace App\Services;
 
+use Twig_Environment;
+use Twig_Loader_Filesystem;
 
 abstract class TwigService
 {
@@ -12,7 +14,7 @@ abstract class TwigService
     {
         if (TwigService::$twig === null)
         {
-            $loader = new Twig_Loader_Filesystem('./View');
+            $loader = new Twig_Loader_Filesystem('./.../Src/View');
             TwigService::$twig = new Twig_Environment($loader, [
                 'cache' => false //'../var/twig',
             ]);

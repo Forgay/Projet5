@@ -61,4 +61,4 @@
     </div>
 
     <?php $content = ob_get_clean(); ?>
-<?php require('frontend/FrontLayout.php'); ?>
+<?php require('frontend/FrontLayout.html.twig'); ?>

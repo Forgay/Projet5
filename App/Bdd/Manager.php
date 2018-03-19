@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Core\Bdd;
+namespace App\Bdd;
 
 
 class Manager

@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Models;
+namespace Src\Models;
 
-use App\Manager\PostManager ;
+use Src\Managers\PostManager ;
 
 class Post
 {

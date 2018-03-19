@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Core\Routing;
+namespace App\Routing;
 
-use Core\Routing\Route;
+use App\Routing\Route;
 
 class Router
 {
@@ -13,6 +13,7 @@ class Router
     public function __construct()
     {
         $this->actionResolver = new ActionResolver();
+
     }
 
     public function loadRoutes()

@@ -1,5 +1,7 @@
 <?php
-ob_start(); ?>
+ob_start();
+
+?>
 
     <div class="section">
 
@@ -11,7 +13,7 @@ ob_start(); ?>
                 <div class="row">
                     <img src="../../Web/img/admin.png" alt="administrateur" width="50%"/>
                 </div>
-                <h4 class="center-align">S'inscrire</h4>
+                <h4 class="center-align">Se connecter</h4>
                 <?php if (!empty($errors)) {
                     ?>
                     <div class="card red">
@@ -21,11 +23,10 @@ ob_start(); ?>
                             } ?>
                         </div>
                     </div>
-                    <?php
-                } ?>
+                <?php } ?>
 
 
-                <form action="../../Web/index1.php?action=inscription" method="POST">
+                <form action="../../Web/index1.php?action=connexion" method="POST">
                     <div class="row">
                         <div class="input-field col s12">
                             <input type="text" id="pseudo" name="pseudo"/>
@@ -34,17 +35,13 @@ ob_start(); ?>
 
                         <div class="input-field col s12">
                             <input type="email" id="email" name="email"/>
-                            <label for="password">votre adresse mail</label>
+                            <label for="email">votre adresse mail</label>
                         </div>
                         <div class="input-field col s12">
                             <input type="password" id="password" name="password"/>
                             <label for="password">Mot de passe</label>
                         </div>
 
-                        <div class="input-field col s12">
-                            <input type="password" id="passwordverif" name="passwordverif"/>
-                            <label for="passwordverif">Vérification du mot de passe</label>
-                        </div>
                     </div>
 
                     <button type="submit" name="submit" class="waves-effect waves-light btn light-green">
@@ -52,11 +49,11 @@ ob_start(); ?>
                         Se connecter
                     </button>
                     <br/><br/>
-                    <a href="ew.php">s'identifier</a>
+                    <a href="../../Web/index.php">Nous rejoindre !</a>
 
             </div>
 
         </div>
     </div>
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('frontend/FrontLayout.html.twig'); ?>

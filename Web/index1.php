@@ -148,12 +148,12 @@ switch ($page) {
 
     case 'error':
 
-        require('../View/404.php');
+        require('../View/404.html.twig');
 
         break;
 
     default:
         header('HTTP/1.0 404 Not Found');
-        require('../View/404.php');
+        require('../View/404.html.twig');
         break;
 }
