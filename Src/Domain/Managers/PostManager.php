@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Src\Managers;
+namespace Src\Domain\Managers;
 
 use App\Bdd\Manager;
 

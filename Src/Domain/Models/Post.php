@@ -3,7 +3,7 @@
 
 namespace Src\Models;
 
-use Src\Managers\PostManager ;
+use Src\Domain\Managers\PostManager ;
 
 class Post
 {

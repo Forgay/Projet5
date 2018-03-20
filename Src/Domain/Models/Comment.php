@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Entity;
+namespace Src\Models;
 
-use Gthareau\Entity;
+use Src\Domain\Managers\CommentManager;
 
 class Comment
 {
