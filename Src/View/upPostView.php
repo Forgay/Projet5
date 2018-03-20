@@ -40,4 +40,4 @@ ob_start();
 
 </form>
 <?php $content = ob_get_clean(); ?>
-<?php require('backend/AdminsLayout.php'); ?>
+<?php require('backend/AdminsLayout.html.twig'); ?>

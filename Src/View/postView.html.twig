@@ -1,4 +1,5 @@
-<?php ob_start(); ?>
+{% extends 'FrontLayout.html.twig' %}
+{% block content %}
 
     <div class="section">
 
@@ -7,12 +8,12 @@
             <div class="col s12 center">
                 <h3><i class="mdi-content-send brown-text"></i></h3>
                 <div class="card-image">
-                    <img src="../web/img/posts/<?=$post['image']?>.jpg" width="50%"/>
+                    <img src="../web/img/posts/{{post.image}}.jpg" width="50%"/>
                 </div>
-                <h4><?= htmlspecialchars($post['title']) ?> </h4>
-                <p class="left-align light"><?=nl2br($post['content']) ?></p>
-                <h5><?= htmlspecialchars($post['writer']) ?></h5>
-                <h6>le <?= htmlspecialchars(date("d/m/Y à H:i", strtotime($post['date']))) ?></h6>
+                <h4>{{post.title}} </h4>
+                <p class="left-align light">{{post.content}} ?></p>
+                <h5>{{post.writer}}</h5>
+                <h6>le {{post.date | date("d/m/Y")}} ?></h6>
             </div>
 
         </div>
@@ -45,20 +46,15 @@
     <div class="section">
 
         <div class="row">
-            <?php while ($postc = $postcomment->fetch()){ ?>
+            {% for comment in comments  %}}
                 <div class="col s12 m4">
                     <div class="icon-block">
 
-                        <h5 class="center"><?=$postc['nom'] . 'le ' .htmlspecialchars(date("d/m/Y à H:i", strtotime($postc['date_comment']))) ?></h5>
-                        <p class="left-align light"><?= $postc['comment'] ?></p>
+                        <h5 class="center">{{ comment.nom }} le {{ comment.date | date("d/m/Y") }}</h5>
+                        <p class="left-align light">{{ comment.comment }}</p>
                     </div>
                 </div>
-            <?php
-            }
-            $postcomment ->closeCursor();
-            ?>
+            {% endfor %}
         </div>
     </div>
-
-    <?php $content = ob_get_clean(); ?>
-<?php require('frontend/FrontLayout.html.twig'); ?>
+{% endblock %}

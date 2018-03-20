@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,11 +17,11 @@
         <a id="logo-container" href="../../Web/index1.php?action=home" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="../../Web/index1.php?action=login">Se connecter</a></li>
-            
+
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li><a href="../../Web/index1.php?action=login">Se connecter</a></li>
-            
+
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -49,7 +48,10 @@
 
 
 <div class="container">
-    <?= $content ?>
+    {% block content %}
+    {% endblock %}
+    {% block contact %}
+    {% endblock %}
 </div>
 
 

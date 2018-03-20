@@ -20,7 +20,7 @@ function post()
     $post = getPost($_GET['id']);
     $postcomment = getComments($_GET['id']);
 
-    require('../View/postView.php');
+    require('../View/postView.html.twig');
 }
 
 function addComment($nom, $email, $comment, $postId)
