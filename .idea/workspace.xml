@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8949500e-e58b-4fc6-a42b-d465941e82fb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Src/UI/Action/PostDetailAction.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/App/Routing/ActionResolver.php" afterPath="$PROJECT_DIR$/App/Routing/ActionResolver.php" />
+      <change beforePath="$PROJECT_DIR$/App/Routing/Route.php" afterPath="$PROJECT_DIR$/App/Routing/Route.php" />
       <change beforePath="$PROJECT_DIR$/App/Routing/Router.php" afterPath="$PROJECT_DIR$/App/Routing/Router.php" />
-      <change beforePath="$PROJECT_DIR$/App/Services/TwigService.php" afterPath="$PROJECT_DIR$/App/Services/TwigService.php" />
-      <change beforePath="$PROJECT_DIR$/Lib/Gthareau/Entity.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Lib/Gthareau/Entity.php" afterPath="$PROJECT_DIR$/App/Services/Entity.php" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Models/Comment.php" afterPath="$PROJECT_DIR$/Src/Domain/Models/Comment.php" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Models/Post.php" afterPath="$PROJECT_DIR$/Src/Domain/Models/Post.php" />
+      <change beforePath="$PROJECT_DIR$/Config/routes.php" afterPath="$PROJECT_DIR$/Config/routes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,19 +22,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PostManager.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Src/Domain/Managers/PostManager.php">
+      <file leaf-file-name="ActionResolver.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Routing/ActionResolver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <marker date="1521535598916" expanded="true" signature="184:220" ph="SELECT * FRO... posts" />
-                <marker date="1521535598916" expanded="true" signature="455:503" ph="SELECT * FRO... posts" />
-                <marker date="1521535598916" expanded="true" signature="725:752" ph="SELECT COUNT... posts" />
-                <marker date="1521535598916" expanded="true" signature="1036:1134" ph="INSERT INTO posts... " />
-                <marker date="1521535598916" expanded="true" signature="1438:1532" ph="UPDATE posts... " />
-                <marker date="1521535598916" expanded="true" signature="1656:1684" ph="DELETE FROM posts... " />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/HttpRequest.php" />
         <option value="$PROJECT_DIR$/App/Config/routes.xml" />
         <option value="$PROJECT_DIR$/lib/gthareau/Route.php" />
@@ -98,18 +89,19 @@
         <option value="$PROJECT_DIR$/Src/Domain/Managers/CommentManager.php" />
         <option value="$PROJECT_DIR$/Src/Domain/Managers/PostManager.php" />
         <option value="$PROJECT_DIR$/Web/index.php" />
-        <option value="$PROJECT_DIR$/App/Routing/ActionResolver.php" />
         <option value="$PROJECT_DIR$/Src/View/AdminsLayout.html.twig" />
         <option value="$PROJECT_DIR$/Src/View/postView.php" />
         <option value="$PROJECT_DIR$/Src/View/postView.html.twig" />
         <option value="$PROJECT_DIR$/Src/View/FrontLayout.html.twig" />
-        <option value="$PROJECT_DIR$/Config/routes.php" />
-        <option value="$PROJECT_DIR$/App/Routing/Route.php" />
-        <option value="$PROJECT_DIR$/App/Routing/Router.php" />
         <option value="$PROJECT_DIR$/App/Services/TwigService.php" />
         <option value="$PROJECT_DIR$/App/Services/Entity.php" />
         <option value="$PROJECT_DIR$/Src/Domain/Models/Post.php" />
         <option value="$PROJECT_DIR$/Src/Domain/Models/Comment.php" />
+        <option value="$PROJECT_DIR$/Src/UI/Action/PostDetailAction.php" />
+        <option value="$PROJECT_DIR$/App/Routing/Route.php" />
+        <option value="$PROJECT_DIR$/App/Routing/Router.php" />
+        <option value="$PROJECT_DIR$/App/Routing/ActionResolver.php" />
+        <option value="$PROJECT_DIR$/Config/routes.php" />
       </list>
     </option>
   </component>
@@ -203,17 +195,6 @@
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Gthareau" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -254,11 +235,6 @@
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
@@ -352,7 +328,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308814000" />
+    <option name="totallyTimeSpent" value="312325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -376,7 +352,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24975514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3022432" sideWeight="0.49570355" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3022432" sideWeight="0.49570355" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -436,13 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/img/background1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -457,13 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -490,21 +452,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lib/Gthareau/HttpResponse.php" />
     <entry file="file://$PROJECT_DIR$/Lib/Gthareau/HttpRequest.php" />
-    <entry file="file://$PROJECT_DIR$/Config/routes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config/confDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Src/View/logonView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -563,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/UI/Action/NotFoundAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Src/View/404.php" />
     <entry file="file://$PROJECT_DIR$/App/controller/contact.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -584,21 +524,6 @@
         <state relative-caret-position="288">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Domain/Managers/CommentManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <marker date="1521535598897" expanded="true" signature="197:571" ph="SELECT comme... comments" />
-            <marker date="1521535598897" expanded="true" signature="818:907" ph="SELECT * FRO... comments" />
-            <marker date="1521535598897" expanded="true" signature="1119:1206" ph="INSERT INTO comments... " />
-            <marker date="1521535598897" expanded="true" signature="1417:1447" ph="SELECT COUNT... comments" />
-            <marker date="1521535598897" expanded="true" signature="1591:1631" ph="UPDATE comments... " />
-            <marker date="1521535598897" expanded="true" signature="1797:1828" ph="DELETE FROM comments... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,14 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Routing/ActionResolver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -698,16 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/UI/Action/HomeAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding>
-            <element signature="e#30#59#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -728,46 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Routing/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2138">
-          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -822,6 +689,121 @@
             <marker date="1521535598916" expanded="true" signature="1438:1532" ph="UPDATE posts... " />
             <marker date="1521535598916" expanded="true" signature="1656:1684" ph="DELETE FROM posts... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Domain/Managers/CommentManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <marker date="1521535598897" expanded="true" signature="197:571" ph="SELECT comme... comments" />
+            <marker date="1521535598897" expanded="true" signature="818:907" ph="SELECT * FRO... comments" />
+            <marker date="1521535598897" expanded="true" signature="1119:1206" ph="INSERT INTO comments... " />
+            <marker date="1521535598897" expanded="true" signature="1417:1447" ph="SELECT COUNT... comments" />
+            <marker date="1521535598897" expanded="true" signature="1591:1631" ph="UPDATE comments... " />
+            <marker date="1521535598897" expanded="true" signature="1797:1828" ph="DELETE FROM comments... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/confDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2022">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/routes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="894">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/UI/Action/NotFoundAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/UI/Action/HomeAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <element signature="e#30#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/UI/Action/PostDetailAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#33#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Routing/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Routing/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Routing/ActionResolver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

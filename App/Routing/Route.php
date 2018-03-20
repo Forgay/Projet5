@@ -11,7 +11,7 @@ class Route
     private $action;
     private $params;
 
-    public function __construct(string $path, string $action, array $params = null)
+    public function __construct(string $path, string $action, string $params = null)
     {
         $this->path = $path;
         $this->action = $action;

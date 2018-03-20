@@ -2,9 +2,8 @@
 
 return[
 
-    'home'=> ['path'=>'/Web/','action'=>Src\UI\Action\HomeAction::class],
-    'Post_details'=>['path'=>'/post/details/{id}',
-        'action'=>Src/UI/Action/ArticleDetailsAction::class,
-        'params'=>['id'=>'/d+']
-    ]
+    'home'=> ['path'=>'/Web/','action'=>'HomeAction()','params'=>''],
+    'Post_detail'=>['path'=>'/post/detail/{id}',
+        'action'=>'Src/UI/Action/PostDetailAction::class',
+        'params'=>'/d+'],
 ];

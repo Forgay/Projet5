@@ -15,7 +15,8 @@ class Router
     {
         $this->actionResolver = new ActionResolver();
         $this->request = $request;
-
+        $this->loadRoutes();
+        $this->handleResquest($request);
     }
 
     public function loadRoutes()
@@ -32,29 +33,31 @@ class Router
      * @param string $request
      * @param array $params
      */
-    public function catchParams(string $request, array $params)
+    public function catchParams(string $request, string $params)
     {
-        foreach ($params as $param) {
-            $params = preg_match($param, $request, $results);
+
+            $params = preg_match($params, $request, $results);
 
             if ($results) {
                 $route->setParams($params);
 
             }
-        }
+
     }
 
 
     public function handleResquest(string $request)
     {
         foreach ($this->routes as $route) {
-            $this->catchParams($request, $route->getParams());
-            if ($route->getPath() === $request) {
+            if (!empty($params)){
+                $this->catchParams($request, $route->getParams());
+                $action = $this->actionResolver->create($route->getAction(), $route->getParams());
+                return $action;
+            }
+
+            elseif ($route->getPath() === $request) {
 
                 $action = $this->actionResolver->create($route->getAction());
-                return $action;
-            } elseif (isset ($params)) {
-                $action = $this->actionResolver->create($route->getAction(), $route->getParams());
                 return $action;
             }
 
