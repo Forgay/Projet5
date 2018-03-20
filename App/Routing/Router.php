@@ -29,7 +29,7 @@ class Router
     {
         $params = preg_match($params, $request, $results);
         if ($results) {
-            $route->getParams($params);
+            $action=$this->actionresolver->create($route->getAction(),$params);
         } else {
             $route->setPath($path);
         }
