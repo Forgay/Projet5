@@ -3,16 +3,18 @@
 
 namespace App\Routing;
 
-use App\Routing\Route;
 
 class Router
 {
     private $routes = [];
     private $actionResolver;
+    private $request;
 
-    public function __construct()
+
+    public function __construct($request)
     {
         $this->actionResolver = new ActionResolver();
+        $this->request = $request;
 
     }
 
@@ -20,20 +22,27 @@ class Router
     {
         $route = require __DIR__ . './../../Config/routes.php';
 
-        foreach ($route as $route) {
+        foreach ($routes as $route) {
             $this->routes[] = new Route ($route['path'], $route['action'], $route['params']);
         }
     }
 
+    /**
+     * @param string $request
+     * @param array $params
+     */
     public function catchParams(string $request, array $params)
     {
-        $params = preg_match($params, $request, $results);
-        if ($results) {
-            $action=$this->actionresolver->create($route->getAction(),$params);
-        } else {
-            $route->setPath($path);
+        foreach ($params as $param) {
+            $params = preg_match($param, $request, $results);
+
+            if ($results) {
+                $route->setParams($params);
+
+            }
         }
     }
+
 
     public function handleResquest(string $request)
     {
@@ -42,10 +51,13 @@ class Router
             if ($route->getPath() === $request) {
                 $action = $this->actionResolver->create($route->getAction());
                 return $action;
+            } elseif (isset ($params)) {
+                $action = $this->actionResolver->create($route->getAction(), $route->getParams());
+                return $action;
             }
-        }
 
-        $action = $this->actionResolver->create(NotFoundAction::class);
-        return $action();
+            $action = $this->actionResolver->create(NotFoundAction::class);
+            return $action;
+        }
     }
 }

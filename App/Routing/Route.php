@@ -32,4 +32,25 @@ class Route
     {
         return $this->action;
     }
+
+    public function setPath($path)
+    {
+        if (is_string($path))
+        {
+            $this->path = $path;
+        }
+    }
+
+    public function setAction($action)
+    {
+       if (is_string($action))
+       {
+           $this->action = $action;
+       }
+    }
+
+     public function setParams(array $params)
+    {
+        $this->params = $params;
+    }
 }
