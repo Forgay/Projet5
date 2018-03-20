@@ -1,9 +1,8 @@
 <?php
 
 
-namespace Gthareau;
+namespace App\Services;
 
-use Gthareau\Session;
 
 abstract class Entity implements \ArrayAccess
 {

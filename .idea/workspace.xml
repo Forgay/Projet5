@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8949500e-e58b-4fc6-a42b-d465941e82fb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/App/Routing/Route.php" afterPath="$PROJECT_DIR$/App/Routing/Route.php" />
       <change beforePath="$PROJECT_DIR$/App/Routing/Router.php" afterPath="$PROJECT_DIR$/App/Routing/Router.php" />
-      <change beforePath="$PROJECT_DIR$/Config/routes.php" afterPath="$PROJECT_DIR$/Config/routes.php" />
+      <change beforePath="$PROJECT_DIR$/App/Services/TwigService.php" afterPath="$PROJECT_DIR$/App/Services/TwigService.php" />
+      <change beforePath="$PROJECT_DIR$/Lib/Gthareau/Entity.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Lib/Gthareau/Entity.php" afterPath="$PROJECT_DIR$/App/Services/Entity.php" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Models/Comment.php" afterPath="$PROJECT_DIR$/Src/Domain/Models/Comment.php" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Models/Post.php" afterPath="$PROJECT_DIR$/Src/Domain/Models/Post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,12 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Router.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/Routing/Router.php">
+      <file leaf-file-name="PostManager.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Src/Domain/Managers/PostManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="192">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <marker date="1521535598916" expanded="true" signature="184:220" ph="SELECT * FRO... posts" />
+                <marker date="1521535598916" expanded="true" signature="455:503" ph="SELECT * FRO... posts" />
+                <marker date="1521535598916" expanded="true" signature="725:752" ph="SELECT COUNT... posts" />
+                <marker date="1521535598916" expanded="true" signature="1036:1134" ph="INSERT INTO posts... " />
+                <marker date="1521535598916" expanded="true" signature="1438:1532" ph="UPDATE posts... " />
+                <marker date="1521535598916" expanded="true" signature="1656:1684" ph="DELETE FROM posts... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/gthareau/Model/AdminsManager.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/HttpResponse.php" />
         <option value="$PROJECT_DIR$/lib/gthareau/HttpRequest.php" />
         <option value="$PROJECT_DIR$/App/Config/routes.xml" />
@@ -78,7 +87,6 @@
         <option value="$PROJECT_DIR$/Templates/AdminsLayout.php" />
         <option value="$PROJECT_DIR$/App/Service/TwigService.php" />
         <option value="$PROJECT_DIR$/Config/confDb.php" />
-        <option value="$PROJECT_DIR$/App/Services/TwigService.php" />
         <option value="$PROJECT_DIR$/App/Kernel.php" />
         <option value="$PROJECT_DIR$/App/Bdd/Manager.php" />
         <option value="$PROJECT_DIR$/Src/UI/Action/HomeAction.php" />
@@ -89,8 +97,6 @@
         <option value="$PROJECT_DIR$/App/Services/Contact.php" />
         <option value="$PROJECT_DIR$/Src/Domain/Managers/CommentManager.php" />
         <option value="$PROJECT_DIR$/Src/Domain/Managers/PostManager.php" />
-        <option value="$PROJECT_DIR$/Src/Domain/Models/Comment.php" />
-        <option value="$PROJECT_DIR$/Src/Domain/Models/Post.php" />
         <option value="$PROJECT_DIR$/Web/index.php" />
         <option value="$PROJECT_DIR$/App/Routing/ActionResolver.php" />
         <option value="$PROJECT_DIR$/Src/View/AdminsLayout.html.twig" />
@@ -100,6 +106,10 @@
         <option value="$PROJECT_DIR$/Config/routes.php" />
         <option value="$PROJECT_DIR$/App/Routing/Route.php" />
         <option value="$PROJECT_DIR$/App/Routing/Router.php" />
+        <option value="$PROJECT_DIR$/App/Services/TwigService.php" />
+        <option value="$PROJECT_DIR$/App/Services/Entity.php" />
+        <option value="$PROJECT_DIR$/Src/Domain/Models/Post.php" />
+        <option value="$PROJECT_DIR$/Src/Domain/Models/Comment.php" />
       </list>
     </option>
   </component>
@@ -286,11 +296,11 @@
       <recent name="C:\wamp64\www\Projet5\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Projet5\App\Services" />
       <recent name="C:\wamp64\www\Projet5\Src\View" />
       <recent name="C:\wamp64\www\Projet5\Src\Domain\Managers" />
       <recent name="C:\wamp64\www\Projet5\Src\Domain\Models" />
       <recent name="C:\wamp64\www\Projet5\Src" />
-      <recent name="C:\wamp64\www\Projet5\Src\UI\Action" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -342,7 +352,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306931000" />
+    <option name="totallyTimeSpent" value="308814000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,7 +376,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24975514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3022432" sideWeight="0.49570355" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3022432" sideWeight="0.49570355" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -484,6 +494,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -568,34 +579,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Services/TwigService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Services/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Domain/Managers/PostManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <marker date="1521535598916" expanded="true" signature="184:220" ph="SELECT * FRO... posts" />
-            <marker date="1521535598916" expanded="true" signature="455:503" ph="SELECT * FRO... posts" />
-            <marker date="1521535598916" expanded="true" signature="725:752" ph="SELECT COUNT... posts" />
-            <marker date="1521535598916" expanded="true" signature="1036:1134" ph="INSERT INTO posts... " />
-            <marker date="1521535598916" expanded="true" signature="1438:1532" ph="UPDATE posts... " />
-            <marker date="1521535598916" expanded="true" signature="1656:1684" ph="DELETE FROM posts... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -611,22 +599,6 @@
             <marker date="1521535598897" expanded="true" signature="1591:1631" ph="UPDATE comments... " />
             <marker date="1521535598897" expanded="true" signature="1797:1828" ph="DELETE FROM comments... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Domain/Models/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Domain/Models/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,14 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Gthareau/Entity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -802,9 +766,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Routing/Router.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="1258">
+          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Services/TwigService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="e#33#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Services/Entity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Domain/Models/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#31#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Domain/Models/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1310">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#31#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Domain/Managers/PostManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1521535598916" expanded="true" signature="184:220" ph="SELECT * FRO... posts" />
+            <marker date="1521535598916" expanded="true" signature="455:503" ph="SELECT * FRO... posts" />
+            <marker date="1521535598916" expanded="true" signature="725:752" ph="SELECT COUNT... posts" />
+            <marker date="1521535598916" expanded="true" signature="1036:1134" ph="INSERT INTO posts... " />
+            <marker date="1521535598916" expanded="true" signature="1438:1532" ph="UPDATE posts... " />
+            <marker date="1521535598916" expanded="true" signature="1656:1684" ph="DELETE FROM posts... " />
+          </folding>
         </state>
       </provider>
     </entry>

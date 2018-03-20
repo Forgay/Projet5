@@ -4,6 +4,7 @@
 namespace Src\Models;
 
 use Src\Domain\Managers\CommentManager;
+use App\Services\Entity;
 
 class Comment
 {

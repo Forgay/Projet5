@@ -20,11 +20,12 @@ class Router
 
     public function loadRoutes()
     {
-        $route = require __DIR__ . './../../Config/routes.php';
+        $routes = require __DIR__ . './../../Config/routes.php';
 
         foreach ($routes as $route) {
             $this->routes[] = new Route ($route['path'], $route['action'], $route['params']);
         }
+
     }
 
     /**
@@ -49,6 +50,7 @@ class Router
         foreach ($this->routes as $route) {
             $this->catchParams($request, $route->getParams());
             if ($route->getPath() === $request) {
+
                 $action = $this->actionResolver->create($route->getAction());
                 return $action;
             } elseif (isset ($params)) {

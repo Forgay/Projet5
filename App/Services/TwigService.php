@@ -20,6 +20,7 @@ abstract class TwigService
             ]);
 
         }
+        return TwigService::$twig;
     }
 
 }
