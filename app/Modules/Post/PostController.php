@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Modules\Post;
+namespace a\Modules\Post;
 
 use Gthareau\Controller;
 use Gthareau\HttpRequest;

@@ -1,7 +1,6 @@
 <?php
 namespace Projet5\web;
 
-require '../vendor/autoload.php';
 
 $page = 'home';
 

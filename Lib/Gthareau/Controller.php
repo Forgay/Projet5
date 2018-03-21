@@ -44,7 +44,7 @@ class Controller
             throw new \InvalidArgumentException('La vue doit être une chaine de caractères non nulle.');
         }
         $this->view = $view;
-        $this->page->setContentFile(__DIR__.'/../../App/Modules/'.$this->module.'/Views/'.$this->view.'View.php');
+        $this->page->setContentFile(__DIR__ . '/../../a/Modules/' .$this->module.'/Views/'.$this->view.'View.php');
     }
 
     public function setLayout($layout)
@@ -54,7 +54,7 @@ class Controller
             throw new \InvalidArgumentException('le layout doit etre une chaine de caractéres.');
         }
         $this->layout=$layout;
-        $this->page->setLayout(__DIR__ . '/../../App/Templates/' . $this->layout . 'Layout.php');
+        $this->page->setLayout(__DIR__ . '/../../a/Templates/' . $this->layout . 'Layout.php');
     }
 
     public function getApp()

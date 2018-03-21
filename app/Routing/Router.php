@@ -58,7 +58,7 @@ class Router
             elseif ($route->getPath() === $request) {
 
                 $action = $this->actionResolver->create($route->getAction());
-                return $action;
+              return $action;
             }
 
             $action = $this->actionResolver->create(NotFoundAction::class);

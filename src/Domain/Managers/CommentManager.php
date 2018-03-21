@@ -43,7 +43,7 @@ class CommentManager extends Manager
 
     }
 
-    public function adComment($nom, $email, $comment, $post_id)
+    public function addComment($nom, $email, $comment, $post_id)
     {
         $req = $this->getConnexion()->prepare("INSERT INTO comments(nom,email,comment,post_id,date_comment) VALUES (?, ?, ?, ?, NOW())");
         $affectComment = $req->execute(array($nom, $email, $comment, $post_id));

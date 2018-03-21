@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Src\UI\Action;
+namespace src\UI\Action;
 
 use App\Services\TwigService;
 

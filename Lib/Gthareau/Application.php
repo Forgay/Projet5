@@ -24,7 +24,7 @@ class Application
         $router = new Router;
 
         $xml = new \DOMDocument;
-        $xml->load(__DIR__ . '/../../App/Config/routes.xml');
+        $xml->load(__DIR__ . '/../../a/Config/routes.xml');
 
         $routes = $xml->getElementsByTagName('route');
 

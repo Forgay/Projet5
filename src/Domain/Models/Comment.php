@@ -3,8 +3,8 @@
 
 namespace Src\Models;
 
-use Src\Domain\Managers\CommentManager;
-use App\Services\Entity;
+use src\Domain\Managers\CommentManager;
+use app\Services\Entity;
 
 class Comment
 {

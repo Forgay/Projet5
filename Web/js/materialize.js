@@ -5,7 +5,7 @@
  */
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call app class as app function"); } }
 
 // Check for jQuery.
 if (typeof jQuery === 'undefined') {
@@ -750,7 +750,7 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
                     H = j.delay || 0;return j.backwards === !0 && (g = f.extend(!0, [], g).reverse()), f.each(g, function (e, t) {
                   parseFloat(j.stagger) ? j.delay = H + parseFloat(j.stagger) * e : m.isFunction(j.stagger) && (j.delay = H + j.stagger.call(t, e, w)), j.drag && (j.duration = parseFloat(E) || (/^(callout|transition)/.test(y) ? 1e3 : h), j.duration = Math.max(j.duration * (j.backwards ? 1 - e / w : (e + 1) / w), .75 * j.duration, 200)), b.Redirects[y].call(t, t, j || {}, e, w, g, k.promise ? k : a);
                 }), e();
-              }var N = "Velocity: First argument (" + y + ") was not a property map, a known action, or a registered redirect. Aborting.";return k.promise ? k.rejecter(new Error(N)) : console.log(N), e();
+              }var N = "Velocity: First argument (" + y + ") was not app property map, app known action, or app registered redirect. Aborting.";return k.promise ? k.rejecter(new Error(N)) : console.log(N), e();
             }A = "start";}var L = { lastParent: null, lastPosition: null, lastFontSize: null, lastPercentToPxWidth: null, lastPercentToPxHeight: null, lastEmToPx: null, remToPx: null, vwToPx: null, vhToPx: null },
             R = [];f.each(g, function (e, t) {
           m.isNode(t) && n.call(t);
@@ -1361,8 +1361,8 @@ var getTime = Date.now || function () {
 };
 
 /**
- * Returns a function, that, when invoked, will only be triggered at most once
- * during a given window of time. Normally, the throttled function will run
+ * Returns app function, that, when invoked, will only be triggered at most once
+ * during app given window of time. Normally, the throttled function will run
  * as much as it can, without ever going more than once per `wait` duration;
  * but if you'd like to disable the execution on the leading edge, pass
  * `{leading: false}`. To disable execution on the trailing edge, ditto.
@@ -4214,8 +4214,8 @@ if (Vel) {
   }
 
   /**
-   * Enables ScrollSpy using a selector
-   * @param {jQuery|string} selector  The elements collection, or a selector
+   * Enables ScrollSpy using app selector
+   * @param {jQuery|string} selector  The elements collection, or app selector
    * @param {Object=} options	Optional.
          throttle : number -> scrollspy throttling. Default: 100 ms
          offsetTop : number -> offset from top. Default: 0
@@ -7548,7 +7548,7 @@ if (Vel) {
           value = _.isDate(value) ? value : calendar.create().obj;
         }
 
-        // If it’s a number or date object, make a normalized date.
+        // If it’s app number or date object, make app normalized date.
         else if (_.isInteger(value) || _.isDate(value)) {
             value = calendar.normalize(new Date(value), options);
           }
@@ -7607,7 +7607,7 @@ if (Vel) {
 
 
   /**
-   * Check if a date unit falls within a date range object.
+   * Check if app date unit falls within app date range object.
    */
   DatePicker.prototype.withinRange = function (range, dateUnit) {
     range = this.createRange(range.from, range.to);
@@ -7885,7 +7885,7 @@ if (Vel) {
 
 
   /**
-   * Parse a string into a usable type.
+   * Parse app string into app usable type.
    */
   DatePicker.prototype.parse = function (type, value, options) {
 
@@ -8200,7 +8200,7 @@ if (Vel) {
               }
           }
 
-          // If a match was found, remove a previous duplicate entry.
+          // If app match was found, remove app previous duplicate entry.
           if (matchFound) for (index = 0; index < disabledItemsCount; index += 1) {
             if (calendar.isDateExact(disabledItems[index], unitToEnable)) {
               disabledItems[index] = null;
@@ -8324,7 +8324,7 @@ if (Vel) {
       // Materialize modified
       if (override == "short_months") if (selectedObject != null) return monthsCollection[selectedObject.month];else return monthsCollection[viewsetObject.month];
 
-      // If there's a need for a month selector
+      // If there's app need for app month selector
       return _.node('div', monthsCollection[viewsetObject.month], settings.klass.month);
     },
         //createMonthLabel
@@ -8440,7 +8440,7 @@ if (Vel) {
           node: 'td',
           item: function (targetDate) {
 
-            // Convert the time date from a relative date to a target date.
+            // Convert the time date from app relative date to app target date.
             targetDate = calendar.create([viewsetObject.year, viewsetObject.month, targetDate + (settings.firstDay ? 1 : 0)]);
 
             var isSelected = selectedObject && selectedObject.pick == targetDate.pick,

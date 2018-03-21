@@ -27,6 +27,7 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
         ),
         'A' => 
         array (
+            'App\\Routing\\' => 12,
             'App\\' => 4,
         ),
     );
@@ -42,15 +43,19 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
         ),
         'Src\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/Src',
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
         ),
+        'App\\Routing\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Routing',
+        ),
         'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/App',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 

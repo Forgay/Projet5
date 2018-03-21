@@ -3,7 +3,7 @@
 
 namespace App\Routing;
 
-use App\Routing\ActionResolver;
+use app\Routing\ActionResolver;
 
 class Route
 {

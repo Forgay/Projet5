@@ -3,8 +3,8 @@
 
 namespace Src\Models;
 
-use Src\Domain\Managers\PostManager;
-use App\Services\Entity;
+use src\Domain\Managers\PostManager;
+use app\Services\Entity;
 
 class Post
 {
