@@ -22,5 +22,9 @@ abstract class TwigService
         }
         return TwigService::$twig;
     }
-
+    public function render($twigPath,$parameters)
+    {
+        $view= TwigService::getTwig()->render($twigPath,$parameters);
+        return $view;
+    }
 }

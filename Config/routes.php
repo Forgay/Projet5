@@ -10,5 +10,5 @@ return [
         'params' => '/d+'],
     'Add_comment'=>['path'=> '/comment/add/{id}',
         'action' => Src\UI\Action\CommentAddAction::class,
-        'params'=>'' ]
+        'params'=>'/d+']
 ];

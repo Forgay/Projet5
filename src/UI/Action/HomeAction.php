@@ -11,7 +11,7 @@ class HomeAction
     public function __invoke()
     {
 
-        return $this->getTwig()->render('listPostView.html.twig',['posts'=>PostManager::getPosts()]);
+        return TwigService::getTwig()->render('listPostView.html.twig',['posts'=>PostManager::getPosts()]);
     }
 
 }

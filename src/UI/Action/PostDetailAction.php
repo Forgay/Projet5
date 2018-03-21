@@ -11,13 +11,9 @@ class PostDetailAction
 {
     public function __invoke($id)
     {
-     if($id ===  null ){
 
-
-     }
         return $this->getTwig()->render('postView.html.twig', ['post' => PostManager::getPost($id),
-            'comments'=>CommentManager::getCommentById($id)
-            ]);
+            'comments'=>CommentManager::getCommentById($id)]);
     }
 
 }
