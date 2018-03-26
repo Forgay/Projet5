@@ -3,6 +3,7 @@
 
 namespace App\Routing;
 
+use Src\UI\Action\NotFoundAction;
 
 class Router
 {
@@ -10,15 +11,21 @@ class Router
     private $actionResolver;
     private $request;
 
-
+    /**
+     * Router constructor.
+     * @param $request
+     */
     public function __construct($request)
     {
         $this->actionResolver = new ActionResolver();
         $this->request = $request;
         $this->loadRoutes();
-        $this->handleResquest($request);
+        $this->handleRequest($request);
     }
 
+    /**
+     * Chargement des routes
+     */
     public function loadRoutes()
     {
         $routes = require __DIR__ . './../../Config/routes.php';
@@ -36,33 +43,33 @@ class Router
     public function catchParams(string $request, string $params)
     {
 
-            $params = preg_match($params, $request, $results);
+        $params = preg_match($params, $request, $results);
 
-            if ($results) {
-                $route->setParams($params);
+        if ($results) {
+            $route->setParams($params);
 
-            }
-
+        }
     }
 
-
-    public function handleResquest(string $request)
+    /**
+     * @param string $request
+     *
+     */
+    public function handleRequest(string $request)
     {
         foreach ($this->routes as $route) {
-            if (!empty($params)){
+            if (!empty($route->getParams())) {
                 $this->catchParams($request, $route->getParams());
                 $action = $this->actionResolver->create($route->getAction(), $route->getParams());
-                return $action;
-            }
-
-            elseif ($route->getPath() === $request) {
+                echo $action();
+            } elseif ($route->getPath() === $request) {
 
                 $action = $this->actionResolver->create($route->getAction());
-             return $action;
+                echo $action();
             }
 
             $action = $this->actionResolver->create(NotFoundAction::class);
-            return $action;
+            echo $action();
         }
     }
 }

@@ -8,8 +8,6 @@ use Gthareau\HttpRequest;
 use Entity\Post;
 use Gthareau\Session;
 
-
-
 class PostController extends Controller
 {
     public function executeListPostsFront()

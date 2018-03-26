@@ -6,19 +6,17 @@ namespace Src\Domain\Managers;
 use App\Bdd\Manager;
 
 
-
-
 class PostManager extends Manager
 {
 
     public function getPosts()
     {
         $req = $this->getConnexion()->query('SELECT * FROM posts ORDER BY id DESC');
-        $results = array();
+        $posts = array();
         while ($rows = $req->fetchAll()) {
-            $results[] = $rows;
+            $posts[] = $rows;
         }
-        return $results;
+        return $posts;
     }
 
     public function getPost($id)

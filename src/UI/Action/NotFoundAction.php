@@ -10,7 +10,7 @@ class NotFoundAction
 
     public function __invoke()
     {
-        return $this->getTwig()->render('404.html.twig');
+        return TwigService::getTwig()->render('404.html.twig');
     }
 
 }

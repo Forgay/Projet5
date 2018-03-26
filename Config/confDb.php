@@ -1,2 +1,6 @@
 <?php
-return ['machine'=>'localhost','db'=>'blog','user'=>'root','password'=>''];
+return ['machine'  => 'localhost',
+        'db'       => 'blog',
+        'user'     => 'root',
+        'password' => ''
+];
