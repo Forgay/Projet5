@@ -14,12 +14,19 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'Twig\\Extensions\\' => 16,
             'Twig\\' => 5,
         ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\Debug\\' => 24,
             'Src\\' => 4,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
         ),
         'E' => 
         array (
@@ -33,6 +40,10 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\Extensions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/extensions/src',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -41,9 +52,21 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
+        'Symfony\\Component\\HttpFoundation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
+        ),
         'Src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -62,6 +85,10 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
     public static $prefixesPsr0 = array (
         'T' => 
         array (
+            'Twig_Extensions_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/extensions/lib',
+            ),
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',

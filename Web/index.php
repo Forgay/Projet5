@@ -1,8 +1,11 @@
 <?php
 
-require '../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use App\Kernel;
+use Symfony\Component\HttpFoundation\Request;
 
-$app=new Kernel();
-$app->boot($_SERVER['REQUEST_URI']);
+$request = Request::createFromGlobals();
+
+$app = new Kernel();
+$app->boot($request->server->get('REQUEST_URI'));

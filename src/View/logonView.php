@@ -1,31 +1,12 @@
-<?php
-ob_start();
 
-?>
-
-    <div class="section">
-
-
+<div class="section">
     <div class="row">
-
         <div class="col l4 m6 s12 offset-l4 offset-m3">
             <div class="card-panel">
                 <div class="row">
                     <img src="../../Web/img/admin.png" alt="administrateur" width="50%"/>
                 </div>
                 <h4 class="center-align">Se connecter</h4>
-                <?php if (!empty($errors)) {
-                    ?>
-                    <div class="card red">
-                        <div class="card-content white-text">
-                            <?php foreach ($errors as $error) {
-                                echo $error . "<br/>";
-                            } ?>
-                        </div>
-                    </div>
-                <?php } ?>
-
-
                 <form action="../../Web/index1.php?action=connexion" method="POST">
                     <div class="row">
                         <div class="input-field col s12">
@@ -50,10 +31,7 @@ ob_start();
                     </button>
                     <br/><br/>
                     <a href="../../Web/index.php">Nous rejoindre !</a>
-
+                </form>
             </div>
-
         </div>
     </div>
-<?php $content = ob_get_clean(); ?>
-<?php require('frontend/FrontLayout.html.twig'); ?>
