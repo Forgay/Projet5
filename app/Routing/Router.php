@@ -38,7 +38,8 @@ class Router
 
     /**
      * @param string $request
-     * @param array $params
+     * @param string $params
+     *
      */
     public function catchParams(string $request, string $params)
     {
