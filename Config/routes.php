@@ -2,16 +2,11 @@
 
 return [
 
-    'home' => ['path' => '/Web/',
+        'Home'   => ['path' => '/',
         'action' => Src\UI\Action\HomeAction::class,
         'params' => ''],
-    'Post_detail'=> ['path' => '/Web/post/detail/{id}',
-        'action' => Src\UI\Action\PostDetailAction::class,
-        'params' => '/d+'],
-    'Add_comment'=>['path'=> '/Web/comment/add/{id}',
-        'action' => Src\UI\Action\CommentAddAction::class,
-        'params' =>'/d+'],
-    'Connect'    =>['path'=> '/Web/connect',
+       'Connect' =>['path' => '/connect',
         'action' => Src\UI\Action\ConnectAction::class,
         'params' =>'']
 ];
+

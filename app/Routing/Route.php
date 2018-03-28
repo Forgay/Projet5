@@ -49,7 +49,7 @@ class Route
        }
     }
 
-     public function setParams(array $params)
+     public function setParams(string $params)
     {
         $this->params = $params;
     }

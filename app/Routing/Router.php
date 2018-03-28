@@ -44,9 +44,10 @@ class Router
     public function catchParams(string $request, string $params)
     {
 
-        $params = preg_match($params, $request, $results);
 
-        if ($results) {
+        $params = preg_match($params, $request);
+
+        if ($params) {
             $route->setParams($params);
 
         }
@@ -58,19 +59,21 @@ class Router
      */
     public function handleRequest(string $request)
     {
+
         foreach ($this->routes as $route) {
             if (!empty($route->getParams())) {
                 $this->catchParams($request, $route->getParams());
                 $action = $this->actionResolver->create($route->getAction(), $route->getParams());
                 echo $action();
             } elseif ($route->getPath() === $request) {
-
                 $action = $this->actionResolver->create($route->getAction());
                 echo $action();
-            }
+            } else {
+                $action = $this->actionResolver->create(NotFoundAction::class);
+                echo $action();
 
-            $action = $this->actionResolver->create(NotFoundAction::class);
-            echo $action();
+            }
         }
     }
 }
+
