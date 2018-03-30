@@ -15,11 +15,10 @@
                 <h5>{{post.writer}}</h5>
                 <h6>le {{post.date | date("d/m/Y")}} ?></h6>
             </div>
-
         </div>
 
     </div>
-    <form action="/Web/add/comment/{{ post.id }}" method="POST">
+    <form action="/add/comment/{{ post.id }}" method="POST">
 
         <div class="row">
             <div class="input-field col s6">
@@ -49,7 +48,6 @@
             {% for comment in comments  %}}
                 <div class="col s12 m4">
                     <div class="icon-block">
-
                         <h5 class="center">{{ comment.nom }} le {{ comment.date | date("d/m/Y") }}</h5>
                         <p class="left-align light">{{ comment.comment }}</p>
                     </div>

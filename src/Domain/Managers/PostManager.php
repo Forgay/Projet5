@@ -12,11 +12,8 @@ class PostManager extends Manager
     public function getPosts()
     {
         $req = $this->getConnexion()->query('SELECT * FROM posts ORDER BY id DESC');
-        $posts = array();
-        while ($rows = $req->fetchAll()) {
-            $posts[] = $rows;
-        }
-        return $posts;
+
+        return $req->fetchAll();
     }
 
     public function getPost($id)

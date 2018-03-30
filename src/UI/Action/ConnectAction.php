@@ -9,7 +9,9 @@ class ConnectAction
 {
     public function __invoke()
     {
-        return new Response(
-            TwigService::getTwig()->render('connectView.html.twig'));
+        $response =  new Response(
+            TwigService::getTwig()->render('ConnectView.html.twig'));
+        return $response->send();
     }
+
 }

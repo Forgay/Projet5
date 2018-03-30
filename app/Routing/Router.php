@@ -1,9 +1,9 @@
 <?php
 
-
 namespace App\Routing;
 
-use Src\UI\Action\NotFoundAction;
+use src\UI\Action\NotFoundAction;
+use Symfony\Component\HttpFoundation\Request;
 
 class Router
 {
@@ -15,7 +15,7 @@ class Router
      * Router constructor.
      * @param $request
      */
-    public function __construct($request)
+    public function __construct(Request $request)
     {
         $this->actionResolver = new ActionResolver();
         $this->request = $request;
@@ -31,7 +31,7 @@ class Router
         $routes = require __DIR__ . './../../Config/routes.php';
 
         foreach ($routes as $route) {
-            $this->routes[] = new Route ($route['path'], $route['action'], $route['params']);
+            $this->routes[] = new Route($route['path'], $route['action'], $route['params']);
         }
 
     }
@@ -44,7 +44,6 @@ class Router
     public function catchParams(string $request, string $params)
     {
 
-
         $params = preg_match($params, $request);
 
         if ($params) {
@@ -54,26 +53,26 @@ class Router
     }
 
     /**
-     * @param string $request
-     *
+     * @param Request $request
      */
-    public function handleRequest(string $request)
+    public function handleRequest(Request $request)
     {
-
         foreach ($this->routes as $route) {
-            if (!empty($route->getParams())) {
-                $this->catchParams($request, $route->getParams());
-                $action = $this->actionResolver->create($route->getAction(), $route->getParams());
-                echo $action();
-            } elseif ($route->getPath() === $request) {
-                $action = $this->actionResolver->create($route->getAction());
-                echo $action();
-            } else {
-                $action = $this->actionResolver->create(NotFoundAction::class);
-                echo $action();
 
+            if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
+
+                $this->catchParams($request->server->get('REQUEST_URI'), $route->getParams());
+
+                $action = $this->actionResolver->create($route->getAction(), $request);
+
+                $action();
+
+            } elseif ($route->getPath() === $request->server->get('REQUEST_URI')) {
+
+                $action = $this->actionResolver->create($route->getAction(), $request);
+
+                $action();
             }
         }
     }
 }
-

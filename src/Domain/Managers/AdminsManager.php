@@ -1,10 +1,9 @@
 <?php
 
 
-namespace Model;
+namespace Src\Domain\Managers;
 
-use Entity\Admins;
-use Gthareau\Manager;
+use App\Bdd\Manager;
 
 class AdminsManager extends Manager
 {

@@ -1,12 +1,11 @@
 <?php
 
 
-namespace Entity;
+namespace Src\Domain\Models;
 
+use App\Bdd\Manager;
 
-use Gthareau\Entity;
-
-class Admins extends Entity
+class Admins extends Manager
 {
     protected $id;
     protected $pseudo;

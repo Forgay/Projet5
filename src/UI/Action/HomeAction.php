@@ -12,15 +12,18 @@ class HomeAction
 
     public function __construct()
     {
+
         $this->postManager = new PostManager();
     }
 
     public function __invoke()
     {
-        return new Response(
-            TwigService::getTwig()->render('listPostView.html.twig', [
+        $response = new Response(
+            TwigService::getTwig()->render('ListPostView.html.twig',[
                 'posts'=> $this->postManager->getPosts()
             ])
         );
+       return $response->send();
     }
 }
+

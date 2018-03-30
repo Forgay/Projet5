@@ -12,11 +12,12 @@ use Symfony\Component\HttpFoundation\Response;
 class CommentAddAction
 {
     private $commentManager;
+    private $request;
 
-    public function __construct()
+
+    public function __construct(Request $request)
     {
-        $request = Request::createFromGlobals();
-        $id =$request->query->get('id');
+        $this->request=$request;
         $this->commentManager = new CommentManager();
     }
 
@@ -24,16 +25,19 @@ class CommentAddAction
     {
         if (isset($id) && $id>0) {
 
-            if (!empty($request['nom']) && !empty($request['email']) && !empty($request['comment'])) {
+            if (!empty($this->request->get('nom')) && !empty($this->request->get('email')) && !empty($this->request->get('comment'))) {
 
-                $nom = htmlspecialchars($request['nom']);
-                $email = htmlspecialchars($request['email']);
-                $comment = htmlspecialchars($request['comment']);
-                $postId = htmlspecialchars($request->query->get('id'));
+                $nom = htmlspecialchars($this->request->get('nom'));
+                $email = htmlspecialchars($this->request->get('email'));
+                $comment = htmlspecialchars($this->request->get('comment'));
+                $postId = htmlspecialchars($this->request->query->get('id'));
 
-                return new Response(
+                $response = new Response(
                     TwigService::getTwig()->render('postView.html.twig',
-                    ['comments'=>$this->commentManager->addComment($nom, $email, $comment, $postId)]));
+                    ['comments'=>$this->commentManager->addComment($nom, $email, $comment, $postId)]
+                    )
+                );
+                return $response->send();
             } else {
                 echo 'Attention : Tous les champs ne sont pas remplis !';
             }

@@ -36,7 +36,7 @@ class CommentManager extends Manager
     public function getCommentById($id)
     {
 
-        $req = $this->getConnexion()->prepare("SELECT * FROM comments WHERE post_id={$_GET['id']} AND seen=1  ORDER BY date_comment DESC");
+        $req = $this->getConnexion()->prepare("SELECT * FROM comments WHERE post_id={$id} AND seen=1  ORDER BY date_comment DESC");
         $req->execute(array($id));
         $result = $req;
         return $result;
@@ -62,6 +62,7 @@ class CommentManager extends Manager
         $valid = $req->execute(array($id));
         return $valid;
     }
+
     public function delComment($id)
     {
         $req = $this->getConnexion()->prepare("DELETE FROM comments WHERE id=? ");

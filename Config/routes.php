@@ -5,8 +5,21 @@ return [
         'Home'   => ['path' => '/',
         'action' => Src\UI\Action\HomeAction::class,
         'params' => ''],
-       'Connect' =>['path' => '/connect',
+
+        'Post_detail' => ['path' => '/post/detail/{id}',
+        'action' => Src\UI\Action\PostDetailAction::class,
+        'params' => '\d+'],
+
+        'Add_comment' => ['path'=> '/comment/add/{id}',
+        'action' => Src\UI\Action\CommentAddAction::class,
+        'params' => '\d+'],
+
+        'Connect' => ['path' => '/connect',
         'action' => Src\UI\Action\ConnectAction::class,
-        'params' =>'']
+        'params' => ''],
+
+        'Enroll' => ['path' => '/enroll',
+        'action' => Src\UI\Action\Enroll::class,
+        'params' => '']
 ];
 

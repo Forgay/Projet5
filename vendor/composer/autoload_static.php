@@ -32,6 +32,10 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
         array (
             'Egulias\\EmailValidator\\' => 23,
         ),
+        'C' => 
+        array (
+            'Composer\\XdebugHandler\\' => 23,
+        ),
         'A' => 
         array (
             'App\\Routing\\' => 12,
@@ -71,6 +75,10 @@ class ComposerStaticInit9c36075426dc1e963220d485312da190
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+        ),
+        'Composer\\XdebugHandler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
         ),
         'App\\Routing\\' => 
         array (

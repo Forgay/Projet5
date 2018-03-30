@@ -8,4 +8,5 @@ use Symfony\Component\HttpFoundation\Request;
 $request = Request::createFromGlobals();
 
 $app = new Kernel();
-$app->boot($request->server->get('REQUEST_URI'));
+$app->boot($request);
+

@@ -4,8 +4,23 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Parallax Template - Materialize</title>
 
+    <!-- REFERENCEMENT -->
+    <meta name="Content-type" content="UTF-8"/>
+    <meta name="description" content="développeur web / Symfony"/>
+    <meta name="title" content="Guillaume Thareau - Développeur web"/>
+    <meta name="Content-Language" content="fr"/>
+    <meta name="Keyword"
+          content='guillaume thareau", "développeur web", "développeur PHP", "développeur Symfony", "développeur Tours","développeur RQTH","RQTH","Tours"'/>
+    <meta name="Copyright" content="Guillaume Thareau">
+    <meta name="Identifier-Url" content="....">
+    <meta name="Reply-To" content="gthareau1@gmail.com">
+    <meta name="Rating" content="general">
+    <meta name="Distribution" content="global">
+    <meta name="Geography" content="Tours, France, 37000">
+    <meta name="Category" content="internet">
+    <!-- TITLE -->
+    <title> Guillaume Thareau - Développeur Web </title>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -15,7 +30,7 @@
 
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="../../Web/index1.php?action=home" class="brand-logo">Logo</a>
+        <a id="logo-container" href="/" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
 
             <li><a href="../../Web/index1.php?action=write">Ajouter un article</a></li>
@@ -48,12 +63,13 @@
 
         </div>
     </div>
-    <div class="parallax"><img src="../../Web/img/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="/img/background1.jpg" alt="Unsplashed background img 1"></div>
 </div>
 
 
 <div class="container">
-    <?= $content ?>
+    {% block content %}
+    {% endblock %}
 </div>
 
 

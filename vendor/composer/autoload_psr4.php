@@ -14,6 +14,7 @@ return array(
     'Src\\' => array($baseDir . '/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),
+    'Composer\\XdebugHandler\\' => array($vendorDir . '/composer/xdebug-handler/src'),
     'App\\Routing\\' => array($baseDir . '/app/Routing'),
     'App\\' => array($baseDir . '/app'),
 );
