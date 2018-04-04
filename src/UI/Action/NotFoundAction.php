@@ -1,7 +1,7 @@
 <?php
 
 
-namespace src\UI\Action;
+namespace Src\UI\Action;
 
 use App\Services\TwigService;
 use Symfony\Component\HttpFoundation\Response;

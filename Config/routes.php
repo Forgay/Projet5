@@ -8,18 +8,14 @@ return [
 
         'Post_detail' => ['path' => '/post/detail/{id}',
         'action' => Src\UI\Action\PostDetailAction::class,
-        'params' => '\d+'],
+        'params' => ['id'=>'/\d+/']],
 
         'Add_comment' => ['path'=> '/comment/add/{id}',
         'action' => Src\UI\Action\CommentAddAction::class,
-        'params' => '\d+'],
+        'params' => ['id'=>'/\d+/']],
 
         'Connect' => ['path' => '/connect',
         'action' => Src\UI\Action\ConnectAction::class,
-        'params' => ''],
-
-        'Enroll' => ['path' => '/enroll',
-        'action' => Src\UI\Action\Enroll::class,
         'params' => '']
 ];
 

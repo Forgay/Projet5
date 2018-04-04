@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Src\UI\Action;
+//namespace Src\UI\Action;
 
 
 
-class EnrollAction
+//class EnrollAction
 {
 $errors = [];
 
@@ -18,7 +18,7 @@ $errors = [];
 
         if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) {
 
-            require('../View/adlistPostsView.php');
+            require(
         }
         if (isset($pseudo) && isset($email) && isset($password) && isset($passwordverif)) {
 

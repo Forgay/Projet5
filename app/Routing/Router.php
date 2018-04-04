@@ -10,6 +10,7 @@ class Router
     private $routes = [];
     private $actionResolver;
     private $request;
+    private $result;
 
     /**
      * Router constructor.
@@ -31,24 +32,29 @@ class Router
         $routes = require __DIR__ . './../../Config/routes.php';
 
         foreach ($routes as $route) {
-            $this->routes[] = new Route($route['path'], $route['action'], $route['params']);
+            $this->routes[] = new Route($route['path'], $route['action'], \is_array($route['params']) ? $route['params'] : []);
         }
 
     }
 
     /**
-     * @param string $request
-     * @param string $params
-     *
+     * @param $params
+     * @param $request
+     * @param null $result
      */
-    public function catchParams(string $request, string $params)
+    public function catchParams($params, $request)
     {
+        foreach ($params as $value) {
+            return $value;
+        }
+            preg_match($value, $request, $result);
 
-        $params = preg_match($params, $request);
 
-        if ($params) {
-            $route->setParams($params);
 
+        if (isset($result)) {
+            foreach ($this->routes as $route) {
+                $route->setParams($result);
+            }
         }
     }
 
@@ -59,9 +65,9 @@ class Router
     {
         foreach ($this->routes as $route) {
 
-            if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
+            $this->catchParams($route->getParams(), $request->server->get('REQUEST_URI'));
 
-                $this->catchParams($request->server->get('REQUEST_URI'), $route->getParams());
+            if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
 
                 $action = $this->actionResolver->create($route->getAction(), $request);
 

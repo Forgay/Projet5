@@ -4,24 +4,25 @@
         <div class="row">
             <div class="col s12 m6 l4">
                 {% for data in posts %}
-                    <div class="card">
-                        <div class="card-content">
-                            <h2 class="flow-text grey-text text-darken-2">{{ data.title }}</h2>
-                            <h3 class="flow-text grey-text">le {{ data.date|date("d/m/Y") }} par {{ data.writer }}</h3>
-                        </div>
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img src="../../../Web/img/posts/{{ data.image }}.jpg" class="activator" alt="{{ data.title }}"/>
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-                            <p><a href="/post/detail/{{ data.id }}">Voir l'article complet</a></p>
-                        </div>
-                        <div class="card-reveal">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="flow-text grey-text text-darken-2">{{ data.title }}</h2>
+                        <h3 class="flow-text grey-text">le {{ data.date|date("d/m/Y") }} par {{ data.writer }}</h3>
+                    </div>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src=./../../Web/img/posts/{{ data.image }}.jpg" class="activator"
+                             alt="{{ data.title }}"/>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                        <p><a href="/post/detail/{{ data.id }}">Voir l'article complet</a></p>
+                    </div>
+                    <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4"><i
                                     class="material-icons right">close</i></span>
-                            <p>{{ data.content }}</p>
-                        </div>
+                        <p>{{ data.content }}</p>
                     </div>
+                </div>
                 {% endfor %}
             </div>
         </div>

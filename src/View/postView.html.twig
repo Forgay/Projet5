@@ -1,37 +1,32 @@
 {% extends 'FrontLayout.html.twig' %}
 {% block content %}
-
     <div class="section">
-
         <div class="row">
-
             <div class="col s12 center">
                 <h3><i class="mdi-content-send brown-text"></i></h3>
                 <div class="card-image">
                     <img src="../web/img/posts/{{post.image}}.jpg" width="50%"/>
                 </div>
-                <h4>{{post.title}} </h4>
-                <p class="left-align light">{{post.content}} ?></p>
+                <h4>{{post.title}}</h4>
+                <p class="left-align light">{{post.content}}</p>
                 <h5>{{post.writer}}</h5>
-                <h6>le {{post.date | date("d/m/Y")}} ?></h6>
+                <h6>le {{post.date | date("d/m/Y")}}</h6>
             </div>
         </div>
-
     </div>
     <form action="/add/comment/{{ post.id }}" method="POST">
-
         <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4 offset-s4">
                 <input id="nom" type="text" name="nom" class="validate">
                 <label for="nom">Nom</label>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4 offset-s4">
                 <input id="email" type="text" name="email" class="validate">
                 <label for="email">Email</label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6 offset-s4">
                 <textarea id="comment" name="comment" class="materialize-textarea"></textarea>
                 <label for="comment">Votre commentaire</label>
             </div>

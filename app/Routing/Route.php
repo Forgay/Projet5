@@ -11,7 +11,7 @@ class Route
     private $action;
     private $params;
 
-    public function __construct(string $path, string $action, string $params = null)
+    public function __construct(string $path, string $action, array $params)
     {
         $this->path = $path;
         $this->action = $action;
@@ -49,7 +49,7 @@ class Route
        }
     }
 
-     public function setParams(string $params)
+     public function setParams(array $params)
     {
         $this->params = $params;
     }

@@ -1,60 +1,88 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Parallax Template - Materialize</title>
-
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--viewport mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- REFERENCEMENT -->
+    <meta name="Content-type" content="UTF-8"/>
+    <meta name="description" content="développeur web / Symfony"/>
+    <meta name="title" content="Guillaume Thareau - Développeur web"/>
+    <meta name="Content-Language" content="fr"/>
+    <meta name="Keyword"
+          content='guillaume thareau", "développeur web", "développeur PHP", "développeur Symfony", "développeur Tours","développeur RQTH","RQTH","Tours"'/>
+    <meta name="Copyright" content="Guillaume Thareau">
+    <meta name="Identifier-Url" content="....">
+    <meta name="Reply-To" content="gthareau1@gmail.com">
+    <meta name="Rating" content="general">
+    <meta name="Distribution" content="global">
+    <meta name="Geography" content="Tours, France, 37000">
+    <meta name="Category" content="internet">
+    <!-- TITLE -->
+    <title> Guillaume Thareau - Développeur Web </title>
+    <!--CSS-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
-<nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="/" class="brand-logo">Logo</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="connect">Se connecter</a></li>
+<header>
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="/" id="logo-container" class=" brand-logo">
+                <h1 class=" flow-text text-darken-4">Guillaume Thareau - Développeur Web PHP Symfony</h1>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Articles - Web</a></li>
+                <li><a href="#">Mes projets</a></li>
+                <li><a href="#">login</a></li>
+            </ul>
 
-        </ul>
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="connect">Se connecter</a></li>
-
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
-
-<div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <br><br>
-            <h1 class="header center teal-text text-lighten-2"></h1>
-            <div class="row center">
-                <h5 class="header col s12 light">« Créer, c’est vivre deux fois », Albert Camus</h5>
-            </div>
-            <div class="row center">
-                <a href="http://materializecss.com/getting-started.html" id="download-button"
-                   class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-            </div>
-            <br><br>
-
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Articles - Web</a></li>
+                <li><a href="#">Mes projets</a></li>
+                <li><a href="#">login</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
+    </nav>
+
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <div class="row center">
+                    <div class="col s12 offset-m2 m8">
+                        <div id="pres" class="card blue-grey lighten-1">
+                            <div class="card-title">
+                                <h1 class="header flow-text center-block col s12 text-darken-4">« Créer, c’est vivre
+                                    deux fois », Albert Camus</h1>
+                                <img id="gtphoto" src="/img/photogt.jpg" alt="Photo Guillaume Thareau"
+                                     class="circle responsive-img">
+                                <span class="card-title flow-text">Bonjour,</span>
+                                <p class="flow-text">Je suis développeur web PHP Symfony :) en cours :) , en recherche d'opportunités.
+                                    Je vous invite à regarder mes projets et laisser moi un message.
+                                    <br>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        <div class="parallax"><img src="/img/background1.jpg" alt="Unsplashed background img 1"></div>
     </div>
-    <div class="parallax"><img src="/img/background1.jpg" alt="Unsplashed background img 1"></div>
-</div>
+</header>
+<main>
 
-
-<div class="container">
     {% block content %}
     {% endblock %}
-    {% block contact %}
-    {% endblock %}
-</div>
 
-
+</main>
 <footer class="page-footer teal blue-grey darken-1">
     <div class="container">
         <div class="left-align">
@@ -71,12 +99,10 @@
     </div>
 </footer>
 
-
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="/js/materialize.js"></script>
 <script src="/js/init.js"></script>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
 </body>
 </html>
+
