@@ -29,15 +29,15 @@
 <body>
 
 <header>
-    <nav class="white" role="navigation">
+    <nav class="indigo lighten-3" role="navigation">
         <div class="nav-wrapper container">
             <a href="/" id="logo-container" class=" brand-logo">
-                <h1 class=" flow-text text-darken-4">Guillaume Thareau - Développeur Web PHP Symfony</h1>
+                <h1 class="flow-text text-blue"><strong>Développeur Web PHP Symfony</strong></h1>
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Articles - Web</a></li>
                 <li><a href="#">Mes projets</a></li>
-                <li><a href="#">login</a></li>
+                <li><a href="/register">login</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
@@ -51,28 +51,18 @@
 
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
-            <div class="container">
                 <br><br>
                 <div class="row center">
-                    <div class="col s12 offset-m2 m8">
-                        <div id="pres" class="card blue-grey lighten-1">
-                            <div class="card-title">
-                                <h1 class="header flow-text center-block col s12 text-darken-4">« Créer, c’est vivre
-                                    deux fois », Albert Camus</h1>
-                                <img id="gtphoto" src="/img/photogt.jpg" alt="Photo Guillaume Thareau"
-                                     class="circle responsive-img">
-                                <span class="card-title flow-text">Bonjour,</span>
-                                <p class="flow-text">Je suis développeur web PHP Symfony :) en cours :) , en recherche d'opportunités.
-                                    Je vous invite à regarder mes projets et laisser moi un message.
-                                    <br>
-                                    <br>
-                                </p>
-                            </div>
+                    <div class="col s12 offset-m9 m3">
+                        <div id="pres" class="card-panel indigo lighten-5 z-depth-1">
+                            <img id="gtphoto" src="/img/photogt.jpg" alt="Photo Guillaume Thareau"
+                                 class="circle responsive-img">
+                            <p class="flow-text indigo-text text-lighten-2"><strong>« Créer, c’est vivre deux
+                                    fois », Albert Camus</strong></p>
                         </div>
                     </div>
                 </div>
                 <br><br>
-            </div>
         </div>
         <div class="parallax"><img src="/img/background1.jpg" alt="Unsplashed background img 1"></div>
     </div>
@@ -81,15 +71,24 @@
 
     {% block content %}
     {% endblock %}
+    {% block contact %}
+    {% endblock %}
+
 
 </main>
-<footer class="page-footer teal blue-grey darken-1">
+<footer class="page-footer  indigo lighten-3">
     <div class="container">
-        <div class="left-align">
-            <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
-            <script type="in/share" data-counter="top"></script>
-            <a class="github-button" href="https://github.com/Forgay" data-size="large"
-               aria-label="Follow @Forgay on GitHub">Follow @Forgay</a>
+        <div class="row">
+            <div class="col s3 left-align">
+                <script type="text/javascript" src="https://platform.linkedin.com/in.js"></script>
+                <script type="in/share" data-counter="top"></script>
+                <a class="github-button" href="https://github.com/Forgay" data-size="large"
+                   aria-label="Follow @Forgay on GitHub">Follow @Forgay</a>
+            </div>
+            <div class="col s3 center-align">
+                <a class="waves-effect waves-lighten-4 btn indigo lighten-2" href="/cv/CV_Guillaume Thareau.pdf"><i
+                            class="material-icons right">unarchive</i>Mon CV en PDF</a>
+            </div>
         </div>
     </div>
     <div class="footer-copyright">

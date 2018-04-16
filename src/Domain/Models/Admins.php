@@ -11,11 +11,25 @@ class Admins extends Manager
     protected $pseudo;
     protected $email;
     protected $password;
-    protected $dateinscription;
+    protected $passwordVerif;
+    protected $dateInscription;
 
-    const INVALID_PSEUDO = 'Le nom d\'utilisateur doit comprendre de 3 à 20 caractères alphanumériques.';
-    const INVALID_EMAIL = 'l\'email saisis semble ne pas être valide.';
-    const INVALID_PASSWORD = 'Le mot de passe doit être composé de 8 à 20 caractères, et doit contenir au moins 1 lettre majuscule, 1 lettre minuscule et 1 chiffre. ';
+    public function __construct(
+        string $id,
+        string $pseudo,
+        string $email,
+        string $password,
+        string $passwordVerif,
+        string $dateInscription
+    ) {
+        $this->id = $id;
+        $this->pseudo = $pseudo;
+        $this->email = $email;
+        $this->password = $password;
+        $this->passwordVerif = $passwordVerif;
+        $this->dateInscription =$dateInscription;
+
+    }
 
     public function getId()
     {
@@ -37,9 +51,14 @@ class Admins extends Manager
         return $this->password;
     }
 
-    public function getDateinscription()
+    public function getPasswordVerif()
     {
-        return $this->dateinscription;
+        return $this->passwordVerif;
+    }
+
+    public function getDateInscription()
+    {
+        return $this->dateInscription;
     }
 
     public function setId($id)
@@ -75,8 +94,8 @@ class Admins extends Manager
         }
     }
 
-    public function setDateinscription($dateinscription)
+    public function setDateInscription($dateInscription)
     {
-        $this->dateinscription = $dateinscription;
+        $this->dateInscription = $dateInscription;
     }
 }

@@ -2,18 +2,19 @@
 {% block content %}
     <div class="section">
         <div class="row">
-            <div class="col l4 m6 s12 offset-l4 offset-m3">
+            <div class="col l4 m8 s12 offset-l4 offset-m4">
                 <div class="card-panel">
-                    <div class="row">
-                        <img src="../../Web/img/admin.png" alt="administrateur" width="50%"/>
+                    <div class="center">
+                        <img src="/img/admin.png" alt="administrateur" width="50%"/>
                     </div>
-                    <h4 class="center-align">Se connecter</h4>
-                    <form action="../../Web/index1.php?action=connexion" method="POST">
+                    <h4 class="center-align indigo-text text-indigo lighten-2">S'inscrire</h4>
+                    <form action="/register" class="center-align" method="POST">
                         <div class="row">
                             <div class="input-field col s12">
                                 <input type="text" id="pseudo" name="pseudo"/>
                                 <label for="pseudo">Votre pseudo</label>
                             </div>
+
                             <div class="input-field col s12">
                                 <input type="email" id="email" name="email"/>
                                 <label for="email">votre adresse mail</label>
@@ -22,15 +23,22 @@
                                 <input type="password" id="password" name="password"/>
                                 <label for="password">Mot de passe</label>
                             </div>
+
+                            <div class="input-field col s12">
+                                <input type="password" id="passwordverif" name="passwordverif"/>
+                                <label for="passwordverif">Vérification du mot de passe</label>
+                            </div>
                         </div>
-                        <button type="submit" name="submit" class="waves-effect waves-light btn indigo lighten-2">
-                            <i class="material-icons left">perm_identity</i>
-                            Se connecter
-                        </button>
+                        <button type="submit" name="submit" class="waves-effect waves-light btn indigo lighten-2">Se
+                            connecter<i class="material-icons left">perm_identity</i></button>
+                        {% for message in session %}
+                            <div class="flash-error">{{ message }}</div>
+                        {% endfor %}
                         <br/><br/>
-                        <a href="../../Web/index.php">Nous rejoindre !</a>
+                        <a href="/connect">s'identifier</a>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
 {% endblock %}

@@ -1,42 +1,40 @@
 <?php
 
-
 namespace Src\UI\Action;
 
-use App\Services\TwigService;
 use Src\Domain\Managers\CommentManager;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-
+use App\Services\CommentBuilder;
 
 class CommentAddAction
 {
     private $commentManager;
     private $request;
-
+    private $commentBuilder;
 
     public function __construct(Request $request)
     {
-        $this->request=$request;
+        $this->request = $request;
         $this->commentManager = new CommentManager();
+        $this->commentBuilder = new CommentBuilder();
     }
 
     public function __invoke()
     {
-        if (isset($id) && $id>0) {
 
-            if (!empty($this->request->get('nom')) && !empty($this->request->get('email')) && !empty($this->request->get('comment'))) {
+        if ($this->request->attributes->get(0)>0) {
 
-                $nom = htmlspecialchars($this->request->get('nom'));
-                $email = htmlspecialchars($this->request->get('email'));
-                $comment = htmlspecialchars($this->request->get('comment'));
-                $postId = htmlspecialchars($this->request->query->get('id'));
+            if (!empty($this->request->get('nom')) && !empty($this->request->get('email')) && !empty($this->request->get('content'))) {
+               $this->commentBuilder->build(
+                   $this->request->get('nom'),
+                   $this->request->get('email'),
+                   $this->request->get('content'),
+                   $this->request->attributes->get(0)
+                    );
 
-                $response = new Response(
-                    TwigService::getTwig()->render('postView.html.twig',
-                    ['comments'=>$this->commentManager->addComment($nom, $email, $comment, $postId)]
-                    )
-                );
+               $this->commentManager->addComment($this->commentBuilder->getComment());
+                 $response = new RedirectResponse('/post/detail/'.$this->request->attributes->all());
                 return $response->send();
             } else {
                 echo 'Attention : Tous les champs ne sont pas remplis !';
@@ -44,5 +42,4 @@ class CommentAddAction
         }
     }
 }
-
 

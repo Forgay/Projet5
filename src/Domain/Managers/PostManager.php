@@ -18,21 +18,19 @@ class PostManager extends Manager
 
     public function getPost($id)
     {
-        $req = $this->getConnexion()->prepare("SELECT * FROM posts WHERE posted= 1 AND id = :id");
-        $req->bindValue(':id', $id);
-        $req->execute(array($id));
-        $post = $req->fetch();
-        return $post;
+        $req = $this->getConnexion()->prepare("SELECT * FROM posts WHERE posted= 1 AND id = ?");
+        $req->execute($id);
+        return $post = $req->fetch();
     }
 
-    public function CountPost()
+    public function countPost()
     {
 
         $query = $this->getConnexion()->query("SELECT COUNT(id) FROM posts");
         return $nombre = $query->fetch();
     }
 
-    public function adPost($title, $content, $posted)
+    public function addPost($title, $content, $posted)
     {
         $p = [
             'title' => $title,

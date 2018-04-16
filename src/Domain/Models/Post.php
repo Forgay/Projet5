@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Src\Models;
+namespace Src\Domain\Models;
 
-use src\Domain\Managers\PostManager;
-use app\Services\Entity;
+use Src\Domain\Managers\PostManager;
+use App\Services\Entity;
 
 class Post
 {

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Src\UI\Action;
 
 use App\Services\TwigService;
@@ -24,13 +23,13 @@ class PostDetailAction
 
     public function __invoke()
     {
-        $response = new Response(
-            TwigService::getTwig()->render('postView.html.twig', [
-                'post' => $this->postManager->getPost($this->request->query->get('id')),
-                'comments' => $this->commentManager->getCommentById($this->request->query->get('id'))
+           $response = new Response(
+            TwigService::getTwig()->render('PostView.html.twig', [
+                'post' => $this->postManager->getPost($this->request->attributes->all()),
+                'comments' => $this->commentManager->getCommentById($this->request->attributes->all())
             ])
         );
-        return $response->send();
+         return $response->send();
     }
 }
 

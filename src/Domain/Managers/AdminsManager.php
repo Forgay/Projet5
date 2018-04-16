@@ -4,6 +4,7 @@
 namespace Src\Domain\Managers;
 
 use App\Bdd\Manager;
+use Src\Domain\Models\Admins;
 
 class AdminsManager extends Manager
 {
@@ -23,7 +24,7 @@ class AdminsManager extends Manager
         return $exist;
     }
 
-    public function adAdmin($pseudo, $email, $password)
+    public function addAdmin(Admins $admins)
     {
         $a = [
             'pseudo' => htmlspecialchars($pseudo),
@@ -31,7 +32,7 @@ class AdminsManager extends Manager
             'password' => password_hash($password, PASSWORD_DEFAULT)];
 
         $sql = "INSERT INTO admins (pseudo, password, email, date_inscription) VALUES (:pseudo,:password,:email,NOW())";
-        $req = $this->setDb()->prepare($sql);
+        $req = $this->getConnexion()->prepare($sql);
         $confirinscription = $req->execute($a);
         return $confirinscription;
     }

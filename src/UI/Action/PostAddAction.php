@@ -7,27 +7,27 @@ use Src\Domain\Managers\PostManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class HomeAction
+class PostAddAction
 {
     private $postManager;
-
-    private $request;
 
     public function __construct(Request $request)
     {
         $this->request = $request;
         $this->postManager = new PostManager();
-
     }
 
     public function __invoke()
     {
-
         $response = new Response(
-            TwigService::getTwig()->render('ListPostView.html.twig',[
-                'posts'=> $this->postManager->getPosts()
-            ]));
-       return $response->send();
+            TwigService::getTwig()->render('WritePost.html.twig',[
+                'posts'=> $this->postManager->addPost(
+                    $this->request->get('title'),
+                    $this->request->get('content'),
+                    $this->request->get('posted')
+                )
+            ])
+        );
+        return $response->send();
     }
 }
-

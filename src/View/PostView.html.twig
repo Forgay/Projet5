@@ -1,0 +1,56 @@
+{% extends 'FrontLayout.html.twig' %}
+{% block content %}
+    <div class="section">
+        <div class="row">
+            <div class="col s6 offset-s3 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <div class="card-image">
+                    <img src="/img/posts/{{ post.image }}.jpg" width="50%"/>
+                </div>
+                <h4 class="indigo-text lighten-2">{{ post.title }}</h4>
+                <p class="center-align light">{{ post.content }}</p>
+                <h6>{{ post.writer }},le {{ post.date | date("d/m/Y") }}</h6>
+            </div>
+        </div>
+    </div>
+    <form action="/comment/add/{{ post.id }}" method="POST">
+        <div class="row">
+            <div class="input-field col s4 offset-s4">
+                <input id="nom" type="text" name="nom" class="validate">
+                <label for="nom">Nom</label>
+            </div>
+            <div class="input-field col s4 offset-s4">
+                <input id="email" type="text" name="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4 offset-s4">
+                <textarea id="content" name="content" class="materialize-textarea"></textarea>
+                <label for="content">Votre commentaire</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="center-align input-field col s4 offset-s4">
+                <a>
+                    <button class="btn waves-effect waves-ripple indigo lighten-2" type="submit" name="action">
+                        Envoyer
+                    </button>
+                </a>
+            </div>
+        </div>
+    </form>
+    <div class="section">
+
+        <div class="row">
+            {% for comment in comments %}
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h5 class="center">{{ comment.nom }} le {{ comment.dateComment | date("d/m/Y") }}</h5>
+                        <p class="left-align light">{{ comment.content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -2,16 +2,17 @@
 
 
 namespace App\Services;
-require('../../vendor/swiftmailer/swiftmailer/lib/swift_required.php');
+require('/../vendor/swiftmailer /swiftmailer/lib/swift_required.php');
 
 class Contact
 {
 
 
-    function addContact($nom, $email, $message)
+    function addContact($firstname, $lastname, $email, $message)
     {
 
-        $nom = htmlspecialchars($nom);
+        $firstname = htmlspecialchars($firstname);
+        $lastname = htmlspecialchars($lastname);
         $email = htmlspecialchars($email);
         $message = htmlspecialchars($message);
 

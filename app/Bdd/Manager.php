@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Bdd;
-
 
 class Manager
 {
@@ -22,7 +20,8 @@ class Manager
     public function getConnexion()
     {
         try{
-            $db = new \PDO('mysql:dbname='.$this->conf['db'].';host='.$this->conf['machine'], $this->conf['user'] , $this->conf['password'], array(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION));
+            $db = new \PDO('mysql:dbname='.$this->conf['db'].';host='.$this->conf['machine'], $this->conf['user'] , $this->conf['password']);
+            $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (\Exception $e){
             die ('<p>Erreur :'.$e->getMessage().'</p>');
         }

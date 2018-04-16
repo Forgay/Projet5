@@ -1,0 +1,31 @@
+{% extends 'AdminsLayout.html.twig' %}
+{% block content %}
+    <h2>Modifier l'article</h2>
+    <form method="post">
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" name="title" id="title" value="{{ post.title }}"/>
+                <label for="title">Titre de l'article</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="content" name="content" class="materialize-textarea"></textarea>
+                <label for="content">Contenu de l'article</label>
+            </div>
+            <div class="col s6">
+                <p>Public</p>
+                <div class="switch">
+                    <label>
+                        Non
+                        <input type="checkbox" name="public" {{ post.posted }}/>
+                        <span class="lever"></span>
+                        Oui
+                    </label>
+                </div>
+            </div>
+            <div class="col s6 right-align">
+                <br/><br/>
+                <button type="submit" class="btn indigo lighten-2" name="submit">Modifier l'article</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

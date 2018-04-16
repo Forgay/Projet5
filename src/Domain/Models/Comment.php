@@ -1,21 +1,31 @@
 <?php
 
 
-namespace Src\Models;
-
-use src\Domain\Managers\CommentManager;
-use app\Services\Entity;
+namespace Src\Domain\Models;
 
 class Comment
 {
 
-    protected $id;
-    protected $nom;
-    protected $email;
-    protected $comment;
-    protected $post_id;
-    protected $date_comment;
-    protected $seen;
+    private $id;
+    private $nom;
+    private $email;
+    private $content;
+    private $postId;
+    private $dateComment;
+    private $seen;
+
+    public function __construct(
+        string $nom,
+        string $email,
+        string $content,
+        int $postId
+    ) {
+        $this->nom = $nom;
+        $this->email = $email;
+        $this->content = $content;
+        $this->postId = $postId;
+
+    }
 
     public function getId()
     {
@@ -32,19 +42,20 @@ class Comment
         return $this->email;
     }
 
-    public function getComment()
+    public function getContent()
     {
-        return $this->comment;
+        return $this->content;
     }
 
     public function getPostId()
     {
-        return $this->post_id;
+        return $this->postId;
     }
+
 
     public function getDateComment()
     {
-        return $this->date_comment;
+        return $this->dateComment;
     }
 
     public function getSeen()
@@ -55,35 +66,42 @@ class Comment
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
     }
 
     public function setNom($nom)
     {
         $this->nom = $nom;
+        return $this;
     }
 
     public function setEmail($email)
     {
         $this->email = $email;
+        return $this;
     }
 
-    public function setComment($comment)
+    public function setContent($content)
     {
-        $this->comment = $comment;
+        $this->content = $content;
+        return $this;
     }
 
-    public function setPostid($postid)
+    public function setPostId($postId)
     {
-        $this->post_id = $postid;
+        $this->postId = $postId;
+        return $this;
     }
 
-    public function setDateComment($date_comment)
+    public function setDateComment($dateComment)
     {
-        $this->date_comment = $date_comment;
+        $this->dateComment = $dateComment;
+        return $this;
     }
 
     public function setSeen($seen)
     {
         $this->seen = $seen;
+        return $this;
     }
 }
