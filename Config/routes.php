@@ -46,4 +46,9 @@ return [
         'action' => Src\UI\Action\SignOutAction::class,
         'params' => []
     ],
+    'Contact' => [
+        'path' => '/contact',
+        'action' => Src\UI\Action\ContactAction::class,
+        'params' => []
+    ],
 ];

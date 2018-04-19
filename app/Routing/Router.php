@@ -69,13 +69,13 @@ class Router
 
             if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
 
-                $action = $this->actionResolver->create($route->getAction(), $request);
+                $action = $this->actionResolver->create($route->getAction(),$request);
 
                return $action();
 
             } elseif ($route->getPath() === $request->server->get('REQUEST_URI')) {
 
-                $action = $this->actionResolver->create($route->getAction(), $request);
+                $action = $this->actionResolver->create($route->getAction(),$request);
 
                return $action();
             }

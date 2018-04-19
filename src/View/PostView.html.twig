@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <form action="/comment/add/{{ post.id }}" method="POST">
+    <form action="/comment/add/{{post.id}}" method="post">
         <div class="row">
             <div class="input-field col s4 offset-s4">
                 <input id="nom" type="text" name="nom" class="validate">
@@ -40,6 +40,9 @@
             </div>
         </div>
     </form>
+    {% for message in session %}
+        <div class="flash-error">{{ message }}</div>
+    {% endfor %}
     <div class="section">
 
         <div class="row">
