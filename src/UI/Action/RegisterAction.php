@@ -19,6 +19,7 @@ class RegisterAction
     {
         $this->request = $request;
         $this->session = new Session();
+        $this->session->start();
         $this->adminsManager = new AdminsManager();
         $this->adminsBuilder = new AdminsBuilder();
     }
@@ -39,7 +40,7 @@ class RegisterAction
             $response = new RedirectResponse('/connect');
             return $response->send();
         } else {
-            $this->session->getFlashBag()->add('Empty','Attention : Tous les champs ne sont pas remplis !');
+            $this->session->getFlashBag()->add('empty','Attention : Tous les champs ne sont pas remplis !');
         }
     }
 }

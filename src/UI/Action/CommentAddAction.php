@@ -26,7 +26,6 @@ class CommentAddAction
 
     public function __invoke()
     {
-        var_dump($this->request->get('nom'));
 
         if (!empty($this->request->get('nom')) && !empty($this->request->get('email')) && !empty($this->request->get('content'))) {
             $this->commentBuilder->build(

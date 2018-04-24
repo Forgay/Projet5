@@ -3,22 +3,30 @@
 
 namespace Src\Domain\Models;
 
-use Src\Domain\Managers\PostManager;
-use App\Services\Entity;
-
 class Post
 {
 
-    protected $id;
-    protected $title;
-    protected $content;
-    protected $writer;
-    protected $image;
-    protected $date;
-    protected $datemodify;
-    protected $posted;
+    private $id;
+    private $title;
+    private $content;
+    private $writer;
+    private $image;
+    private $date;
+    private $dateModify;
+    private $posted;
 
+    public function __construct(
+        string $id,
+        string $title,
+        string $content,
+        int $posted
+    ) {
+        $this->id = $id;
+        $this->title = $title;
+        $this->content = $content;
+        $this->posted = $posted;
 
+    }
     public function getId()
     {
         return $this->id;
@@ -49,9 +57,9 @@ class Post
         return $this->date;
     }
 
-    public function getDatemodify()
+    public function getDateModify()
     {
-        return $this->datemodify;
+        return $this->dateModify;
     }
 
     public function getPosted()

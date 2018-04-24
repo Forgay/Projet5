@@ -11,20 +11,7 @@ class CommentManager extends Manager
 {
     public function getComments()
     {
-        $req = $this->getConnexion()->query("
-        SELECT  comments.id,
-                comments.nom,
-                comments.email,
-                comments.date_comment,
-                comments.post_id,
-                comments.comment,
-                posts.title
-        FROM comments
-        JOIN posts
-        ON comments.post_id = posts.id
-        WHERE comments.seen = '1'
-        ORDER BY comments.date_comment ASC
-    ");
+        $req = $this->getConnexion()->query("SELECT * FROM comments WHERE seen = 0 ORDER BY dateComment ASC ");
 
         $results = [];
         while ($rows = $req->fetchObject()) {
@@ -61,9 +48,9 @@ class CommentManager extends Manager
     }
 
 
-    public function countComment()
+    public function notValideComment()
     {
-        $query = $this->getConnexion()->query("SELECT COUNT(id) FROM comments");
+        $query = $this->getConnexion()->prepare("SELECT COUNT(id) FROM comments SET seen='0' ");
         return $query->fetch();
     }
 

@@ -4,12 +4,16 @@ namespace App\Routing;
 
 use Src\UI\Action\NotFoundAction;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
+use App\Services\SecuredService;
 
 class Router
 {
     private $routes = [];
     private $actionResolver;
     private $request;
+    private $session;
+    private $secured;
 
     /**
      * Router constructor.
@@ -18,6 +22,8 @@ class Router
     public function __construct(Request $request)
     {
         $this->actionResolver = new ActionResolver();
+        $this->secured = new SecuredService();
+        $this->session = new Session();
         $this->request = $request;
         $this->loadRoutes();
         $this->handleRequest($request);
@@ -31,7 +37,7 @@ class Router
         $routes = require __DIR__ . './../../Config/routes.php';
 
         foreach ($routes as $route) {
-            $this->routes[] = new Route($route['path'], $route['action'], $route['params']);
+            $this->routes[] = new Route($route['path'], $route['action'], $route['params'], $route['secured'] ?? false);
         }
 
     }
@@ -41,20 +47,22 @@ class Router
      * @param $request
      * @param null $result
      */
-    public function catchParams($params, $uri, Route $route,Request $request)
+    public function catchParams($params, $uri, Route $route, Request $request)
     {
+        $path = $route->getPath();
 
-        foreach ($params as $value) {
+        foreach ($params as $value => $param) {
 
-            preg_match($value, $uri, $result);
+            preg_match($param, $uri, $result);
 
-        }
-        if (isset($result[0])) {
+            if ($result && array_key_exists($value, $params)) {
 
-                $route->setPath($uri);
+                $newPath = strtr($path, ['{' . $value . '}' => $result[0]]);
+                $route->setPath($newPath);
                 $request->attributes->add($result);
-
+            }
         }
+
     }
 
     /**
@@ -64,24 +72,25 @@ class Router
     {
 
         foreach ($this->routes as $route) {
+            $this->secured->catchSecured($route->getSecured(),$request->get('admin'),$request);
+            $this->catchParams($route->getParams(), $request->server->get('REQUEST_URI'), $route, $request);
 
-            $this->catchParams($route->getParams(), $request->server->get('REQUEST_URI'),$route,$request);
+              if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
 
-            if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
+              $action = $this->actionResolver->create($route->getAction(),$request);
 
-                $action = $this->actionResolver->create($route->getAction(),$request);
+              return $action();
 
-               return $action();
+              } elseif ($route->getPath() === $request->server->get('REQUEST_URI')) {
 
-            } elseif ($route->getPath() === $request->server->get('REQUEST_URI')) {
+              $action = $this->actionResolver->create($route->getAction(),$request);
 
-                $action = $this->actionResolver->create($route->getAction(),$request);
+                  return $action();
 
-               return $action();
-            }
-
+              }
         }
         $action = new NotFoundAction();
-       return $action();
+
+        return $action();
     }
 }

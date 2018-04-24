@@ -3,37 +3,17 @@
 
 namespace Src\Domain\Models;
 
-use App\Bdd\Manager;
-
-class Admins extends Manager
+class Admins
 {
-    protected $id;
     protected $pseudo;
     protected $email;
     protected $password;
-    protected $passwordVerif;
-    protected $dateInscription;
 
-    public function __construct(
-        string $id,
-        string $pseudo,
-        string $email,
-        string $password,
-        string $passwordVerif,
-        string $dateInscription
-    ) {
-        $this->id = $id;
+    public function __construct(string $pseudo, string $email, string $password)
+    {
         $this->pseudo = $pseudo;
         $this->email = $email;
         $this->password = $password;
-        $this->passwordVerif = $passwordVerif;
-        $this->dateInscription =$dateInscription;
-
-    }
-
-    public function getId()
-    {
-        return $this->id;
     }
 
     public function getPseudo()
@@ -51,51 +31,31 @@ class Admins extends Manager
         return $this->password;
     }
 
-    public function getPasswordVerif()
-    {
-        return $this->passwordVerif;
-    }
-
-    public function getDateInscription()
-    {
-        return $this->dateInscription;
-    }
-
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
     public function setPseudo($pseudo)
     {
-        if(!preg_match('#^¨[a-zA-Z0-9].{3,20}$#',$pseudo )){
+        if (!preg_match('#^¨[a-zA-Z0-9].{3,20}$#', $pseudo)) {
 
-            $this->errors[] =  self::INVALID_PSEUDO;
-        }else {
+            $this->errors[] = self::INVALID_PSEUDO;
+        } else {
             $this->pseudo = $pseudo;
         }
     }
 
     public function setEmail($email)
     {
-        if (empty($email)||!filter_var($email,FILTER_VALIDATE_EMAIL)){
-            $this->errors[]= self::INVALID_EMAIL;
-        }else{
-        $this->email = $email;
+        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->errors[] = self::INVALID_EMAIL;
+        } else {
+            $this->email = $email;
         }
     }
 
     public function setPassword($password)
     {
-        if (!preg_match('#(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,20}"',$password)){
-            $this->errors[]= self::INVALID_PASSWORD;
-        }else {
+        if (!preg_match('#(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,20}"', $password)) {
+            $this->errors[] = self::INVALID_PASSWORD;
+        } else {
             $this->password = $password;
         }
-    }
-
-    public function setDateInscription($dateInscription)
-    {
-        $this->dateInscription = $dateInscription;
     }
 }
