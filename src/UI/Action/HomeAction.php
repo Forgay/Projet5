@@ -30,4 +30,3 @@ class HomeAction
        return $response->send();
     }
 }
-

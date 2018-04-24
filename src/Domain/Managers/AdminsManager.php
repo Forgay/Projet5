@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Src\Domain\Managers;
 
 use App\Bdd\Manager;
@@ -9,39 +8,31 @@ use Src\Domain\Models\Admins;
 class AdminsManager extends Manager
 {
 
-    public function isAdmin($pseudo, $email, $password)
+    public function isAdmin(Admins $admins)
     {
 
-        $z = [
-            'pseudo' => $pseudo,
-            'email' => $email,
-            'password' => password_hash($password, PASSWORD_DEFAULT)];
+        $req = $this->getConnexion()->prepare("SELECT password FROM admins WHERE pseudo=:pseudo AND email = :email");
 
-        // verifier l'administrateur existe
-        $sql = "SELECT * FROM admins WHERE pseudo = :pseudo AND email = :email AND password=:password";
-        $req = $this->setDb()->prepare($sql);
-        $exist = $req->execute($z);
-        return $exist;
+        $req->bindValue(':pseudo', htmlspecialchars($admins->getPseudo()),\PDO::PARAM_STR);
+        $req->bindValue(':email', htmlspecialchars($admins->getEmail()),\PDO::PARAM_STR);
+        $req->execute();
+
+        $result = $req->fetch();
+
+        return password_verify($admins->getPassword(),$result['password']);
+
     }
 
     public function addAdmin(Admins $admins)
     {
-        $a = [
-            'pseudo' => htmlspecialchars($pseudo),
-            'email' => htmlspecialchars($email),
-            'password' => password_hash($password, PASSWORD_DEFAULT)];
+        $req = $this->getConnexion()->prepare("INSERT INTO admins (pseudo, email, password,  dateInscription) VALUES (:pseudo,:email,:password,NOW())");
 
-        $sql = "INSERT INTO admins (pseudo, password, email, date_inscription) VALUES (:pseudo,:password,:email,NOW())";
-        $req = $this->getConnexion()->prepare($sql);
-        $confirinscription = $req->execute($a);
-        return $confirinscription;
-    }
+        $req->bindValue(':pseudo', htmlspecialchars($admins->getPseudo()),\PDO::PARAM_STR);
+        $req->bindValue(':email', htmlspecialchars($admins->getEmail()),\PDO::PARAM_STR);
+        $req->bindValue(':password', password_hash($admins->getPassword(),PASSWORD_DEFAULT),\PDO::PARAM_STR);
 
-    public function CountPost()
-    {
+        $req->execute();
 
-        $query = $this->setDb()->query("SELECT COUNT(id) FROM posts");
-        return $nombre = $query->fetch();
     }
 
     public function isPass($pseudo)
@@ -53,4 +44,26 @@ class AdminsManager extends Manager
             return $results;
     }
 
+    public function InTable($tables)
+    {
+        foreach ($tables as $table){
+
+            $req = $this->getConnexion()->query("SELECT COUNT(id) FROM $table");
+            $req->execute();
+
+            dump($nombre = $req->fetch());
+        }
+
+
+    }
+
+    public function getTables()
+    {
+        $tables = [
+            "Publications" => "posts",
+            "Commentaires" => "comments",
+            "Administrateurs" => "admins"
+        ];
+        return $tables;
+    }
 }

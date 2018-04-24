@@ -4,6 +4,7 @@
 namespace Src\Domain\Managers;
 
 use App\Bdd\Manager;
+use Src\Domain\Models\Post;
 
 
 class PostManager extends Manager
@@ -23,35 +24,39 @@ class PostManager extends Manager
         return $post = $req->fetch();
     }
 
-    public function countPost()
+    public function notValidePost()
     {
-
-        $query = $this->getConnexion()->query("SELECT COUNT(id) FROM posts");
-        return $nombre = $query->fetch();
+        $query = $this->getConnexion()->prepare("SELECT COUNT(id) FROM comments SET seen='0' ");
+        return $query->fetch();
     }
 
-    public function addPost($title, $content, $posted)
+    public function addPost(Post $post)
     {
-        $p = [
-            'title' => $title,
-            'content' => $content,
-            'posted' => $posted
-        ];
         $req = $this->getConnexion()->prepare("INSERT INTO posts(title,content,writer,date,posted) VALUES (:title,:content,'admin',NOW(),:posted)");
-        $req->execute($p);
+
+        $req->bindValue(':nom', $post->getTitle(), \PDO::PARAM_STR);
+        $req->bindValue(':content', $post->getContent(), \PDO::PARAM_STR);
+        $req->bindValue(':writer', $post->getWriter(), \PDO::PARAM_STR);
+        $req->bindValue(':posted', $post->getPosted(), \PDO::PARAM_INT);
+
+
+        $req->execute();
 
     }
 
-    public function updatePost($title, $content, $posted, $id)
+    public function updatePost(Post $post)
     {
-        $a = [
-            'title' => $title,
-            'content' => $content,
-            'posted' => $posted,
-            'id' => $id
-        ];
+
         $req = $this->getConnexion()->prepare("UPDATE posts SET title=:title, content=:content, datemodify=NOW(), posted=:posted WHERE id=:id");
-        $req->execute($a);
+
+        $req->bindValue('id',$post->getId(),\PDO::PARAM_INT);
+        $req->bindValue(':title',$post->getTitle(), \PDO::PARAM_STR);
+        $req->bindValue('content',$post->getContent(),\PDO::PARAM_STR);
+        $req->bindValue('posted',$post->getPosted(),\PDO::PARAM_INT);
+
+
+
+        $req->execute();
     }
 
     public function delPost($id)

@@ -10,12 +10,14 @@ class Route
     private $path;
     private $action;
     private $params;
+    private $secured;
 
-    public function __construct(string $path, string $action, array $params)
+    public function __construct(string $path, string $action, array $params, bool $secured = false )
     {
         $this->path = $path;
         $this->action = $action;
         $this->params = $params;
+        $this->secured = $secured;
     }
 
     public function getPath()
@@ -31,6 +33,11 @@ class Route
     public function getAction()
     {
         return $this->action;
+    }
+
+    public function getSecured()
+    {
+        return $this->secured;
     }
 
     public function setPath($path)

@@ -8,20 +8,16 @@ class AdminsBuilder
 {
     private $admins;
 
-    public function build(string $id,
-                          string $pseudo,
+    public function build(string $pseudo,
                           string $email,
-                          string $password,
-                          string $passwordVerif,
-                          string $dateInscription
+                          string $password
     )
     {
-        $this->admins = new Admins($id, $pseudo, $email, $password, $passwordVerif, $dateInscription);
+        $this->admins = new Admins($pseudo, $email, $password);
     }
 
     public function getAdmins()
     {
         return $this->admins;
     }
-
 }

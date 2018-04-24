@@ -4,7 +4,6 @@ namespace Src\UI\Action;
 
 use App\Services\TwigService;
 use Src\Domain\Managers\PostManager;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class SignOutAction
