@@ -4,15 +4,14 @@ namespace App\Routing;
 
 use Src\UI\Action\NotFoundAction;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session\Session;
 use App\Services\SecuredService;
+
 
 class Router
 {
     private $routes = [];
     private $actionResolver;
     private $request;
-    private $session;
     private $secured;
 
     /**
@@ -23,7 +22,6 @@ class Router
     {
         $this->actionResolver = new ActionResolver();
         $this->secured = new SecuredService();
-        $this->session = new Session();
         $this->request = $request;
         $this->loadRoutes();
         $this->handleRequest($request);
@@ -72,7 +70,8 @@ class Router
     {
 
         foreach ($this->routes as $route) {
-            $this->secured->catchSecured($route->getSecured(),$request->get('admin'),$request);
+
+            $this->secured->catchSecured($route->getSecured(),$request->getSession());
             $this->catchParams($route->getParams(), $request->server->get('REQUEST_URI'), $route, $request);
 
               if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
@@ -85,7 +84,7 @@ class Router
 
               $action = $this->actionResolver->create($route->getAction(),$request);
 
-                  return $action();
+              return $action();
 
               }
         }

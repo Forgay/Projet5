@@ -3,26 +3,17 @@
 
 namespace App\Services;
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class SecuredService
 {
-    private $session;
-
-    public function __construct()
+    public function catchSecured($secured, SessionInterface $session)
     {
-        $this->session = new Session();
-    }
-
-    public function catchSecured($secured, $admin)
-    {
-
-        if ($secured && $admin === null) {
-            $this->session->getFlashBag()->add('warning', 'Merci de vous inscrire !');
-            $response = new Response(TwigService::getTwig()->render('ConnectView.html.twig',
-                ['warning' => $this->session]
-            ));
+        if ($secured && $session->get('admin') === null) {
+            $session->getFlashBag()->add('warning', 'Merci de vous inscrire !');
+            $response = new RedirectResponse('/connecting');
             return $response->send();
         }
     }

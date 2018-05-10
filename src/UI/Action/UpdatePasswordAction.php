@@ -8,7 +8,7 @@ use Src\Domain\Managers\AdminsManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-class LogonAction
+class UpdatePasswordAction
 {
     private $request;
     private $adminsManager;
@@ -25,7 +25,6 @@ class LogonAction
 
     public function __invoke()
     {
-
         if (!empty($this->request->get('pseudo')) && !empty($this->request->get('email')) && !empty($this->request->get('password')) && !empty($this->request->get('passwordVerif'))) {
             if ($this->request->get('password') === $this->request->get('passwordVerif')) {
                 $this->adminsBuilder->build(
@@ -35,11 +34,12 @@ class LogonAction
                     ''
 
                 );
-                $this->adminsManager->addAdmin($this->adminsBuilder->getAdmins());
+                $this->adminsManager->UpDateAdmin($this->adminsBuilder->getAdmins());
+                $this->session->getFlashBag()->add('MotPasse','Mot de passe modifié!');
                 $response = new RedirectResponse('/connect');
                 return $response->send();
             } else {
-                $this->session->getFlashBag()->add('Erreur_password', 'Attention : les mots de passe ne sont identiques !');
+                $this->session->getFlashBag()->add('ErreurPassword', 'Attention : les mots de passe ne sont identiques !');
             }
         }
         $this->session->getFlashBag()->add('Empty', 'Attention : Tous les champs ne sont pas remplis !');

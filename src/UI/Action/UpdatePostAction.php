@@ -23,7 +23,6 @@ class UpdatePostAction
 
     public function __invoke()
     {
-        dump($this->request);
         $this->postBuilder->build(
             $this->request->attributes->get(0),
             $this->request->get('title'),

@@ -14,7 +14,7 @@ $session = new Session\Session();
 $session->start();
 
 $request = Request::createFromGlobals();
-
+$request->setSession($session);
 $app = new Kernel();
 $app->boot($request);
 

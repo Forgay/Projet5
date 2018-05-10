@@ -2,27 +2,31 @@
 {% block content %}
     <h2>Tableau de bord</h2>
     <div class="row">
-
-
-        {% for data in tables %}
-
-              <div class="col l4 m6 s12">
-                <div class="card">
-                    <div class="card-content  white-text">
-                        <span class="card-title">{{ data.name }}</span>
-                          <h4>{{ nbrInTable }}</h4>
-                    </div>
+        <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-content  brown-text">
+                    <span class="card-title">Ajouter un article</span>
+                    <h4>Vous souhaitez ajouter un article</h4>
+                    <a href="/post/add" type="submit" name="submit" class="waves-effect waves-light btn indigo lighten-2">
+                        <i class="material-icons left">build</i>Ajouter un article</a>
                 </div>
             </div>
-        {% endfor %}
+        </div>
+        <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-content  brown-text">
+                    <span class="card-title">Liste des articles</span>
+                    <h4>C'est ici pour modifier les articles</h4>
+                    <a href="/post/list" type="submit" name="submit" class="waves-effect waves-light btn indigo lighten-2">
+                        <i class="material-icons left">build</i>Liste des articles</a>
+                </div>
 
-
+            </div>
+        </div>
     </div>
 
+
     <h4>Commentaires non lus</h4>
-    <?php
-    $comments = get_comments();
-?>
     <table>
         <thead>
         <tr>
@@ -32,63 +36,20 @@
         </tr>
         </thead>
         <tbody>
-        {% if comment %}
-
             {% for value in comment %}
-                <tr id="{{ comment.id }}">
-                    <td>{{ comment.title }}</td>
-                    <td>{{ comment.content|striptags }}</td>
+                <tr id="{{ value.id }}">
+                    <td>{{ value.title }}</td>
+                    <td>{{ value.content|striptags }}</td>
                     <td>
-                        <a href="#" id="{{ comment.id }}>"
+                        <a href="/validcomment/{{ value.id }}"
                            class="btn-floating btn-small waves-effect waves-light green see_comment"><i
                                     class="material-icons">done</i></a>
-                        <a href="#" id="{{ comment.id }}"
+                        <a href="/deletecomment/{{ value.id }}"
                            class="btn-floating btn-small waves-effect waves-light red delete_comment"><i
                                     class="material-icons">delete</i></a>
-                        <a href=" {{ comment.id }}"
-                           class="btn-floating btn-small waves-effect waves-light blue modal-trigger"><i
-                                    class="material-icons">more_vert</i></a>
-
-                        <div class="modal" id="comment_<?= $comment->id ?>">
-                            <div class="modal-content">
-                                <h4><?= $comment->title ?></h4>
-
-                                <p>Commentaire posté par
-                                    <strong><?= $comment->name . " (" . $comment->email . ")</strong><br/>Le " .
-                                    date("d/m/Y à
-                                    H:i",
-                                    strtotime($comment->date)) ?>
-                                </p>
-                                <hr/>
-                                <p><?= nl2br($comment->comment) ?></p>
-
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" id="<?= $comment->id ?>"
-                                   class="modal-action modal-close waves-effect waves-red btn-flat delete_comment"><i
-                                            class="material-icons">delete</i></a>
-                                <a href="#" id="<?= $comment->id ?>"
-                                   class="modal-action modal-close waves-effect waves-green btn-flat see_comment"><i
-                                            class="material-icons">done</i></a>
-                            </div>
-
-
-                        </div>
-
-
                     </td>
                 </tr>
             {% endfor %}
-        {% endif %}
-        <tr>
-            <td></td>
-            <td>
-                <p>Aucun commentaire à valider</p>
-            </td>
-        </tr>
-        <?php
-        }
-        ?>
         </tbody>
     </table>
 {% endblock %}

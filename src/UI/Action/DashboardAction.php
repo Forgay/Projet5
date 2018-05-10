@@ -33,15 +33,12 @@ class DashboardAction
     public function __invoke()
     {
 
-        $response = new Response(
-            TwigService::getTwig()->render('DashboardView.html.twig', [
-                    'tables' => $this->adminsManager->getTables(),
-                    'nbrInTable' => $this->adminsManager->inTable( $this->adminsManager->getTables()),
-                    'comments' => $this->commentManager->notValideComment(),
-                    'posts' => $this->postManager->notValidePost(),
-                    'comment' =>$this->commentManager->getComments()
-                ]
-            ));
+            $response = new Response(
+                TwigService::getTwig()->render('DashboardView.html.twig', [
+                        'comment' => $this->commentManager->getComments()
+                    ]
+                ));
+
         return $response->send();
 
     }

@@ -5,15 +5,40 @@ namespace Src\Domain\Models;
 
 class Admins
 {
+    /**
+     * @var string
+     */
     protected $pseudo;
+
+    /**
+     * @var string
+     */
     protected $email;
+
+    /**
+     * @var string
+     */
     protected $password;
 
-    public function __construct(string $pseudo, string $email, string $password)
+    /**
+     * @var string
+     */
+    protected $role;
+
+    /**
+     * Admins constructor.
+     *
+     * @param string $pseudo
+     * @param string $email
+     * @param string $password
+     * @param string $role
+     */
+    public function __construct(string $pseudo, string $email, string $password, string $role)
     {
         $this->pseudo = $pseudo;
         $this->email = $email;
         $this->password = $password;
+        $this->role =$role;
     }
 
     public function getPseudo()
@@ -30,6 +55,15 @@ class Admins
     {
         return $this->password;
     }
+
+    /**
+     * @return string
+     */
+    public function getRole(): string
+    {
+        return $this->role;
+    }
+
 
     public function setPseudo($pseudo)
     {

@@ -5,16 +5,54 @@ namespace Src\Domain\Models;
 
 class Post
 {
-
+    /**
+     * @var string
+     */
     private $id;
+
+    /**
+     * @var string
+     */
     private $title;
+
+    /**
+     * @var string
+     */
     private $content;
+
+    /**
+     * @var string
+     */
     private $writer;
+
+    /**
+     * @var
+     */
     private $image;
+
+    /**
+     * @var
+     */
     private $date;
+
+    /**
+     * @var
+     */
     private $dateModify;
+
+    /**
+     * @var int
+     */
     private $posted;
 
+    /**
+     * Post constructor.
+     *
+     * @param string $id
+     * @param string $title
+     * @param string $content
+     * @param int $posted
+     */
     public function __construct(
         string $id,
         string $title,

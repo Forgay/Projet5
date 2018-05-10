@@ -17,6 +17,7 @@ class ConnectingAction
     private $adminsBuilder;
     private $session;
 
+
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -33,24 +34,32 @@ class ConnectingAction
             $this->adminsBuilder->build(
                 $this->request->get('pseudo'),
                 $this->request->get('email'),
-                $this->request->get('password')
+                $this->request->get('password'),
+                ''
             );
 
             if($this->adminsManager->isAdmin($this->adminsBuilder->getAdmins())){
+                $admin= $this->adminsManager->getAdmin($this->adminsBuilder->getAdmins());
                 $response = new RedirectResponse('/dashboard');
-                $this->session->set('admin',$this->adminsBuilder->getAdmins());
+                $this->session->set('admin',$this->adminsBuilder->buildForSession($admin)->getAdmins());
+
                 return $response->send();
 
             } else {
-                $this->session->getFlashBag()->add('Erreur_password', 'Attention : les mots de passe ne sont identiques !');
+                $this->session->getFlashBag()->add('error', 'Attention : les mots de passe ne sont identiques !');
 
                 $response = new Response(
                     TwigService::getTwig()->render('ConnectView.html.twig',[
-                     'error' => $this->session
+                      'error'=> $this->session->get('error')
                     ]));
                 return $response->send();
             }
         }
         $this->session->getFlashBag()->add('Empty', 'Attention : Tous les champs ne sont pas remplis !');
+        $response = new Response(
+          TwigService::getTwig()->render('ConnectView.html.twig',[
+              'error'=>$this->session->get('Empty')
+          ])
+        );
     }
 }

@@ -5,11 +5,34 @@ namespace Src\Domain\Models;
 class contact
 
 {
+    /**
+     * @var string
+     */
     private $firstname;
+
+    /**
+     * @var string
+     */
     private $lastname;
+
+    /**
+     * @var string
+     */
     private $email;
+
+    /**
+     * @var string
+     */
     private $message;
 
+    /**
+     * contact constructor.
+     *
+     * @param string $firstname
+     * @param string $lastname
+     * @param string $email
+     * @param string $message
+     */
     public function __construct(
         string $firstname,
         string $lastname,

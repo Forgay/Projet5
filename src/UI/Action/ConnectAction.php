@@ -21,5 +21,4 @@ class ConnectAction
             TwigService::getTwig()->render('ConnectView.html.twig'));
         return $response->send();
     }
-
 }

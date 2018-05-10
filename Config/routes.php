@@ -41,11 +41,36 @@ return [
         'action' => Src\UI\Action\ConnectingAction::class,
         'params' => []
     ],
-    'Dashboard' =>[
+    'Contact' => [
+        'path' => '/contact',
+        'action' => Src\UI\Action\ContactAction::class,
+        'params' => []
+    ],
+    'Reset' => [
+        'path' => '/reset',
+        'action' => Src\UI\Action\ResetAction::class,
+        'params' => []
+    ],
+    'Send' => [
+        'path' => '/send',
+        'action' => Src\UI\Action\SendPasswordAction::class,
+        'params' => []
+    ],
+    'ResetPassword'=>[
+        'path' =>'/reset/password',
+        'action' => Src\UI\Action\ShowResetPasswordAction::class,
+        'params' => []
+    ],
+    'UpDatePassword'=>[
+        'path' =>'/update/password',
+        'action' => Src\UI\Action\UpdatePasswordAction::class,
+        'params' => []
+    ],
+    'Dashboard' => [
         'path' => '/dashboard',
         'action' => Src\UI\Action\DashboardAction::class,
         'params' => [],
-        'secured'=> true
+        'secured' => true
     ],
     'Add_Post' => [
         'path' => '/post/add',
@@ -77,14 +102,21 @@ return [
         'params' => ['PostId' => '/\d+/'],
         'secured' => true
     ],
-    'Sign_Out' => [
-        'path' => '/',
-        'action' => Src\UI\Action\SignOutAction::class,
-        'params' => []
+    'Valid_Comment' => [
+        'path' => '/validcomment/{comid}',
+        'action' => Src\UI\Action\ValidCommentAction::class,
+        'params' => ['comid' => '/\d+/'],
+        'secured' => true
     ],
-    'Contact' => [
-        'path' => '/contact',
-        'action' => Src\UI\Action\ContactAction::class,
+    'Delet_Comment' => [
+        'path' => '/deletecomment/{coid}',
+        'action' => Src\UI\Action\DeleteCommentAction::class,
+        'params' => ['coid' => '/\d+/'],
+        'secured' => true
+    ],
+    'Disconnect' => [
+        'path' => '/disconnect',
+        'action' => Src\UI\Action\DisconnectAction::class,
         'params' => []
     ],
 ];

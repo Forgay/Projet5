@@ -5,15 +5,49 @@ namespace Src\Domain\Models;
 
 class Comment
 {
-
+    /**
+     * @var int
+     */
     private $id;
+
+    /**
+     * @var string
+     */
     private $nom;
+
+    /**
+     * @var string
+     */
     private $email;
+
+    /**
+     * @var string
+     */
     private $content;
+
+    /**
+     * @var int
+     */
     private $postId;
+
+    /**
+     * @var
+     */
     private $dateComment;
+
+    /**
+     * @var
+     */
     private $seen;
 
+    /**
+     * Comment constructor.
+     *
+     * @param string $nom
+     * @param string $email
+     * @param string $content
+     * @param int $postId
+     */
     public function __construct(
         string $nom,
         string $email,
