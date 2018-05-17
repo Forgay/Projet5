@@ -7,7 +7,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class LoginAction
 {
-
+    /**
+     * Displays the register page
+     *
+     * @return Response
+     */
     public function __invoke()
     {
         $response = new Response(

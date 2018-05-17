@@ -6,19 +6,40 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Src\Domain\Managers\PostManager;
 use App\Services\PostBuilder;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class PostAddAction
 {
+    /**
+     * @var PostManager
+     */
     private $postManager;
-    private $request;
-    private $postBuilder;
 
+    /**
+     * @var Request
+     */
+    private $request;
+
+    /**
+     * @var PostBuilder
+     */
+    private $postBuilder;
+    /**
+     * @var Session
+     */
+    private $session;
+
+    /**
+     * PostAddAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         $this->request = $request;
         $this->postManager = new PostManager();
         $this->postBuilder = new PostBuilder();
+        $this->session = new Session();
     }
 
     public function __invoke()
@@ -37,6 +58,10 @@ class PostAddAction
             return $response->send();
         } else {
             $this->session->getFlashBag()->add('Empty', 'Attention : Tous les champs ne sont pas remplis !');
+            $response = new RedirectResponse('/post/add',[
+                'message' => $this->session->getFlashBag()->get('Empty')
+            ]);
+            return $response->send();
         }
     }
 }

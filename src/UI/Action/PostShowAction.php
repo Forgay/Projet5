@@ -34,7 +34,8 @@ class PostShowAction
         } else {
             $this->session->getFlashBag()->add('role', 'Attention : vous n\'avez pas le role !');
             $response = new Response(
-                TwigService::getTwig()->render('DashboardView.html.twig', ['role' => $this->session
+                TwigService::getTwig()->render('DashboardView.html.twig',[
+                    'role' => $this->session->getFlashBag()->get('role')
                 ]));
             return $response->send();
         }

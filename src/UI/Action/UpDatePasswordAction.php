@@ -8,7 +8,7 @@ use Src\Domain\Managers\AdminsManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-class UpdatePasswordAction
+class UpDatePasswordAction
 {
     private $request;
     private $adminsManager;
@@ -31,7 +31,8 @@ class UpdatePasswordAction
                     $this->request->get('pseudo'),
                     $this->request->get('email'),
                     $this->request->get('password'),
-                    ''
+                    '',
+                    $token
 
                 );
                 $this->adminsManager->UpDateAdmin($this->adminsBuilder->getAdmins());
@@ -40,8 +41,16 @@ class UpdatePasswordAction
                 return $response->send();
             } else {
                 $this->session->getFlashBag()->add('ErreurPassword', 'Attention : les mots de passe ne sont identiques !');
+                $response = new RedirectResponse('/update/password',[
+                    'message' => $this->session->getFlashBag()->get('ErreurPassword')
+                ]);
+                return $response->send();
             }
         }
         $this->session->getFlashBag()->add('Empty', 'Attention : Tous les champs ne sont pas remplis !');
+        $response = new RedirectResponse('/update/password',[
+         'message' => $this->session->getFlashBag()->get('Empty')
+        ]);
+        return $response->send();
     }
 }

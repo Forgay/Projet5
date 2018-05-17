@@ -4,36 +4,41 @@ namespace App\Services;
 
 use Swift_Mailer;
 use Swift_Message;
-use Symfony\Component\HttpFoundation\Request;
+use Src\Domain\Models\Contact;
 
 class ContactService
 {
-    private $request;
+    private $contact;
     private $mailer;
+    private $config = [];
 
-    public function __construct(Request $request)
+    public function __construct(Contact $contact)
     {
-        $this->request = $request;
+        $this->contact = $contact;
+        $this->loadConfig();
     }
 
-    public function __invoke()
+    public function loadConfig()
     {
-        $transport = (new \Swift_SmtpTransport('smtp.sendgrid.net', 25))
-            ->setUsername('apikey')
-            ->setPassword('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');
-        //
+        $this->config = require __DIR__.'./../../Config/mailer.php';
+    }
+
+    public function sendMail()
+    {
+        $transport = (new \Swift_SmtpTransport($this->config['host'], $this->config['port'], $this->config['encryption']))
+            ->setUsername($this->config['username'])
+            ->setPassword($this->config['password']);
+
         $this->mailer = new Swift_Mailer($transport);
 
         $message = (new Swift_Message('Message du site'))
             ->setFrom('gthareau1@gmail.com')
-            ->setTo($this->request->get('email'))
+            ->setTo($this->contact->getEmail())
             ->setBody(
-                '<h4> Demande de ' . $this->request->get('lastname') . '</h4>
-                        <p>' . nl2br($this->request->get('message')) . '</p>',
+                '<h4> Demande de ' . $this->contact->getFirstname() . '</h4>
+                        <p>' . nl2br($this->contact->getMessage()) . '</p>',
                 'text/html'
             );
-
         $this->mailer->send($message);
-
     }
 }

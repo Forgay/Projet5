@@ -14,6 +14,13 @@
         </div>
     </div>
     <form action="/comment/add/{{post.id}}" method="post">
+        {% for data in Empty %}
+            <div class="errors">
+                <ul>
+                    <li>{{ data }}</li>
+                </ul>
+            </div>
+        {% endfor %}
         <div class="row">
             <div class="input-field col s4 offset-s4">
                 <input id="nom" type="text" name="nom" class="validate">

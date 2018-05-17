@@ -7,7 +7,11 @@ use Src\Domain\Models\Admins;
 
 class AdminsManager extends Manager
 {
-
+    /**
+     * @param Admins $admins
+     *
+     * @return bool
+     */
     public function isAdmin(Admins $admins)
     {
 
@@ -25,6 +29,7 @@ class AdminsManager extends Manager
 
     /**
      * @param Admins $admins
+     *
      * @return mixed
      */
     public function getAdmin(Admins $admins)
@@ -36,6 +41,11 @@ class AdminsManager extends Manager
         return $req->fetch();
     }
 
+    /**
+     * @param Admins $admins
+     *
+     * @return mixed
+     */
     public function isRole(Admins $admins)
     {
         $req = $this->getConnexion()->prepare("SELECT role FROM admins WHERE pseudo=:pseudo AND email=:email");
@@ -50,29 +60,40 @@ class AdminsManager extends Manager
 
     }
 
+    /**
+     * @param Admins $admins
+     */
     public function addAdmin(Admins $admins)
     {
-        $req = $this->getConnexion()->prepare("INSERT INTO admins (pseudo, email, password,  dateInscription) VALUES (:pseudo,:email,:password,NOW())");
+        $req = $this->getConnexion()->prepare("INSERT INTO admins (pseudo, email, password, dateInscription, token) VALUES (:pseudo,:email,:password,NOW(),:token)");
+
+        $req->bindValue(':pseudo', htmlspecialchars($admins->getPseudo()), \PDO::PARAM_STR);
+        $req->bindValue(':email', htmlspecialchars($admins->getEmail()), \PDO::PARAM_STR);
+        $req->bindValue(':password', password_hash($admins->getPassword(), PASSWORD_DEFAULT), \PDO::PARAM_STR);
+        $req->bindValue(':token',$admins->getToken(),\PDO::PARAM_STR);
+        $req->execute();
+
+    }
+
+    /**
+     * @param Admins $admins
+     */
+    public function UpDateAdmin(Admins $admins)
+    {
+        $req = $this->getConnexion()->prepare("UPDATE admins SET email=:email, password=:password WHERE pseudo=:pseudo");
 
         $req->bindValue(':pseudo', htmlspecialchars($admins->getPseudo()), \PDO::PARAM_STR);
         $req->bindValue(':email', htmlspecialchars($admins->getEmail()), \PDO::PARAM_STR);
         $req->bindValue(':password', password_hash($admins->getPassword(), PASSWORD_DEFAULT), \PDO::PARAM_STR);
 
         $req->execute();
-
     }
 
-    public function UpDateAdmin(Admins $admins)
-    {
-        $req = $this->getConnexion()->prepare("UPDATE admins SET email=:email, password=:password WHERE pseudo=:pseudo");
-
-        $req->bindValue(':pseudo',htmlspecialchars($admins->getPseudo()),\PDO::PARAM_STR);
-        $req->bindValue(':email',htmlspecialchars($admins->getEmail()),\PDO::PARAM_STR);
-        $req->bindValue(':password',password_hash($admins->getPassword(),PASSWORD_DEFAULT),\PDO::PARAM_STR);
-
-        $req->execute();
-    }
-
+    /**
+     * @param $tables
+     *
+     * @return mixed
+     */
     public function InTable($tables)
     {
         foreach ($tables as $table) {
@@ -82,17 +103,14 @@ class AdminsManager extends Manager
 
             return $req->fetch();
         }
-
-
     }
 
-    public function getTables()
+    /**
+     *
+     */
+    public function createToken()
     {
-        $tables = [
-            "Publications" => "posts",
-            "Commentaires" => "comments",
-            "Administrateurs" => "admins"
-        ];
-        return $tables;
+       return bin2hex(random_bytes(64));
+
     }
 }

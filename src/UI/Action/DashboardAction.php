@@ -4,42 +4,43 @@ namespace Src\UI\Action;
 
 use App\Services\TwigService;
 use Src\Domain\Managers\CommentManager;
-use Src\Domain\Managers\PostManager;
-use Src\Domain\Managers\AdminsManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\Session;
 
 class DashboardAction
 {
+    /**
+     * @var CommentManager
+     */
     private $commentManager;
-    private $postManager;
+
+    /**
+     * @var Request
+     */
     private $request;
-    private $session;
-    private $adminsManager;
 
-
+    /**
+     * DashboardAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
-
         $this->request = $request;
         $this->commentManager = new CommentManager();
-        $this->postManager = new PostManager();
-        $this->adminsManager = new AdminsManager();
-        $this->session = new Session();
-
     }
 
+    /**
+     * Send the Dashboard View with uncommitted comments
+     *
+     * @return Response
+     */
     public function __invoke()
     {
-
             $response = new Response(
                 TwigService::getTwig()->render('DashboardView.html.twig', [
                         'comment' => $this->commentManager->getComments()
-                    ]
-                ));
-
+                    ]));
         return $response->send();
-
     }
 }

@@ -10,10 +10,26 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PostDetailAction
 {
+    /**
+     * @var PostManager
+     */
     private $postManager;
+
+    /**
+     * @var CommentManager
+     */
     private $commentManager;
+
+    /**
+     * @var Request
+     */
     private $request;
 
+    /**
+     * PostDetailAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         $this->request = $request;

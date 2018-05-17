@@ -8,16 +8,37 @@ use App\Services\AdminsBuilder;
 use Src\Domain\Managers\AdminsManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use Symfony\Component\HttpFoundation\Response;
+use Src\Domain\Models\Admins;
 
 class ConnectingAction
 {
+    /**
+     * @var Request
+     */
     private $request;
+
+    /**
+     * @var AdminsManager
+     */
     private $adminsManager;
+
+    /**
+     * @var AdminsBuilder
+     */
     private $adminsBuilder;
+
+    /**
+     * @var Session
+     */
     private $session;
 
-
+    /**
+     * ConnectingAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -26,6 +47,11 @@ class ConnectingAction
         $this->session = new Session();
     }
 
+    /**
+     * Check if he is an administrator and sends or redirects
+     *
+     * @return Response
+     */
     public function __invoke()
     {
 
@@ -35,7 +61,10 @@ class ConnectingAction
                 $this->request->get('pseudo'),
                 $this->request->get('email'),
                 $this->request->get('password'),
-                ''
+                '',
+                $this->adminsManager->createToken()
+
+
             );
 
             if($this->adminsManager->isAdmin($this->adminsBuilder->getAdmins())){
@@ -50,16 +79,17 @@ class ConnectingAction
 
                 $response = new Response(
                     TwigService::getTwig()->render('ConnectView.html.twig',[
-                      'error'=> $this->session->get('error')
+                      'error'=> $this->session->getFlashBag()->get('error')
                     ]));
                 return $response->send();
             }
         }
         $this->session->getFlashBag()->add('Empty', 'Attention : Tous les champs ne sont pas remplis !');
         $response = new Response(
-          TwigService::getTwig()->render('ConnectView.html.twig',[
-              'error'=>$this->session->get('Empty')
+           TwigService::getTwig()->render('ConnectView.html.twig',[
+              'error'=>$this->session->getFlashBag()->get('Empty')
           ])
         );
+        return $response->send();
     }
 }

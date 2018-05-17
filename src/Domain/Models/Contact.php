@@ -2,7 +2,7 @@
 
 namespace Src\Domain\Models;
 
-class contact
+class Contact
 
 {
     /**

@@ -6,15 +6,35 @@ use Src\Domain\Managers\CommentManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use App\Services\CommentBuilder;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class CommentAddAction
 {
+    /**
+     * @var CommentManager
+     */
     private $commentManager;
+
+    /**
+     * @var Request
+     */
     private $request;
+
+    /**
+     * @var CommentBuilder
+     */
     private $commentBuilder;
+    /**
+     * @var Session
+     */
     private $session;
 
+    /**
+     * CommentAddAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
 
@@ -24,6 +44,12 @@ class CommentAddAction
         $this->session = new Session();
     }
 
+    /**
+     * Add a comment or redirect to the item detail
+     *
+     * @return Response
+     *
+     */
     public function __invoke()
     {
 
@@ -40,6 +66,10 @@ class CommentAddAction
             return $response->send();
         } else {
             $this->session->getFlashBag()->add('Empty','Attention : Tous les champs ne sont pas remplis !');
+            $response = new RedirectResponse('/post/detail/'.$this->request->attributes->get(0),[
+                    'Empty'=>$this->session->getFlashBag()->get('Empty')
+                ]);
+            return $response->send();
         }
 
     }

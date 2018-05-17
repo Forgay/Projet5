@@ -8,7 +8,9 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ResetContactService
 {
-
+    /**
+     * @var
+     */
     private $mailer;
 
     public function __construct($pseudo,$email)

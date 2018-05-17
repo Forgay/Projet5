@@ -1,32 +1,43 @@
 {% extends 'AdminsLayout.html.twig' %}
 {% block content %}
-    <h2>Tableau de bord</h2>
-    <div class="row">
-        <div class="col l4 m6 s12">
-            <div class="card">
-                <div class="card-content  brown-text">
-                    <span class="card-title">Ajouter un article</span>
-                    <h4>Vous souhaitez ajouter un article</h4>
-                    <a href="/post/add" type="submit" name="submit" class="waves-effect waves-light btn indigo lighten-2">
-                        <i class="material-icons left">build</i>Ajouter un article</a>
+    <div class="center">
+        <h2>Tableau de bord</h2>
+        <div class="row">
+            {% for data in role %}
+                <div class="errors">
+                    <ul>
+                        <li>{{ data }}</li>
+                    </ul>
+                </div>
+            {% endfor %}
+            <div class="col l4 m6 s12">
+                <div class="card">
+                    <div class="card-content  brown-text">
+                        <span class="card-title">Ajouter un article</span>
+                        <h4>Vous souhaitez ajouter un article</h4>
+                        <a href="/post/add" type="submit" name="submit"
+                           class="waves-effect waves-light btn indigo lighten-2">
+                            <i class="material-icons left">build</i>Ajouter un article</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col l4 m6 s12">
-            <div class="card">
-                <div class="card-content  brown-text">
-                    <span class="card-title">Liste des articles</span>
-                    <h4>C'est ici pour modifier les articles</h4>
-                    <a href="/post/list" type="submit" name="submit" class="waves-effect waves-light btn indigo lighten-2">
-                        <i class="material-icons left">build</i>Liste des articles</a>
-                </div>
+            <div class="col l4 m6 s12">
+                <div class="card">
+                    <div class="card-content  brown-text">
+                        <span class="card-title">Liste des articles</span>
+                        <h4>C'est ici pour modifier les articles</h4>
+                        <a href="/post/list" type="submit" name="submit"
+                           class="waves-effect waves-light btn indigo lighten-2">
+                            <i class="material-icons left">build</i>Liste des articles</a>
+                    </div>
 
+                </div>
             </div>
         </div>
     </div>
-
-
-    <h4>Commentaires non lus</h4>
+    <div class="center">
+        <h4>Commentaires non lus</h4>
+    </div>
     <table>
         <thead>
         <tr>
@@ -36,20 +47,20 @@
         </tr>
         </thead>
         <tbody>
-            {% for value in comment %}
-                <tr id="{{ value.id }}">
-                    <td>{{ value.title }}</td>
-                    <td>{{ value.content|striptags }}</td>
-                    <td>
-                        <a href="/validcomment/{{ value.id }}"
-                           class="btn-floating btn-small waves-effect waves-light green see_comment"><i
-                                    class="material-icons">done</i></a>
-                        <a href="/deletecomment/{{ value.id }}"
-                           class="btn-floating btn-small waves-effect waves-light red delete_comment"><i
-                                    class="material-icons">delete</i></a>
-                    </td>
-                </tr>
-            {% endfor %}
+        {% for value in comment %}
+            <tr id="{{ value.id }}">
+                <td>{{ value.title }}</td>
+                <td>{{ value.content|striptags }}</td>
+                <td>
+                    <a href="/validcomment/{{ value.id }}"
+                       class="btn-floating btn-small waves-effect waves-light green see_comment"><i
+                                class="material-icons">done</i></a>
+                    <a href="/deletecomment/{{ value.id }}"
+                       class="btn-floating btn-small waves-effect waves-light red delete_comment"><i
+                                class="material-icons">delete</i></a>
+                </td>
+            </tr>
+        {% endfor %}
         </tbody>
     </table>
 {% endblock %}

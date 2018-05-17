@@ -11,7 +11,7 @@ class ShowResetPasswordAction
     public function __invoke()
     {
      $response= new Response(
-         TwigService::getTwig()->render('UpDatePassword.htlm.twig'));
+         TwigService::getTwig()->render('UpDatePassword.html.twig'));
      return $response->send();
     }
 }

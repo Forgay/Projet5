@@ -63,7 +63,7 @@ return [
     ],
     'UpDatePassword'=>[
         'path' =>'/update/password',
-        'action' => Src\UI\Action\UpdatePasswordAction::class,
+        'action' => Src\UI\Action\UpDatePasswordAction::class,
         'params' => []
     ],
     'Dashboard' => [
@@ -98,7 +98,7 @@ return [
     ],
     'Update_Post' => [
         'path' => '/post/update/{PostId}',
-        'action' => Src\UI\Action\UpdatePostAction::class,
+        'action' => Src\UI\Action\UpDatePostAction::class,
         'params' => ['PostId' => '/\d+/'],
         'secured' => true
     ],

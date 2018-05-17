@@ -41,6 +41,7 @@ class RegisterAction
             return $response->send();
         } else {
             $this->session->getFlashBag()->add('empty','Attention : Tous les champs ne sont pas remplis !');
+            $this->session->getFlashBag()->get('empty');
         }
     }
 }

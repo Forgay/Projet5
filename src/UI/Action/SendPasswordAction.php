@@ -12,12 +12,36 @@ use Symfony\Component\HttpFoundation\Response;
 
 class SendPasswordAction
 {
+    /**
+     * @var Request mixed
+     */
     private $request;
+
+    /**
+     * @var AdminsManager
+     */
     private $adminsManager;
+
+    /**
+     * @var AdminsBuilder
+     */
     private $adminsBuilder;
+
+    /**
+     * @var Session
+     */
     private $session;
+
+    /**
+     * @var
+     */
     private $resetContactService;
 
+    /**
+     * SendPasswordAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -33,17 +57,18 @@ class SendPasswordAction
             htmlspecialchars($this->request->get('email'))
         );
 
-        dump($this->adminsManager->getAdmin($this->adminsBuilder->getAdmins()));
 
         if (empty($this->request->get('pseudo')) || empty($this->request->get('email')))
         {
             $this->session->getFlashBag()->add('erreur', 'Attention :un champ n\'est pas rempli ');
-        } elseif ($this->adminsManager->getAdmin($this->adminsBuilder->getAdmins()) != false )
+        } else
         {
-            $this->session->getFlashBag()->add('message envoyee','mail envoyé');
-            $data = $this->adminsManager->getAdmin($this->adminsBuilder->getAdmins());
+
+            $this->session->getFlashBag()->add('message','mail envoyé');
+            $data = $this->adminsBuilder->getAdmins();
             $this->resetContactService = new ResetContactService($data['pseudo'],$data['email']);
-            $response = new RedirectResponse('/connect', $this->session);
+            $response = new RedirectResponse('/connect');
+
             return $response->send();
         }
     }

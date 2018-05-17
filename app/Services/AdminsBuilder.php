@@ -6,25 +6,43 @@ use Src\Domain\Models\Admins;
 
 class AdminsBuilder
 {
+
     private $admins;
 
-    public function build(string $pseudo,
-                          string $email,
-                          string $password,
-                          string $role
-
+    /**
+     * @param string $pseudo
+     * @param string $email
+     * @param string $password
+     * @param string $role
+     * @param string $token
+     */
+    public function build(
+        string $pseudo,
+        string $email,
+        string $password,
+        string $role,
+        string $token
     )
     {
-        $this->admins = new Admins($pseudo, $email, $password,$role );
+        $this->admins = new Admins($pseudo, $email, $password, $role, $token);
     }
 
+    /**
+     * @param array $data
+     * @return $this
+     */
     public function buildForSession(array $data)
     {
-        $this->admins = new Admins($data['pseudo'], $data['email'], '',$data['role']);
+        $this->admins = new Admins($data['pseudo'], $data['email'], '',$data['role'],$token='');
 
         return $this;
     }
 
+    /**
+     * @param $pseudo
+     * @param $email
+     * @return $this
+     */
     public function buildForReset($pseudo,$email)
     {
         $this->admins = new Admins($pseudo,$email,'','');

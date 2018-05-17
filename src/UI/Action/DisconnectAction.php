@@ -7,18 +7,28 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class DisconnectAction
 {
+    /**
+     * @var Session
+     */
     private $session;
 
+    /**
+     * DisconnectAction constructor.
+     */
     public function __construct()
     {
         $this->session = new Session();
     }
 
+    /**
+     * Clears the Session and redirects to home
+     *
+     * @return RedirectResponse
+     */
     public function __invoke()
     {
-        $response = new RedirectResponse('/');
         $this->session->invalidate();
-        $this->session->getFlashBag()->add('Disconnect','Au revoir, à la prochaine');
+        $response = new RedirectResponse('/');
         return $response->send();
     }
 }

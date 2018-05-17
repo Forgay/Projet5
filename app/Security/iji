@@ -1,0 +1,24 @@
+if (empty($this->request->get('firstname')) || empty($this->request->get('lastname')) || !filter_var($this->request->get('email'), FILTER_VALIDATE_EMAIL) || empty($this->request->get('message'))) {
+            if (empty($this->request->get('firstname'))) {
+                $this->session->getFlashBag()->add('nom', 'Attention : Votre nom n\'est pas rempli !');
+                $response = new Response('/', [
+                    'error' => $this->session->getFlashBag()->get('nom')
+                ]);
+                return $response->send();
+            } elseif (empty($this->request->get('lastname'))) {
+                $this->session->getFlashBag()->add('lastname', 'Attention : Votre prenom n\'est pas rempli!');
+                $response = new RedirectResponse('/', [
+                    'error' => $this->session->getFlashBag()->get('lastname')
+                ]);
+                return $response->send();
+            } elseif (!filter_var($this->request->get('email'), FILTER_VALIDATE_EMAIL)) {
+                $this->session->getFlashBag()->add('emailInvalid', "Votre email est invalide");
+                $response = new RedirectResponse('/', [
+                    'error' => $this->session->getFlashBag()->get('emailInvalid')
+                ]);
+                return $response->send();
+            } else {
+
+
+            }
+        }

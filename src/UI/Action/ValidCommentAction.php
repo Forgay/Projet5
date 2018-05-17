@@ -7,10 +7,15 @@ use Src\Domain\Managers\CommentManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-
 class ValidCommentAction
 {
+    /**
+     * @var CommentManager
+     */
     private $commentManager;
+    /**
+     * @var Request
+     */
     private $request;
 
     public function __construct(Request $request)

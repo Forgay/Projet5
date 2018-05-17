@@ -24,6 +24,10 @@ class Admins
      * @var string
      */
     protected $role;
+    /**
+     * @var string
+     */
+    protected $token;
 
     /**
      * Admins constructor.
@@ -33,12 +37,20 @@ class Admins
      * @param string $password
      * @param string $role
      */
-    public function __construct(string $pseudo, string $email, string $password, string $role)
+    public function __construct(
+        string $pseudo,
+        string $email,
+        string $password,
+        string $role,
+        string $token
+
+    )
     {
         $this->pseudo = $pseudo;
         $this->email = $email;
         $this->password = $password;
-        $this->role =$role;
+        $this->role = $role;
+        $this->token = $token;
     }
 
     public function getPseudo()
@@ -64,6 +76,10 @@ class Admins
         return $this->role;
     }
 
+    public function getToken()
+    {
+        return $this->token;
+    }
 
     public function setPseudo($pseudo)
     {
@@ -91,5 +107,10 @@ class Admins
         } else {
             $this->password = $password;
         }
+    }
+
+    public function setToken($token)
+    {
+        $this->token = $token;
     }
 }
