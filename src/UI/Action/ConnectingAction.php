@@ -8,9 +8,8 @@ use App\Services\AdminsBuilder;
 use Src\Domain\Managers\AdminsManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use Symfony\Component\HttpFoundation\Response;
-use Src\Domain\Models\Admins;
+use App\Services\ValidatorService;
 
 class ConnectingAction
 {
@@ -35,6 +34,11 @@ class ConnectingAction
     private $session;
 
     /**
+     * @var ValidatorService
+     */
+    private $validator;
+
+    /**
      * ConnectingAction constructor.
      *
      * @param Request $request
@@ -45,6 +49,7 @@ class ConnectingAction
         $this->adminsManager = new AdminsManager();
         $this->adminsBuilder = new AdminsBuilder();
         $this->session = new Session();
+        $this->validator = new ValidatorService();
     }
 
     /**
@@ -54,42 +59,36 @@ class ConnectingAction
      */
     public function __invoke()
     {
-
-        if (!empty($this->request->get('pseudo')) && !empty($this->request->get('email')) && !empty($this->request->get('password'))) {
-
-            $this->adminsBuilder->build(
-                $this->request->get('pseudo'),
-                $this->request->get('email'),
-                $this->request->get('password'),
-                '',
-                $this->adminsManager->createToken()
-
-
-            );
-
-            if($this->adminsManager->isAdmin($this->adminsBuilder->getAdmins())){
-                $admin= $this->adminsManager->getAdmin($this->adminsBuilder->getAdmins());
-                $response = new RedirectResponse('/dashboard');
-                $this->session->set('admin',$this->adminsBuilder->buildForSession($admin)->getAdmins());
-
-                return $response->send();
-
-            } else {
-                $this->session->getFlashBag()->add('error', 'Attention : les mots de passe ne sont identiques !');
-
-                $response = new Response(
-                    TwigService::getTwig()->render('ConnectView.html.twig',[
-                      'error'=> $this->session->getFlashBag()->get('error')
-                    ]));
-                return $response->send();
-            }
+        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
+            $this->session->getFlashBag()->add('violations', $violations['0']);
+            return new RedirectResponse($this->request->getPathInfo());
         }
-        $this->session->getFlashBag()->add('Empty', 'Attention : Tous les champs ne sont pas remplis !');
-        $response = new Response(
-           TwigService::getTwig()->render('ConnectView.html.twig',[
-              'error'=>$this->session->getFlashBag()->get('Empty')
-          ])
+
+        $this->adminsBuilder->build(
+            $this->request->get('pseudo'),
+            $this->request->get('email'),
+            $this->request->get('password'),
+            '',
+            $this->adminsManager->createToken()
+
+
         );
-        return $response->send();
+
+        if ($this->adminsManager->isAdmin($this->adminsBuilder->getAdmins())) {
+            $admin = $this->adminsManager->getAdmin($this->adminsBuilder->getAdmins());
+            $response = new RedirectResponse('/dashboard');
+            $this->session->set('admin', $this->adminsBuilder->buildForSession($admin)->getAdmins());
+
+            return $response->send();
+
+        } else {
+            $this->session->getFlashBag()->add('error', 'Attention : les mots de passe ne sont identiques !');
+
+            $response = new Response(
+                TwigService::getTwig()->render('ConnectView.html.twig', [
+                    'error' => $this->session->getFlashBag()->get('error')
+                ]));
+            return $response->send();
+        }
     }
 }

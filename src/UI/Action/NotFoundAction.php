@@ -8,7 +8,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class NotFoundAction
 {
-
+    /**
+     * @return $this response
+     */
     public function __invoke()
     {
         $response = new Response(

@@ -6,8 +6,9 @@
 
 ### Composer ###
 composer.phar
-/vendor/
+/vendor/*
 /Services/
+/Config/
 
 # User-specific stuff:
 .idea/**/workspace.xml

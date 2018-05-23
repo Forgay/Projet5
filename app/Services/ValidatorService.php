@@ -2,33 +2,36 @@
 
 namespace App\Services;
 
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\Session;
-
-class ValidatorService
+final class ValidatorService
 {
-    private $data;
-    private $session;
-    private $content;
+    /**
+     * @var array
+     */
+    private $violations = [];
 
-
-    public function isValid($data, $content)
+    /**
+     * @param array $data
+     * @param array $contraints
+     * @return array
+     */
+    public function validator(array $data, array $contraints): array
     {
-        $this->data = $data;
-        $this->content = $content;
-        $this->session = new Session();
+        if(empty($data)) {return $violations =[];}
 
-        foreach ($data as $valid) {
-
-            if (empty($valid)) {
-                $this->session->getFlashBag()->add('vide', 'Attention : un champ n\'est pas rempli !');
-                $response = new Response(
-                    TwigService::getTwig()->render(
-                        $this->content, [
-                            'error' => $this->session->getFlashBag()->get('vide')
-                    ]));
-                return $response->send();
+        foreach ($data as $key =>$value){
+            foreach($contraints as $key =>$const){
+                switch ($const){
+                    case 'is_string':
+                        $this->violations['string'] = is_string($value) == true ? '' : 'cette chaîne de caratère n\'est pas valide !';
+                        break;
+                    case 'email':
+                        $this->violations['email'] = filter_var($value, FILTER_VALIDATE_EMAIL ) ? : 'cet emal n\'est pas valide';
+                        break;
+                    case 'empty':
+                        $this->violations['empty'] = empty($value) == true ? '' : 'un champ n\'est pas rempli';
+                }
             }
         }
+        return $this->violations;
     }
 }

@@ -2,46 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8949500e-e58b-4fc6-a42b-d465941e82fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Config/mailer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Services/ContactBuilder.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Services/ValidatorService.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Services/UploadImages.php" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Config/routes.php" afterPath="$PROJECT_DIR$/Config/routes.php" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Config/confDb.php" afterPath="$PROJECT_DIR$/Config/confDb.php" />
+      <change beforePath="$PROJECT_DIR$/Config/mailer.php" afterPath="$PROJECT_DIR$/Config/mailer.php" />
+      <change beforePath="$PROJECT_DIR$/app/Routing/ActionResolver.php" afterPath="$PROJECT_DIR$/app/Routing/ActionResolver.php" />
+      <change beforePath="$PROJECT_DIR$/app/Routing/Router.php" afterPath="$PROJECT_DIR$/app/Routing/Router.php" />
+      <change beforePath="$PROJECT_DIR$/app/Security/iji" afterPath="" />
       <change beforePath="$PROJECT_DIR$/app/Services/AdminsBuilder.php" afterPath="$PROJECT_DIR$/app/Services/AdminsBuilder.php" />
       <change beforePath="$PROJECT_DIR$/app/Services/CommentBuilder.php" afterPath="$PROJECT_DIR$/app/Services/CommentBuilder.php" />
       <change beforePath="$PROJECT_DIR$/app/Services/ContactService.php" afterPath="$PROJECT_DIR$/app/Services/ContactService.php" />
+      <change beforePath="$PROJECT_DIR$/app/Services/PostBuilder.php" afterPath="$PROJECT_DIR$/app/Services/PostBuilder.php" />
       <change beforePath="$PROJECT_DIR$/app/Services/ResetContactService.php" afterPath="$PROJECT_DIR$/app/Services/ResetContactService.php" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Managers/AdminsManager.php" afterPath="$PROJECT_DIR$/src/Domain/Managers/AdminsManager.php" />
+      <change beforePath="$PROJECT_DIR$/app/Services/SecuredService.php" afterPath="$PROJECT_DIR$/app/Services/SecuredService.php" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ValidatorService.php" afterPath="$PROJECT_DIR$/app/Services/ValidatorService.php" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Models/Admins.php" afterPath="$PROJECT_DIR$/src/Domain/Models/Admins.php" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Models/Contact.php" afterPath="$PROJECT_DIR$/src/Domain/Models/Contact.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/AddPostAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/AddPostAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Models/Post.php" afterPath="$PROJECT_DIR$/src/Domain/Models/Post.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/CommentAddAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/CommentAddAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/ConnectAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ConnectAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/ConnectingAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ConnectingAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/ContactAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ContactAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/DashboardAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/DashboardAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/DeleteCommentAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/DeleteCommentAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/DisconnectAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/DisconnectAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/HomeAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/HomeAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/LoginAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/LoginAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/LogonAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/LogonAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Action/NotFoundAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/NotFoundAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/PostAddAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/PostAddAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/PostDetailAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/PostDetailAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/PostShowAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/PostShowAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/RegisterAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/RegisterAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Action/ShowPostAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ShowPostAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/UpdatePasswordAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/UpdatePostAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/UpDatePostAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Action/UpDatePostAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/UpDatePostAction.php" />
       <change beforePath="$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/View/ConnectView.html.twig" afterPath="$PROJECT_DIR$/src/View/ConnectView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/DashboardView.html.twig" afterPath="$PROJECT_DIR$/src/View/DashboardView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/ListPostView.html.twig" afterPath="$PROJECT_DIR$/src/View/ListPostView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/PostView.html.twig" afterPath="$PROJECT_DIR$/src/View/PostView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/RegisterView.html.twig" afterPath="$PROJECT_DIR$/src/View/RegisterView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/ResetPassword.html.twig" afterPath="$PROJECT_DIR$/src/View/ResetPassword.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/UpDatePassword.htlm.twig" afterPath="$PROJECT_DIR$/src/View/UpDatePassword.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/View/WritePostView.html.twig" afterPath="$PROJECT_DIR$/src/View/WritePostView.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,14 +50,14 @@
     <favorites_list name="Projet5" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4509689">
+    <splitter split-orientation="horizontal" split-proportion="0.3580918">
       <split-first>
         <leaf>
-          <file leaf-file-name="mailer.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Config/mailer.php">
+          <file leaf-file-name="Post.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Domain/Models/Post.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
+                <state relative-caret-position="882">
+                  <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -75,13 +67,13 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ValidatorService.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Services/ValidatorService.php">
+          <file leaf-file-name="PostAddAction.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/UI/Action/PostAddAction.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="744">
-                  <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+                <state relative-caret-position="775">
+                  <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
                   <folding>
-                    <element signature="e#32#78#0#PHP" expanded="true" />
+                    <element signature="e#33#67#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -111,57 +103,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/UI/Action/UpdatePostAction.php" />
-        <option value="$PROJECT_DIR$/Web/index.php" />
-        <option value="$PROJECT_DIR$/app/Routing/Router.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/ResetAction.php" />
-        <option value="$PROJECT_DIR$/src/View/AdminsLayout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Domain/Models/Post.php" />
-        <option value="$PROJECT_DIR$/src/Domain/Models/Comment.php" />
-        <option value="$PROJECT_DIR$/app/Services/PostBuilder.php" />
-        <option value="$PROJECT_DIR$/app/Services/SecuredService.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/ResetPasswordAction.php" />
-        <option value="$PROJECT_DIR$/src/View/UpDatePassword.htlm.twig" />
         <option value="$PROJECT_DIR$/app/.gitignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Domain/Models/Contact.php" />
-        <option value="$PROJECT_DIR$/app/Services/CommentBuilder.php" />
         <option value="$PROJECT_DIR$/app/Services/ContactBuilder.php" />
-        <option value="$PROJECT_DIR$/app/Services/ResetContactService.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/RegisterAction.php" />
         <option value="$PROJECT_DIR$/src/View/RegisterView.html.twig" />
-        <option value="$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php" />
         <option value="$PROJECT_DIR$/src/View/ResetPassword.html.twig" />
-        <option value="$PROJECT_DIR$/app/Services/AdminsBuilder.php" />
         <option value="$PROJECT_DIR$/src/View/ConnectView.html.twig" />
-        <option value="$PROJECT_DIR$/src/Domain/Models/Admins.php" />
         <option value="$PROJECT_DIR$/src/View/DashboardView.html.twig" />
         <option value="$PROJECT_DIR$/src/View/PostView.html.twig" />
         <option value="$PROJECT_DIR$/src/View/ListPostView.html.twig" />
-        <option value="$PROJECT_DIR$/src/UI/Action/PostAddAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/PostDetailAction.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/PostShowAction.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/UpdatePasswordAction.php" />
         <option value="$PROJECT_DIR$/Config/routes.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php" />
         <option value="$PROJECT_DIR$/src/Domain/Managers/AdminsManager.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/AddPostAction.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/CommentAddAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/ConnectAction.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/ConnectingAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/DashboardAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/DeleteCommentAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/DisconnectAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/HomeAction.php" />
         <option value="$PROJECT_DIR$/src/UI/Action/LoginAction.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/LogonAction.php" />
         <option value="$PROJECT_DIR$/app/Security/iji" />
-        <option value="$PROJECT_DIR$/app/Services/ValidatorService.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Config/confDb.php" />
+        <option value="$PROJECT_DIR$/app/Routing/Router.php" />
         <option value="$PROJECT_DIR$/app/Services/ContactService.php" />
-        <option value="$PROJECT_DIR$/src/UI/Action/ContactAction.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Models/Admins.php" />
+        <option value="$PROJECT_DIR$/app/Services/ResetContactService.php" />
+        <option value="$PROJECT_DIR$/src/View/WritePostView.html.twig" />
+        <option value="$PROJECT_DIR$/app/Services/SecuredService.php" />
+        <option value="$PROJECT_DIR$/app/Services/AdminsBuilder.php" />
+        <option value="$PROJECT_DIR$/app/Services/CommentBuilder.php" />
         <option value="$PROJECT_DIR$/Config/mailer.php" />
+        <option value="$PROJECT_DIR$/app/Routing/ActionResolver.php" />
+        <option value="$PROJECT_DIR$/app/Services/UploadImages.php" />
+        <option value="$PROJECT_DIR$/app/Services/ValidatorService.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/ContactAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/CommentAddAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/ConnectingAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/LogonAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/NotFoundAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/UpDatePostAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/ShowPostAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/RegisterAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/PostShowAction.php" />
+        <option value="$PROJECT_DIR$/src/UI/Action/PostAddAction.php" />
+        <option value="$PROJECT_DIR$/app/Services/PostBuilder.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Models/Post.php" />
       </list>
     </option>
   </component>
@@ -209,8 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,12 +224,6 @@
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Routing" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Security" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
@@ -305,17 +289,19 @@
               <item name="Projet5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/OPENCLASSROOM/projet_5/Nicoridollo" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/OPENCLASSROOM/projet_5/EMMANUEL/OC_P5-master" />
     <property name="SearchEverywhereHistoryKey" value="directory&#9;ACTION&#9;NewDir&#10;windo&#9;ACTION&#9;HideActiveWindow" />
   </component>
   <component name="RecentsManager">
@@ -391,12 +377,13 @@
       <workItem from="1524743771536" duration="24475000" />
       <workItem from="1525852255155" duration="43349000" />
       <workItem from="1526023515187" duration="604000" />
-      <workItem from="1526115078782" duration="53133000" />
+      <workItem from="1526115078782" duration="87059000" />
+      <workItem from="1527016987278" duration="23641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="869683000" />
+    <option name="totallyTimeSpent" value="927250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,17 +397,17 @@
   <component name="ToolWindowManager">
     <frame x="2391" y="-9" width="2118" height="1281" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16601372" sideWeight="0.4951724" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18903036" sideWeight="0.4951724" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20092593" sideWeight="0.50195885" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24975514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26574075" sideWeight="0.49804112" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11203704" sideWeight="0.49804112" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20176297" sideWeight="0.50482756" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -467,145 +454,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/ShowPostAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/ResetAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/RegisterAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ResetPassword.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/img/background2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/img/background1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/img/admin.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Models/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Models/Contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Models/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Managers/PostManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1525968688396" expanded="true" signature="210:246" ph="SELECT * FRO... posts" />
-            <marker date="1525968688396" expanded="true" signature="377:423" ph="SELECT * FRO... posts" />
-            <marker date="1525968688396" expanded="true" signature="591:634" ph="SELECT COUNT... comments" />
-            <marker date="1525968688396" expanded="true" signature="771:869" ph="INSERT INTO posts... " />
-            <marker date="1525968688396" expanded="true" signature="1296:1390" ph="UPDATE posts... " />
-            <marker date="1525968688396" expanded="true" signature="1790:1818" ph="DELETE FROM posts... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="551" column="9" lean-forward="false" selection-start-line="551" selection-start-column="9" selection-end-line="551" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_0.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="142" column="13" lean-forward="false" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Routing/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PostView.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ListPostView.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/ConnectView.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -613,49 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/NotFoundAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/PostAddAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <element signature="e#33#87#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/PostDetailAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/PostShowAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,45 +476,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#34#73#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Domain/Managers/AdminsManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
           <folding>
             <element signature="e#39#59#0#PHP" expanded="false" />
-            <marker date="1526476357617" expanded="true" signature="299:366" ph="SELECT passw... admins" />
-            <marker date="1526476357617" expanded="true" signature="871:930" ph="SELECT pseud... admins" />
-            <marker date="1526476357617" expanded="true" signature="1259:1320" ph="SELECT role admins" />
-            <marker date="1526476357617" expanded="true" signature="1744:1859" ph="INSERT INTO admins... " />
-            <marker date="1526476357617" expanded="true" signature="2410:2481" ph="UPDATE admins... " />
-            <marker date="1526476357617" expanded="true" signature="3012:3034" ph="SELECT COUNT... ${$table}" />
+            <marker date="1526575760431" expanded="true" signature="299:366" ph="SELECT passw... admins" />
+            <marker date="1526575760431" expanded="true" signature="871:930" ph="SELECT pseud... admins" />
+            <marker date="1526575760431" expanded="true" signature="1259:1320" ph="SELECT role admins" />
+            <marker date="1526575760431" expanded="true" signature="1744:1859" ph="INSERT INTO admins... " />
+            <marker date="1526575760431" expanded="true" signature="2410:2481" ph="UPDATE admins... " />
+            <marker date="1526575760431" expanded="true" signature="3012:3034" ph="SELECT COUNT... ${$table}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/AdminsBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,19 +500,194 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ContactBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Security/iji">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ListPostView.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/confDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Routing/Router.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1154">
-          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="528">
+          <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="28" />
+          <folding>
+            <marker date="1522225720303" expanded="true" signature="2606:2844" ph="..." />
+            <marker date="1522225720303" expanded="true" signature="2617:2765" ph="..." />
+            <marker date="1522225720303" expanded="true" signature="2776:2836" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Domain/Models/Admins.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="93" column="24" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/WritePostView.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/CommentBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Models/Contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SmtpTransport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ContactService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="42" column="53" lean-forward="true" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+          <folding>
+            <element signature="e#32#49#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Routing/ActionResolver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/mailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/SecuredService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#87#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ResetContactService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="49" column="87" lean-forward="true" selection-start-line="49" selection-start-column="87" selection-end-line="49" selection-end-column="87" />
+          <folding>
+            <element signature="e#32#49#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/UploadImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#32#77#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/AddPostAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/CommentAddAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/ConnectAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/ConnectingAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="67" column="6" lean-forward="false" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+          <folding>
+            <element signature="e#33#62#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -737,15 +695,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
           <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="e#33#62#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Action/DeleteCommentAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
+        <state relative-caret-position="522">
           <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding />
         </state>
@@ -761,41 +717,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Action/HomeAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        <state relative-caret-position="515">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Action/LoginAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="312">
           <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/NotFoundAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#33#62#0#PHP" expanded="false" />
+            <element signature="e#34#63#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Action/LogonAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        <state relative-caret-position="456">
+          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ValidatorService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/UpDatePostAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding>
+            <element signature="e#33#62#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1084">
+          <caret line="64" column="14" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
           <folding>
             <element signature="e#33#78#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ContactBuilder.php">
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="360">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/PostBuilder.php">
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/ShowPostAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/ResetAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -803,97 +817,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/SecuredService.php">
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/RegisterAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="696">
+          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding>
+            <element signature="e#33#87#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Security/iji">
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/PostShowAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
-          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/ConnectingAction.php">
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/PostDetailAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/CommentAddAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/AddPostAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Action/ConnectAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="60" column="13" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ContactService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="792">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
-            <element signature="e#32#49#0#PHP" expanded="true" />
+            <element signature="e#33#62#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ValidatorService.php">
+    <entry file="file://$PROJECT_DIR$/app/Services/AdminsBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="e#32#78#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="247">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Action/ContactAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#33#87#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="316">
+          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config/mailer.php">
+    <entry file="file://$PROJECT_DIR$/app/Services/PostBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
+        <state relative-caret-position="408">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Models/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Action/PostAddAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#67#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

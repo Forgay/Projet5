@@ -31,11 +31,11 @@ class Admins
 
     /**
      * Admins constructor.
-     *
      * @param string $pseudo
      * @param string $email
      * @param string $password
      * @param string $role
+     * @param string $token
      */
     public function __construct(
         string $pseudo,
@@ -43,7 +43,6 @@ class Admins
         string $password,
         string $role,
         string $token
-
     )
     {
         $this->pseudo = $pseudo;

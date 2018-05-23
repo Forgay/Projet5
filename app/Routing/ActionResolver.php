@@ -2,14 +2,15 @@
 
 namespace App\Routing;
 
-
 use Symfony\Component\HttpFoundation\Request;
 
 class ActionResolver
 {
     /**Instancie le controller lié à la route demandée
+     *
      * @param  $className
-     * @param null $params
+     * @param Request
+     *
      * @return mixed
      */
     public function create($className, Request $request)
@@ -17,4 +18,3 @@ class ActionResolver
        return new $className($request);
     }
 }
-

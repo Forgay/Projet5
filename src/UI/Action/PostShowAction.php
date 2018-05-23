@@ -10,10 +10,26 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class PostShowAction
 {
+    /**
+     * @var PostManager
+     */
     private $postManager;
+
+    /**
+     * @var Request
+     */
     private $request;
+
+    /**
+     * @var Session
+     */
     private $session;
 
+    /**
+     * PostShowAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         $this->request = $request;

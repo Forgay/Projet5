@@ -24,19 +24,12 @@ class Post
      * @var string
      */
     private $writer;
-
     /**
-     * @var
-     */
-    private $image;
-
-    /**
-     * @var
+     * @var string
      */
     private $date;
-
     /**
-     * @var
+     * @var string
      */
     private $dateModify;
 
@@ -45,24 +38,19 @@ class Post
      */
     private $posted;
 
-    /**
-     * Post constructor.
-     *
-     * @param string $id
-     * @param string $title
-     * @param string $content
-     * @param int $posted
-     */
+
     public function __construct(
-        string $id,
         string $title,
         string $content,
-        int $posted
+        int $posted,
+        string $writer,
+        string $dateModify
     ) {
-        $this->id = $id;
         $this->title = $title;
         $this->content = $content;
         $this->posted = $posted;
+        $this->writer = $writer;
+        $this->dateModify =  $dateModify;
 
     }
     public function getId()
@@ -83,11 +71,6 @@ class Post
     public function getWriter()
     {
         return $this->writer;
-    }
-
-    public function getImage()
-    {
-        return $this->image;
     }
 
     public function getDate()

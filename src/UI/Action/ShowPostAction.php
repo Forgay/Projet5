@@ -9,12 +9,13 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ShowPostAction
 {
-
+    /**
+     * @var PostManager
+     */
     private $postManager;
 
     public function __construct()
     {
-
         $this->postManager = new PostManager();
     }
 

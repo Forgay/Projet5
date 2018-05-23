@@ -9,9 +9,24 @@ use App\Services\SecuredService;
 
 class Router
 {
+    /**
+     * @var array
+     */
     private $routes = [];
+
+    /**
+     * @var ActionResolver
+     */
     private $actionResolver;
+
+    /**
+     * @var Request
+     */
     private $request;
+
+    /**
+     * @var SecuredService
+     */
     private $secured;
 
     /**
