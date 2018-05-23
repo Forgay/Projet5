@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ShowResetPasswordAction
 {
-
     public function __invoke()
     {
      $response= new Response(

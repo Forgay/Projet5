@@ -18,6 +18,11 @@ class ValidCommentAction
      */
     private $request;
 
+    /**
+     * ValidCommentAction constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         $this->request = $request;

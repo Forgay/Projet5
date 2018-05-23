@@ -8,13 +8,14 @@ class PostBuilder
 {
     private $post;
 
-    public function build(string $id,
-                          string $title,
+    public function build(string $title,
                           string $content,
-                          string $posted
+                          string $posted,
+                          string $writer,
+                          string $dateModify
     )
     {
-        $this->post = new Post($id,$title,$content,$posted);
+        $this->post = new Post($title,$content,$posted,$writer,$dateModify);
     }
 
     public function getPost()

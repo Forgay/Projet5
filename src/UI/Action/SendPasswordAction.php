@@ -9,6 +9,7 @@ use Src\Domain\Managers\AdminsManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Response;
+use App\Services\ValidatorService;
 
 class SendPasswordAction
 {
@@ -33,9 +34,14 @@ class SendPasswordAction
     private $session;
 
     /**
-     * @var
+     * @var ResetContactService
      */
     private $resetContactService;
+
+    /**
+     * @var ValidatorService
+     */
+    private $validator;
 
     /**
      * SendPasswordAction constructor.
@@ -48,6 +54,7 @@ class SendPasswordAction
         $this->adminsManager = new AdminsManager();
         $this->session = new Session();
         $this->adminsBuilder = new AdminsBuilder();
+        $this->validator = new ValidatorService();
     }
 
     public function __invoke()
@@ -57,19 +64,16 @@ class SendPasswordAction
             htmlspecialchars($this->request->get('email'))
         );
 
-
-        if (empty($this->request->get('pseudo')) || empty($this->request->get('email')))
-        {
-            $this->session->getFlashBag()->add('erreur', 'Attention :un champ n\'est pas rempli ');
-        } else
-        {
-
-            $this->session->getFlashBag()->add('message','mail envoyé');
-            $data = $this->adminsBuilder->getAdmins();
-            $this->resetContactService = new ResetContactService($data['pseudo'],$data['email']);
+        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
+            $this->session->getFlashBag()->add('violations', $violations['0']);
+            return new RedirectResponse($this->request->getPathInfo());
+        }
+        $this->session->getFlashBag()->add('message','mail envoyé');
+            $this->adminsBuilder->getAdmins();
+            $this->resetContactService = new ResetContactService($this->adminsBuilder->getAdmins());
             $response = new RedirectResponse('/connect');
 
             return $response->send();
-        }
+
     }
 }

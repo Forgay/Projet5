@@ -7,7 +7,7 @@ use Src\Domain\Models\Comment;
 class CommentBuilder
 {
     /**
-     * @var
+     * @var Comment
      */
     private $comment;
 

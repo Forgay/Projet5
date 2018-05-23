@@ -8,8 +8,19 @@ use Src\Domain\Models\Contact;
 
 class ContactService
 {
+    /**
+     * @var Contact
+     */
     private $contact;
+
+    /**
+     * @var
+     */
     private $mailer;
+
+    /**
+     * @var array
+     */
     private $config = [];
 
     public function __construct(Contact $contact)

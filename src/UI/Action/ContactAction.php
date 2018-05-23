@@ -33,13 +33,15 @@ class ContactAction
     private $contactBuilder;
 
     /**
+     * @var ValidatorService
+     */
+    private $validator;
+
+    /**
      * ContactAction constructor.
      *
      * @param Request $request
      */
-
-    private $validator;
-
 
     public function __construct(Request $request)
     {
@@ -57,14 +59,15 @@ class ContactAction
      */
     public function __invoke()
     {
-        $data = $this->request->request;
-        $this->validator->isValid($data,'ListPostView.html.twig');
-
+        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
+        $this->session->getFlashBag()->add('violations', $violations['0']);
+        return new RedirectResponse($this->request->getPathInfo());
+        }
         $this->contactBuilder->buildContact(
-            $this->request->get('firstname'),
-            $this->request->get('lastname'),
-            $this->request->get('email'),
-            $this->request->get('message')
+            htmlspecialchars($this->request->get('firstname')),
+            htmlspecialchars($this->request->get('lastname')),
+            htmlspecialchars($this->request->get('email')),
+            htmlspecialchars($this->request->get('message'))
         );
 
         $this->contactService = new ContactService($this->contactBuilder->getContact());

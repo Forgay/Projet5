@@ -6,7 +6,9 @@ use Src\Domain\Models\Admins;
 
 class AdminsBuilder
 {
-
+    /**
+     * @var Admins
+     */
     private $admins;
 
     /**
@@ -45,10 +47,14 @@ class AdminsBuilder
      */
     public function buildForReset($pseudo,$email)
     {
-        $this->admins = new Admins($pseudo,$email,'','');
+        $this->admins = new Admins($pseudo,$email,'','','');
 
         return $this;
     }
+
+    /**
+     * @return Admins
+     */
     public function getAdmins()
     {
         return $this->admins;
