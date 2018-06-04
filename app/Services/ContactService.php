@@ -50,6 +50,6 @@ class ContactService
                         <p>' . nl2br($this->contact->getMessage()) . '</p>',
                 'text/html'
             );
-        $this->mailer->send($message);
+       $this->mailer->send($message);
     }
 }

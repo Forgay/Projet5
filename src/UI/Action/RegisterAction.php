@@ -49,24 +49,22 @@ class RegisterAction
         $this->adminsBuilder = new AdminsBuilder();
         $this->validator = new ValidatorService();
     }
+
     public function __invoke()
     {
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
-            $this->session->getFlashBag()->add('violations', $violations['0']);
-            return new RedirectResponse($this->request->getPathInfo());
-        } else {
+
         $this->adminsBuilder->build(
-                $this->request->get('pseudo'),
-                $this->request->get('email'),
-                $this->request->get('password'),
-                $this->request->get('passwordVerif'),
-                $dateInscription = null
-            );
+            $this->request->get('pseudo'),
+            $this->request->get('email'),
+            $this->request->get('password'),
+            $this->request->get('passwordVerif'),
+            $dateInscription = null
+        );
 
-            $this->adminsManager->addAdmin($this->adminsBuilder->getAdmins());
+        $this->adminsManager->addAdmin($this->adminsBuilder->getAdmins());
 
-            $response = new RedirectResponse('/connect');
-            return $response->send();
-        }
+        $response = new RedirectResponse('/connect');
+        return $response->send();
     }
+
 }

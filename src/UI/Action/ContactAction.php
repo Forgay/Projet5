@@ -49,7 +49,6 @@ class ContactAction
         $this->session = new Session();
         $this->contactBuilder = new ContactBuilder();
         $this->validator = new ValidatorService();
-
     }
 
     /**
@@ -59,21 +58,36 @@ class ContactAction
      */
     public function __invoke()
     {
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
-        $this->session->getFlashBag()->add('violations', $violations['0']);
-        return new RedirectResponse($this->request->getPathInfo());
+
+        if (empty($this->request->request->all())) {
+            $this->session->getFlashBag()->add('vides', 'les champs sont vides');
+            $response = new RedirectResponse("/");
+            return $response->send();
         }
+        $this->request->request->remove('submit');
+        $violations = $this->validator->validate($this->request->request->all(), ['is_string', 'empty', 'email']);
+
+        if (\count(array_values($violations)) > 0) {
+            foreach ($violations as $key => $value) {
+                foreach($value as $item =>$val) {
+                    $this->session->getFlashBag()->add($key,$val);
+                }
+            }
+
+            $response = new RedirectResponse("/");
+            return $response->send();
+        }
+
         $this->contactBuilder->buildContact(
             htmlspecialchars($this->request->get('firstname')),
             htmlspecialchars($this->request->get('lastname')),
             htmlspecialchars($this->request->get('email')),
             htmlspecialchars($this->request->get('message'))
         );
-
         $this->contactService = new ContactService($this->contactBuilder->getContact());
         $this->contactService->sendMail();
         $this->session->getFlashBag()->add('emailvalid', "Mail Reçu");
-        $response = new RedirectResponse('/');
+        $response = new RedirectResponse("/");
         return $response->send();
     }
 }

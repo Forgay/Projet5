@@ -59,21 +59,19 @@ class SendPasswordAction
 
     public function __invoke()
     {
+
         $this->adminsBuilder->buildForReset(
             htmlspecialchars($this->request->get('pseudo')),
             htmlspecialchars($this->request->get('email'))
         );
 
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
-            $this->session->getFlashBag()->add('violations', $violations['0']);
-            return new RedirectResponse($this->request->getPathInfo());
-        }
-        $this->session->getFlashBag()->add('message','mail envoyé');
-            $this->adminsBuilder->getAdmins();
-            $this->resetContactService = new ResetContactService($this->adminsBuilder->getAdmins());
-            $response = new RedirectResponse('/connect');
 
-            return $response->send();
+        $this->session->getFlashBag()->add('mailsend', 'mail envoyé');
+        $this->adminsBuilder->getAdmins();
+        $this->resetContactService = new ResetContactService($this->adminsBuilder->getAdmins());
+        $response = new RedirectResponse('/connect');
+
+        return $response->send();
 
     }
 }

@@ -58,10 +58,6 @@ class CommentAddAction
      */
     public function __invoke()
     {
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
-            $this->session->getFlashBag()->add('violations', $violations['0']);
-            return new RedirectResponse($this->request->getPathInfo());
-        }
 
         $this->commentBuilder->build(
                 $this->request->get('nom'),

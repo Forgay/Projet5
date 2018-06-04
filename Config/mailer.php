@@ -1,9 +1,9 @@
 <?php
 
 return [
-  "host" => 'smtp.gmail.net',
-  "port" => 465,
-    "encryption" =>'ssl',
+  "host" => 'smtp-relay.sendinblue.com',
+  "port" => 587,
+    "encryption" =>'tls',
     "username" =>'gthareau1@gmail.com',
-    "password" =>'Virgule37'
+    "password" =>'tqShMLXx57Amy2OP'
 ];

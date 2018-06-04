@@ -12,26 +12,29 @@ final class ValidatorService
     /**
      * @param array $data
      * @param array $contraints
+     *
      * @return array
      */
-    public function validator(array $data, array $contraints): array
+    public function validate(array $data, array $constraints): array
     {
-        if(empty($data)) {return $violations =[];}
 
-        foreach ($data as $key =>$value){
-            foreach($contraints as $key =>$const){
-                switch ($const){
+        foreach ($data as $key => $value) {
+            foreach ($constraints as $keys => $const) {
+                switch ($const) {
                     case 'is_string':
-                        $this->violations['string'] = is_string($value) == true ? '' : 'cette chaîne de caratère n\'est pas valide !';
-                        break;
-                    case 'email':
-                        $this->violations['email'] = filter_var($value, FILTER_VALIDATE_EMAIL ) ? : 'cet emal n\'est pas valide';
+                         is_string($value) == true ?: $this->violations[$key]['string'] = 'Cette chaîne de caractère n\'est pas valide !';
                         break;
                     case 'empty':
-                        $this->violations['empty'] = empty($value) == true ? '' : 'un champ n\'est pas rempli';
+                       empty($value) == false ?:   $this->violations[$key]['empty'] =  'le champ est vide !';
+                        break;
+                    case 'email':
+                        !filter_var($value, FILTER_VALIDATE_EMAIL) ?: $this->violations[$key]['email'] =  'Cet email n\'est pas valide';
+                    default:
+
                 }
             }
         }
+
         return $this->violations;
     }
 }

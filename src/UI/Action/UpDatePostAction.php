@@ -54,15 +54,14 @@ class UpDatePostAction
 
     public function __invoke()
     {
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
-            $this->session->getFlashBag()->add('violations', $violations['0']);
-            return new RedirectResponse($this->request->getPathInfo());
-        }
+
         $this->postBuilder->build(
             $this->request->attributes->get(0),
             $this->request->get('title'),
             $this->request->get('content'),
-            $this->request->get('posted'));
+            $this->request->get('posted'),
+            ''
+        );
 
         $response = new Response(
             TwigService::getTwig()->render('UpdatePostView.html.twig', [

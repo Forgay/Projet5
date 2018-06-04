@@ -37,6 +37,7 @@ class HomeAction
      */
     public function __invoke()
     {
+
         $response = new Response(
             TwigService::getTwig()->render('ListPostView.html.twig',[
                 'posts'=> $this->postManager->getPosts()

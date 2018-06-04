@@ -56,12 +56,7 @@ class LogonAction
     {
         $token = $this->adminsManager->createToken();
 
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
-            $this->session->getFlashBag()->add('violations', $violations['0']);
-            return new RedirectResponse($this->request->getPathInfo());
-        }
-
-        elseif ($this->request->get('password') === $this->request->get('passwordVerif')) {
+       if ($this->request->get('password') === $this->request->get('passwordVerif')) {
             $this->adminsBuilder->build(
                 $this->request->get('pseudo'),
                 $this->request->get('email'),
@@ -75,7 +70,7 @@ class LogonAction
 
         } else {
 
-            $this->session->getFlashBag()->add('Erreur_password', 'Attention : les mots de passe ne sont identiques !');
+            $this->session->getFlashBag()->add('Erreur_password', 'Attention : les mots de passe ne sont pas identiques !');
 
             $response = new Response(
                 TwigService::getTwig()->render('ConnectView.html.twig', [

@@ -59,19 +59,12 @@ class ConnectingAction
      */
     public function __invoke()
     {
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])){
-            $this->session->getFlashBag()->add('violations', $violations['0']);
-            return new RedirectResponse($this->request->getPathInfo());
-        }
-
         $this->adminsBuilder->build(
             $this->request->get('pseudo'),
             $this->request->get('email'),
             $this->request->get('password'),
             '',
             $this->adminsManager->createToken()
-
-
         );
 
         if ($this->adminsManager->isAdmin($this->adminsBuilder->getAdmins())) {

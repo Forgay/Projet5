@@ -31,6 +31,7 @@ class Router
 
     /**
      * Router constructor.
+     *
      * @param $request
      */
     public function __construct(Request $request)
@@ -57,8 +58,9 @@ class Router
 
     /**
      * @param $params
-     * @param $request
-     * @param null $result
+     * @param $uri
+     * @param Route $route
+     * @param Request $request
      */
     public function catchParams($params, $uri, Route $route, Request $request)
     {
@@ -72,6 +74,7 @@ class Router
 
                 $newPath = strtr($path, ['{' . $value . '}' => $result[0]]);
                 $route->setPath($newPath);
+
                 $request->attributes->add($result);
             }
         }
@@ -85,6 +88,8 @@ class Router
     {
 
         foreach ($this->routes as $route) {
+
+
 
             $this->secured->catchSecured($route->getSecured(),$request->getSession());
             $this->catchParams($route->getParams(), $request->server->get('REQUEST_URI'), $route, $request);

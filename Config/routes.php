@@ -57,9 +57,9 @@ return [
         'params' => []
     ],
     'ResetPassword'=>[
-        'path' =>'/reset/password',
+        'path' =>'/reset/password/{token}',
         'action' => Src\UI\Action\ShowResetPasswordAction::class,
-        'params' => []
+        'params' => ['token' => '/[a-z0-9]+/']
     ],
     'UpDatePassword'=>[
         'path' =>'/update/password',

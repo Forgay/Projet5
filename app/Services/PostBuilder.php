@@ -15,12 +15,20 @@ class PostBuilder
                           string $dateModify
     )
     {
-        $this->post = new Post($title,$content,$posted,$writer,$dateModify);
+        $this->post = new Post($title, $content, $posted, $writer, $dateModify);
+    }
+
+    public function buildAddPost(
+        string $title,
+        string $content,
+        string $posted
+    )
+    {
+        $this->post = new Post($title, $content, $posted);
     }
 
     public function getPost()
     {
         return $this->post;
     }
-
 }

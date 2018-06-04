@@ -52,10 +52,7 @@ class UpDatePasswordAction
      */
     public function __invoke()
     {
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])) {
-            $this->session->getFlashBag()->add('violations', $violations['0']);
-            return new RedirectResponse($this->request->getPathInfo());
-        } elseif ($this->request->get('password') === $this->request->get('passwordVerif')) {
+        if ($this->request->get('password') === $this->request->get('passwordVerif')) {
             $this->adminsBuilder->build(
                 $this->request->get('pseudo'),
                 $this->request->get('email'),
@@ -70,10 +67,9 @@ class UpDatePasswordAction
         } else {
             $this->session->getFlashBag()->add('ErreurPassword', 'Attention : les mots de passe ne sont identiques !');
             $response = new RedirectResponse('/update/password', [
-                'message' => $this->session->getFlashBag()->get('ErreurPassword')
+                'errorPass' => $this->session->getFlashBag()->get('ErreurPassword')
             ]);
             return $response->send();
         }
-
     }
 }

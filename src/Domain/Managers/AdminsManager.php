@@ -90,27 +90,43 @@ class AdminsManager extends Manager
     }
 
     /**
-     * @param $tables
-     *
-     * @return mixed
-     */
-    public function InTable($tables)
-    {
-        foreach ($tables as $table) {
-
-            $req = $this->getConnexion()->query("SELECT COUNT(id) FROM $table");
-            $req->execute();
-
-            return $req->fetch();
-        }
-    }
-
-    /**
      *
      */
     public function createToken()
     {
        return bin2hex(random_bytes(64));
+
+    }
+    public function getToken(Admins $admins)
+    {
+        $req = $this->getConnexion()->prepare("SELECT token FROM admins WHERE pseudo=:pseudo AND email=:email");
+
+        $req->bindValue(':pseudo', htmlspecialchars($admins->getPseudo()), \PDO::PARAM_STR);
+        $req->bindValue(':email', htmlspecialchars($admins->getEmail()), \PDO::PARAM_STR);
+        $req->execute();
+
+        $result = $req->fetch();
+
+        return $result;
+
+    }
+
+    /**
+     * @param Admins $admins
+     *
+     * @return bool
+     */
+    public function isToken(Admins $admins)
+    {
+
+        $req = $this->getConnexion()->prepare("SELECT id FROM admins WHERE token = :token");
+
+        $req->bindValue(':token', htmlspecialchars($admins->getToken()), \PDO::PARAM_STR);
+        $req->execute();
+
+        $result = $req->fetch();
+
+        return !empty($result);
 
     }
 }

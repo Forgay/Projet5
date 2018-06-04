@@ -33,11 +33,10 @@
          style="padding-left: 55px;padding-right:55px;padding-top:35px;padding-bottom:35px">
         <h2 class="grey-text text-indigo lighten-2 center">Pour me contacter</h2>
         <form action="/contact" method="POST" class="offset-s2 col s8 center-align">
-            {% for data in error %}
-                <div class="errors">
-                    <ul>
-                        <li>{{ data }}</li>
-                    </ul>
+            {{ message.flashBag.get('vides') }}
+            {% for flashmessage in message.flashBag.all() %}
+                <div class="flash-notice">
+                    {{ flashmessage }}
                 </div>
             {% endfor %}
             <div class="row">

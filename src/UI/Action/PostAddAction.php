@@ -2,6 +2,7 @@
 
 namespace Src\UI\Action;
 
+use App\Services\UploadImages;
 use App\Services\ValidatorService;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -38,6 +39,7 @@ class PostAddAction
      * @var ValidatorService
      */
     private $validator;
+    private $uploadimages;
 
     /**
      * PostAddAction constructor.
@@ -55,27 +57,26 @@ class PostAddAction
 
     public function __invoke()
     {
-           foreach ( $this->request->files as $file )
-           {
-               dump($file->getFilename());
-           }
-        if ($violations = $this->validator->validator($this->request->request->all(), ['is_string', 'email', 'empty'])) {
-            $this->postBuilder->build(
+
+        $this->uploadimages = new UploadImages($this->request);
+
+        //validate
+
+            $this->postBuilder->buildAddPost(
                 $this->request->get('title'),
                 $this->request->get('content'),
-                $this->request->get('posted'),
-                $this->request->get('writer'),
-                $this->request->get('dateModify')
+                $this->request->get('posted')
             );
+
             $this->postManager->addPost($this->postBuilder->getPost());
             $response = new RedirectResponse('/post/add');
             return $response->send();
-        } else {
+
             $this->session->getFlashBag()->add('Empty', 'Attention : Tous les champs ne sont pas remplis !');
             $response = new Response('/post/add',[
-                'message' => $this->session->getFlashBag()->get('Empty')
+                'flash' => $this->session->getFlashBag()->get('Empty')
             ]);
             return $response->send();
-        }
+
     }
 }

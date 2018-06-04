@@ -30,6 +30,9 @@ class ValidCommentAction
 
     }
 
+    /**
+     * @return $Response
+     */
     public function __invoke()
     {
         $this->commentManager->validComment($this->request->attributes->all());

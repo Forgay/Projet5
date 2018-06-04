@@ -6,7 +6,6 @@ namespace Src\Domain\Managers;
 use App\Bdd\Manager;
 use Src\Domain\Models\Post;
 
-
 class PostManager extends Manager
 {
 
@@ -19,27 +18,25 @@ class PostManager extends Manager
 
     public function getPost($id)
     {
-        $req = $this->getConnexion()->prepare("SELECT * FROM posts WHERE posted= 1 AND id = ?");
+        $req = $this->getConnexion()->prepare("SELECT * FROM posts WHERE posted= 'on' AND id = ?");
         $req->execute($id);
         return $post = $req->fetch();
     }
 
     public function notValidePost()
     {
-        $query = $this->getConnexion()->prepare("SELECT COUNT(id) FROM comments SET seen='0' ");
+        $query = $this->getConnexion()->prepare("SELECT COUNT(id) FROM posts SET seen='off' ");
         return $query->fetch();
     }
 
     public function addPost(Post $post)
     {
-        $req = $this->getConnexion()->prepare("INSERT INTO posts(title,content,writer,date,posted) VALUES (:title,:content,'admin',NOW(),:posted)");
+
+        $req = $this->getConnexion()->prepare("INSERT INTO posts(title,content,date,posted) VALUES (:title,:content,NOW(),:posted)");
 
         $req->bindValue(':nom', $post->getTitle(), \PDO::PARAM_STR);
         $req->bindValue(':content', $post->getContent(), \PDO::PARAM_STR);
-        $req->bindValue(':writer', $post->getWriter(), \PDO::PARAM_STR);
-        $req->bindValue(':posted', $post->getPosted(), \PDO::PARAM_INT);
-
-
+        $req->bindValue(':posted', $post->getPosted(), \PDO::PARAM_STR);
         $req->execute();
 
     }
@@ -49,10 +46,10 @@ class PostManager extends Manager
 
         $req = $this->getConnexion()->prepare("UPDATE posts SET title=:title, content=:content, datemodify=NOW(), posted=:posted WHERE id=:id");
 
-        $req->bindValue('id',$post->getId(),\PDO::PARAM_INT);
+        $req->bindValue(':id',$post->getId(),\PDO::PARAM_INT);
         $req->bindValue(':title',$post->getTitle(), \PDO::PARAM_STR);
-        $req->bindValue('content',$post->getContent(),\PDO::PARAM_STR);
-        $req->bindValue('posted',$post->getPosted(),\PDO::PARAM_INT);
+        $req->bindValue(':content',$post->getContent(),\PDO::PARAM_STR);
+        $req->bindValue(':posted',$post->getPosted(),\PDO::PARAM_STR);
 
 
 

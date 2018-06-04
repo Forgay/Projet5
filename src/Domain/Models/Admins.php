@@ -31,6 +31,7 @@ class Admins
 
     /**
      * Admins constructor.
+     *
      * @param string $pseudo
      * @param string $email
      * @param string $password
@@ -82,30 +83,20 @@ class Admins
 
     public function setPseudo($pseudo)
     {
-        if (!preg_match('#^¨[a-zA-Z0-9].{3,20}$#', $pseudo)) {
+        $this->pseudo = $pseudo;
 
-            $this->errors[] = self::INVALID_PSEUDO;
-        } else {
-            $this->pseudo = $pseudo;
-        }
     }
 
     public function setEmail($email)
     {
-        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $this->errors[] = self::INVALID_EMAIL;
-        } else {
-            $this->email = $email;
-        }
+         $this->email = $email;
+
     }
 
     public function setPassword($password)
     {
-        if (!preg_match('#(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,20}"', $password)) {
-            $this->errors[] = self::INVALID_PASSWORD;
-        } else {
-            $this->password = $password;
-        }
+         $this->password = $password;
+
     }
 
     public function setToken($token)

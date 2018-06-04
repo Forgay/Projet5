@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use Src\Domain\Managers\AdminsManager;
+use Src\Domain\Models\Contact;
 use Swift_Mailer;
 use Swift_Message;
 use Src\Domain\Models\Admins;
@@ -18,12 +20,22 @@ class ResetContactService
     private $mailer;
 
     /**
+     * @var Contact
+     */
+    private $contact;
+    /**
+     * @var AdminsManager
+     */
+    private $adminsManager;
+
+    /**
      * @var array
      */
     private $config = [];
 
     public function __construct(Admins $admins)
     {
+        $this->adminsManager = new AdminsManager();
         $this->admins = $admins;
         $this->loadConfig();
     }
@@ -47,7 +59,7 @@ class ResetContactService
             ->setTo($this->contact->getEmail())
             ->setBody(
                 '<h4> Demande de ' . $this->contact->getFirstname() . '</h4>
-                        <p> lien pour réinitialiser votre mot de passe. /reset/password </p>',
+                        <p> lien pour réinitialiser votre mot de passe' . 'http://127.0.0.1:8085/reset/password/' . '$this->adminsManager->getToken($this->admins)' . '</p>',
                 'text/html'
             );
         $this->mailer->send($message);

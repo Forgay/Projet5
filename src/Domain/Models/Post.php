@@ -34,7 +34,7 @@ class Post
     private $dateModify;
 
     /**
-     * @var int
+     * @var string
      */
     private $posted;
 
@@ -42,9 +42,9 @@ class Post
     public function __construct(
         string $title,
         string $content,
-        int $posted,
-        string $writer,
-        string $dateModify
+        string $posted,
+        string $writer=null,
+        string $dateModify=null
     ) {
         $this->title = $title;
         $this->content = $content;
