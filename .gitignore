@@ -1,8 +1,8 @@
 ### Composer ###
 composer.phar
-/vendor/*
-/Services/
-/Config/
+vendor/
+Services/
+Config/
 
 ### PhpStorm Patch ###
 

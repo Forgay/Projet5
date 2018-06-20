@@ -24,6 +24,12 @@ class Post
      * @var string
      */
     private $writer;
+
+    /**
+     * @var image
+     */
+    private $image;
+
     /**
      * @var string
      */
@@ -42,14 +48,16 @@ class Post
     public function __construct(
         string $title,
         string $content,
-        string $posted,
-        string $writer=null,
-        string $dateModify=null
+        string $posted = null,
+        string $writer= null,
+        string $image = null,
+        string $dateModify = null
     ) {
         $this->title = $title;
         $this->content = $content;
         $this->posted = $posted;
         $this->writer = $writer;
+        $this->image = $image;
         $this->dateModify =  $dateModify;
 
     }
@@ -71,6 +79,11 @@ class Post
     public function getWriter()
     {
         return $this->writer;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
 
     public function getDate()

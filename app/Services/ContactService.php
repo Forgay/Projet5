@@ -36,7 +36,7 @@ class ContactService
 
     public function sendMail()
     {
-        $transport = (new \Swift_SmtpTransport($this->config['host'], $this->config['port'], $this->config['encryption']))
+        $transport = (new \Swift_SmtpTransport($this->config['host'], $this->config['port']))
             ->setUsername($this->config['username'])
             ->setPassword($this->config['password']);
 
@@ -46,10 +46,12 @@ class ContactService
             ->setFrom('gthareau1@gmail.com')
             ->setTo($this->contact->getEmail())
             ->setBody(
-                '<h4> Demande de ' . $this->contact->getFirstname() . '</h4>
-                        <p>' . nl2br($this->contact->getMessage()) . '</p>',
-                'text/html'
+                TwigService::getTwig()->render('Mail.html.twig', [
+                    'firstname' => $this->contact->getFirstname(),
+                    'lastname' => $this->contact->getLastname(),
+                    'message' => $this->contact->getMessage()
+                ])
             );
-       $this->mailer->send($message);
+      return $this->mailer->send($message);
     }
 }

@@ -59,16 +59,35 @@ class CommentAddAction
     public function __invoke()
     {
 
-        $this->commentBuilder->build(
-                $this->request->get('nom'),
-                $this->request->get('email'),
-                $this->request->get('content'),
-                $this->request->attributes->get(0)
-            );
-
-            $this->commentManager->addComment($this->commentBuilder->getComment());
-            $response = new RedirectResponse('/post/detail/'.$this->request->attributes->get(0));
+        if (empty($this->request->request->all())) {
+            $this->session->getFlashBag()->add('vides', 'les champs sont vides');
+            $response = new RedirectResponse('/post/detail/' . $this->request->attributes->get(0));
             return $response->send();
+        }
+        $this->request->request->remove('action');
+        $violations = $this->validator->validate($this->request->request->all(), ['is_string', 'empty']);
+
+        if (\count(array_values($violations)) > 0) {
+
+            foreach ($violations as $key => $value) {
+                foreach ($value as $item => $val){
+                    $this->session->getFlashBag()->add($key, $val);
+                }
+            }
+            $response = new RedirectResponse('/post/detail/' . $this->request->attributes->get(0));
+            return $response->send();
+        }
+
+        $this->commentBuilder->build(
+            $this->request->get('nom'),
+            $this->request->get('email'),
+            $this->request->get('content'),
+            $this->request->attributes->get(0)
+        );
+
+        $this->commentManager->addComment($this->commentBuilder->getComment());
+        $response = new RedirectResponse('/post/detail/' . $this->request->attributes->get(0));
+        return $response->send();
     }
 }
 

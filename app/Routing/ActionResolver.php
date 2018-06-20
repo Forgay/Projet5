@@ -15,6 +15,7 @@ class ActionResolver
      */
     public function create($className, Request $request)
     {
+
        return new $className($request);
     }
 }

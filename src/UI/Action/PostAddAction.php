@@ -39,7 +39,16 @@ class PostAddAction
      * @var ValidatorService
      */
     private $validator;
+    /**
+     * @var
+     */
+
     private $uploadimages;
+
+    /**
+     * @var UploadedFile
+     */
+    private $file;
 
     /**
      * PostAddAction constructor.
@@ -58,14 +67,17 @@ class PostAddAction
     public function __invoke()
     {
 
-        $this->uploadimages = new UploadImages($this->request);
 
-        //validate
+        $this->uploadimages = new UploadImages($this->request);
+        $this->uploadimages->upload();
+
 
             $this->postBuilder->buildAddPost(
                 $this->request->get('title'),
                 $this->request->get('content'),
-                $this->request->get('posted')
+                $this->request->get('posted',"off"),
+                $this->request->get('writer','admin'),
+                $this->request->files->get('images')->getClientOriginalName()
             );
 
             $this->postManager->addPost($this->postBuilder->getPost());

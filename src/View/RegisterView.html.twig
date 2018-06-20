@@ -7,12 +7,12 @@
                     <div class="center">
                         <img src="/img/admin.png" alt="administrateur" width="50%"/>
                     </div>
-                    {% for data in message %}
-                        <div class="errors">
-                            <ul>
-                                <li>{{ data }}</li>
-                            </ul>
-                        </div>
+                    {% for key, flashmessage in message.flashBag.all() %}
+                        {% for message in flashmessage %}
+                            <div class="flash-notice">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
                     {% endfor %}
                     <h4 class="center-align indigo-text text-indigo lighten-2">S'inscrire</h4>
                     <form action="/logon" class="center-align" method="POST">

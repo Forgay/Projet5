@@ -3,9 +3,9 @@
 namespace App\Routing;
 
 use Src\UI\Action\NotFoundAction;
+use Src\UI\Action\ServerError;
 use Symfony\Component\HttpFoundation\Request;
 use App\Services\SecuredService;
-
 
 class Router
 {
@@ -68,14 +68,24 @@ class Router
 
         foreach ($params as $value => $param) {
 
-            preg_match($param, $uri, $result);
+            if ($value === "token"){
+                $numpos = strrpos($uri, "/");
+                preg_match($param, $uri, $results,PREG_OFFSET_CAPTURE,$numpos);
+                $result = $results[0];
+
+            } else {
+
+                preg_match($param, $uri, $result);
+            }
+
 
             if ($result && array_key_exists($value, $params)) {
 
-                $newPath = strtr($path, ['{' . $value . '}' => $result[0]]);
+                $newPath = strtr($path, ["{".$value."}" => $result[0]]);
                 $route->setPath($newPath);
 
                 $request->attributes->add($result);
+
             }
         }
 
@@ -89,27 +99,35 @@ class Router
 
         foreach ($this->routes as $route) {
 
+            if (empty($request->server->get('REQUEST_METHOD'))) {
 
+                $action = new ServerError();
 
-            $this->secured->catchSecured($route->getSecured(),$request->getSession());
+                return $action();
+            }
+
+            //$this->secured->catchSecured($route->getSecured() ?? false, $request->getSession());
+
             $this->catchParams($route->getParams(), $request->server->get('REQUEST_URI'), $route, $request);
 
-              if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
+            if (!empty($route->getParams()) && $route->getPath() === $request->server->get('REQUEST_URI')) {
 
-              $action = $this->actionResolver->create($route->getAction(),$request);
+                $action = $this->actionResolver->create($route->getAction(), $request);
 
-              return $action();
+                return $action();
 
-              } elseif ($route->getPath() === $request->server->get('REQUEST_URI')) {
+            } elseif ($route->getPath() === $request->server->get('REQUEST_URI')) {
 
-              $action = $this->actionResolver->create($route->getAction(),$request);
+                $action = $this->actionResolver->create($route->getAction(), $request);
 
-              return $action();
+                return $action();
 
-              }
+            }
         }
+
         $action = new NotFoundAction();
 
         return $action();
     }
+
 }

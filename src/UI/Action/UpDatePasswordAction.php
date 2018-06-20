@@ -62,7 +62,7 @@ class UpDatePasswordAction
             );
             $this->adminsManager->UpDateAdmin($this->adminsBuilder->getAdmins());
             $this->session->getFlashBag()->add('MotPasse', 'Mot de passe modifié!');
-            $response = new RedirectResponse('/connect');
+            $response = new RedirectResponse('/');
             return $response->send();
         } else {
             $this->session->getFlashBag()->add('ErreurPassword', 'Attention : les mots de passe ne sont identiques !');

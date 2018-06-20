@@ -16,6 +16,11 @@ return [
         'action' => Src\UI\Action\CommentAddAction::class,
         'params' => ['post_id' => '/\d+/']
     ],
+    'ResetPassword' => [
+        'path' =>'/mailreset/password/{token}',
+        'action' => Src\UI\Action\ShowResetPasswordAction::class,
+        'params' => ['token' => '/[a-zA-Z0-9]+/']
+    ],
     'Login' => [
         'path' => '/login',
         'action' => Src\UI\Action\LoginAction::class,
@@ -55,11 +60,6 @@ return [
         'path' => '/send',
         'action' => Src\UI\Action\SendPasswordAction::class,
         'params' => []
-    ],
-    'ResetPassword'=>[
-        'path' =>'/reset/password/{token}',
-        'action' => Src\UI\Action\ShowResetPasswordAction::class,
-        'params' => ['token' => '/[a-z0-9]+/']
     ],
     'UpDatePassword'=>[
         'path' =>'/update/password',
@@ -106,6 +106,12 @@ return [
         'path' => '/validcomment/{comid}',
         'action' => Src\UI\Action\ValidCommentAction::class,
         'params' => ['comid' => '/\d+/'],
+        'secured' => true
+    ],
+    'Delet_Post' => [
+        'path' => '/deletepost/{poid}',
+        'action' => Src\UI\Action\DeletePostAction::class,
+        'params' => ['poid' => '/\d+/'],
         'secured' => true
     ],
     'Delet_Comment' => [

@@ -24,9 +24,16 @@ class ShowResetPasswordAction
      */
     private $adminsManager;
 
-    public function __invoke(Request $request)
+    public function __construct(Request $request)
     {
-        if ($this->adminsManager->isToken($this->request->attributes->get('token'))) {
+        $this->request = $request;
+        $this->adminsManager = new AdminsManager();
+    }
+
+    public function __invoke()
+    {
+
+        if ($this->adminsManager->isToken($this->request->attributes->get(0))) {
             $response = new Response(
                 TwigService::getTwig()->render('UpDatePassword.html.twig'));
             return $response->send();

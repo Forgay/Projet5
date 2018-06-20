@@ -8,7 +8,6 @@ use App\Services\AdminsBuilder;
 use Src\Domain\Managers\AdminsManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\Response;
 use App\Services\ValidatorService;
 
 class SendPasswordAction
@@ -67,8 +66,9 @@ class SendPasswordAction
 
 
         $this->session->getFlashBag()->add('mailsend', 'mail envoyé');
-        $this->adminsBuilder->getAdmins();
+
         $this->resetContactService = new ResetContactService($this->adminsBuilder->getAdmins());
+        $this->resetContactService->sendMail();
         $response = new RedirectResponse('/connect');
 
         return $response->send();

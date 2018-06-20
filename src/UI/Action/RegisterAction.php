@@ -53,6 +53,8 @@ class RegisterAction
     public function __invoke()
     {
 
+
+
         $this->adminsBuilder->build(
             $this->request->get('pseudo'),
             $this->request->get('email'),

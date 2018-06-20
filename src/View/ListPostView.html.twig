@@ -9,7 +9,7 @@
                             <h4 class="flow-text indigo-text text-indigo lighten-2">{{ data.title }}</h4>
                         </div>
                         <div class="card-image">
-                            <img src="/img/posts/{{ data.image }}.jpg" width="60%"/>
+                            <img src="/img/posts/{{ data.image }}" width="60%"/>
                         </div>
                         <div class="card-content">
                             <h5 class="">le {{ data.date|date("d/m/Y") }} par {{ data.writer }}</h5>
@@ -29,37 +29,43 @@
     </div>
 {% endblock %}
 {% block contact %}
-    <div class="container indigo lighten-5 z-depth-1"
-         style="padding-left: 55px;padding-right:55px;padding-top:35px;padding-bottom:35px">
-        <h2 class="grey-text text-indigo lighten-2 center">Pour me contacter</h2>
-        <form action="/contact" method="POST" class="offset-s2 col s8 center-align">
-            {{ message.flashBag.get('vides') }}
-            {% for flashmessage in message.flashBag.all() %}
+<div class="container indigo lighten-5 z-depth-1"
+     style="padding-left: 55px;padding-right:55px;padding-top:35px;padding-bottom:35px">
+    <h2 class="grey-text text-indigo lighten-2 center">Pour me contacter</h2>
+    <form action="/contact" method="POST" class="offset-s2 col s8 center-align">
+        {% for key, flashmessage in message.flashBag.all() %}
+            {% for message in flashmessage %}
                 <div class="flash-notice">
-                    {{ flashmessage }}
+                    {{ message }}
+                </div>
+                    {% endfor %}
+             {% endfor %}
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="firstname" name="firstname" type="text" class="validate">
+                <label for="firstname">Votre Prénom</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="lastname" name="lastname" type="text" class="validate">
+                <label for="lastname">Votre Nom</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="message" name="message" type="text" class="materialize-textarea"></textarea>
+                <label for="message">Votre message</label>
+            </div>
+            <button type="submit" name="submit" class="btn waves-effect waves-light indigo lighten-2">Envoyer
+                <i class="material-icons right">send</i>
+            </button>
+            {% for data in emailvalid %}
+                <div class="flash-notice">
+                    {{ data }}
                 </div>
             {% endfor %}
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="firstname" name="firstname" type="text" class="validate">
-                    <label for="firstname">Votre Prénom</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="lastname" name="lastname" type="text" class="validate">
-                    <label for="lastname">Votre Nom</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="email" name="email" type="email" class="validate">
-                    <label for="email" data-error="wrong" data-success="right">Email</label>
-                </div>
-                <div class="input-field col s12">
-                    <textarea id="message" name="message" type="text" class="materialize-textarea"></textarea>
-                    <label for="message">Votre message</label>
-                </div>
-                <button type="submit" name="submit" class="btn waves-effect waves-light indigo lighten-2">Envoyer
-                    <i class="material-icons right">send</i>
-                </button>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 {% endblock %}

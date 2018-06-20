@@ -54,7 +54,26 @@ class LogonAction
 
     public function __invoke()
     {
-        $token = $this->adminsManager->createToken();
+        if (empty($this->request->request->all())){
+            $this->session->getFlashBag()->add('vides', 'les champs sont vides');
+            $response = new RedirectResponse("/login");
+            return $response->send();
+        }
+
+        $this->request->request->remove('submit');
+        $violations = $this->validator->validate($this->request->request->all(),['empty','is_string']);
+
+        if (\count(array_values($violations)) > 0) {
+
+            foreach ($violations as $key => $value) {
+                foreach ($value as $item => $val) {
+                    $this->session->getFlashBag()->add($key, $val);
+                }
+            }
+
+            $response = new RedirectResponse("/login");
+            return $response->send();
+        }
 
        if ($this->request->get('password') === $this->request->get('passwordVerif')) {
             $this->adminsBuilder->build(
@@ -62,9 +81,11 @@ class LogonAction
                 $this->request->get('email'),
                 $this->request->get('password'),
                 '',
-                $token
+                $this->adminsManager->createToken()
             );
+
             $this->adminsManager->addAdmin($this->adminsBuilder->getAdmins());
+            $this->session->getFlashBag()->add('Inscrit', 'Inscription OK !');
             $response = new RedirectResponse('/connect');
             return $response->send();
 

@@ -59,10 +59,29 @@ class ConnectingAction
      */
     public function __invoke()
     {
+
+        if (empty($this->request->request->all())) {
+            $this->session->getFlashBag()->add('vides', 'Les champs sont vides');
+            $response = new RedirectResponse('/connect');
+            return $response->send();
+        }
+        $this->request->request->remove('submit');
+        $violations = $this->validator->validate($this->request->request->all(), ['empty', 'is_string']);
+
+        if (\count(array_values($violations)) > 0) {
+            foreach ($violations as $key => $value) {
+                foreach ($value as $item => $val) {
+                    $this->session->getFlashBag()->add($key, $val);
+                }
+            }
+            $response = new RedirectResponse('/connect');
+            return $response->send();
+        }
+
         $this->adminsBuilder->build(
-            $this->request->get('pseudo'),
-            $this->request->get('email'),
-            $this->request->get('password'),
+            htmlspecialchars($this->request->get('pseudo')),
+            htmlspecialchars($this->request->get('email')),
+            htmlspecialchars($this->request->get('password')),
             '',
             $this->adminsManager->createToken()
         );
@@ -75,7 +94,7 @@ class ConnectingAction
             return $response->send();
 
         } else {
-            $this->session->getFlashBag()->add('error', 'Attention : les mots de passe ne sont identiques !');
+            $this->session->getFlashBag()->add('error', 'Attention : les mots de passe ne sont pas identiques !');
 
             $response = new Response(
                 TwigService::getTwig()->render('ConnectView.html.twig', [
