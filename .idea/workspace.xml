@@ -2,56 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8949500e-e58b-4fc6-a42b-d465941e82fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Web/css/stylem.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/UI/Action/DeletePostAction.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/UI/Action/ServerError.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/View/500.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/View/Mail.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/View/ResetPassMail.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/View/layoutMail.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Config/mailer.php" afterPath="$PROJECT_DIR$/Config/mailer.php" />
-      <change beforePath="$PROJECT_DIR$/Config/routes.php" afterPath="$PROJECT_DIR$/Config/routes.php" />
-      <change beforePath="$PROJECT_DIR$/Web/css/materialize.css" afterPath="$PROJECT_DIR$/Web/css/materialize.css" />
-      <change beforePath="$PROJECT_DIR$/Web/img/posts/3.jpg" afterPath="$PROJECT_DIR$/Web/img/posts/3.jpg" />
-      <change beforePath="$PROJECT_DIR$/app/Kernel.php" afterPath="$PROJECT_DIR$/app/Kernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Routing/ActionResolver.php" afterPath="$PROJECT_DIR$/app/Routing/ActionResolver.php" />
-      <change beforePath="$PROJECT_DIR$/app/Routing/Route.php" afterPath="$PROJECT_DIR$/app/Routing/Route.php" />
-      <change beforePath="$PROJECT_DIR$/app/Routing/Router.php" afterPath="$PROJECT_DIR$/app/Routing/Router.php" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ContactService.php" afterPath="$PROJECT_DIR$/app/Services/ContactService.php" />
-      <change beforePath="$PROJECT_DIR$/app/Services/PostBuilder.php" afterPath="$PROJECT_DIR$/app/Services/PostBuilder.php" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ResetContactService.php" afterPath="$PROJECT_DIR$/app/Services/ResetContactService.php" />
-      <change beforePath="$PROJECT_DIR$/app/Services/TwigService.php" afterPath="$PROJECT_DIR$/app/Services/TwigService.php" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UploadImages.php" afterPath="$PROJECT_DIR$/app/Services/UploadImages.php" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ValidatorService.php" afterPath="$PROJECT_DIR$/app/Services/ValidatorService.php" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Managers/AdminsManager.php" afterPath="$PROJECT_DIR$/src/Domain/Managers/AdminsManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Managers/CommentManager.php" afterPath="$PROJECT_DIR$/src/Domain/Managers/CommentManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Managers/PostManager.php" afterPath="$PROJECT_DIR$/src/Domain/Managers/PostManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Models/Post.php" afterPath="$PROJECT_DIR$/src/Domain/Models/Post.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/CommentAddAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/CommentAddAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/ConnectingAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ConnectingAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/ContactAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ContactAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/DeleteCommentAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/DeleteCommentAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/LogonAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/LogonAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/PostAddAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/PostAddAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/PostDetailAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/PostDetailAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/PostShowAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/PostShowAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/RegisterAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/RegisterAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/SendPasswordAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ShowResetPasswordAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/UpDatePasswordAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/UpDatePostAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/UpDatePostAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php" afterPath="$PROJECT_DIR$/src/UI/Action/ValidCommentAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/View/ConnectView.html.twig" afterPath="$PROJECT_DIR$/src/View/ConnectView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/ListPostView.html.twig" afterPath="$PROJECT_DIR$/src/View/ListPostView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/PostView.html.twig" afterPath="$PROJECT_DIR$/src/View/PostView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/RegisterView.html.twig" afterPath="$PROJECT_DIR$/src/View/RegisterView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/ResetPassword.html.twig" afterPath="$PROJECT_DIR$/src/View/ResetPassword.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/ShowPostView.html.twig" afterPath="$PROJECT_DIR$/src/View/ShowPostView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/UpDatePassword.html.twig" afterPath="$PROJECT_DIR$/src/View/UpDatePassword.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/UpdatePostView.html.twig" afterPath="$PROJECT_DIR$/src/View/UpdatePostView.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/View/WritePostView.html.twig" afterPath="$PROJECT_DIR$/src/View/WritePostView.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,22 +22,12 @@
     <splitter split-orientation="horizontal" split-proportion="0.35788193">
       <split-first>
         <leaf>
-          <file leaf-file-name="PostManager.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Domain/Managers/PostManager.php">
+          <file leaf-file-name="ValidatorService.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Services/ValidatorService.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="868">
-                  <caret line="69" column="1" lean-forward="false" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
-                  <folding>
-                    <marker date="1529401183116" expanded="true" signature="275:311" ph="SELECT * FRO... posts" />
-                    <marker date="1529401183116" expanded="true" signature="442:491" ph="SELECT * FRO... posts" />
-                    <marker date="1529401183116" expanded="true" signature="666:708" ph="SELECT COUNT... posts" />
-                    <marker date="1529401183116" expanded="true" signature="846:934" ph="INSERT INTO posts... " />
-                    <marker date="1529401183116" expanded="true" signature="846:967" ph="INSERT INTO posts... " />
-                    <marker date="1529401183116" expanded="true" signature="1462:1552" ph="UPDATE posts... " />
-                    <marker date="1529401183116" expanded="true" signature="1462:1565" ph="UPDATE posts... " />
-                    <marker date="1529401183116" expanded="true" signature="1462:1568" ph="UPDATE posts... " />
-                    <marker date="1529401183116" expanded="true" signature="1969:1997" ph="DELETE FROM posts... " />
-                  </folding>
+                <state relative-caret-position="703">
+                  <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -473,7 +414,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1208464000" />
+    <option name="totallyTimeSpent" value="1208907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,14 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config/mailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/layoutMail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -918,14 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ValidatorService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/CommentBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -987,6 +912,22 @@
             <marker date="1529401183116" expanded="true" signature="1462:1568" ph="UPDATE posts... " />
             <marker date="1529401183116" expanded="true" signature="1969:1997" ph="DELETE FROM posts... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/mailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ValidatorService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
