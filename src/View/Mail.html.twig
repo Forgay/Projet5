@@ -1,0 +1,27 @@
+{% extends 'layoutMail.html.twig' %}
+
+{% block content %}
+    <tr>
+        <td class="wrapper">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+
+                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                            <tbody>
+                            <tr>
+                                <td align="left">
+                                    <p>Bonjour,</p>
+                                    <p>{{ firstname }} {{ lastname }} nous a laissé un petit message :</p>
+                                    <p>{{ message }}</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>Bonne journée! Hope it works.</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+{% endblock %}

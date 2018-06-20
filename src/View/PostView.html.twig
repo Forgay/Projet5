@@ -5,7 +5,7 @@
             <div class="col s6 offset-s3 center">
                 <h3><i class="mdi-content-send brown-text"></i></h3>
                 <div class="card-image">
-                    <img src="/img/posts/{{ post.image }}.jpg" width="50%"/>
+                    <img src="/img/posts/{{ post.image }}  " width="50%"/>
                 </div>
                 <h4 class="indigo-text lighten-2">{{ post.title }}</h4>
                 <p class="center-align light">{{ post.content }}</p>
@@ -13,13 +13,13 @@
             </div>
         </div>
     </div>
-    <form action="/comment/add/{{post.id}}" method="post">
-        {% for data in Empty %}
-            <div class="errors">
-                <ul>
-                    <li>{{ data }}</li>
-                </ul>
-            </div>
+    <form action="/comment/add/{{ post.id }}" method="post" class="offset-s2 col s8 center-align">
+        {% for key, flashmessage in message.flashBag.all() %}
+            {% for message in flashmessage %}
+                <div class="flash-notice">
+                    {{ message }}
+                </div>
+            {% endfor %}
         {% endfor %}
         <div class="row">
             <div class="input-field col s4 offset-s4">
@@ -47,20 +47,15 @@
             </div>
         </div>
     </form>
-    {% for message in session %}
-        <div class="flash-error">{{ message }}</div>
-    {% endfor %}
-    <div class="section">
-
-        <div class="row">
-            {% for comment in comments %}
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h5 class="center">{{ comment.nom }} le {{ comment.dateComment | date("d/m/Y") }}</h5>
-                        <p class="left-align light">{{ comment.content }}</p>
-                    </div>
+    <div class="row">
+        {% for comment in comments %}
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h5 class="center">{{ comment.nom }} le {{ comment.dateComment | date("d/m/Y") }}</h5>
+                    <p class="left-align light">{{ comment.content }}</p>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
+    </div>
     </div>
 {% endblock %}

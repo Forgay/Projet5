@@ -39,7 +39,7 @@ class DeleteCommentAction
      */
     public function __invoke()
     {
-        $this->commentManager->delComment($this->request->attributes->all());
+        $this->commentManager->delComment($this->request->attributes->get(0));
         $response = new RedirectResponse('/dashboard');
         return $response->send();
     }

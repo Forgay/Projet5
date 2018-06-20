@@ -107,7 +107,7 @@ class AdminsManager extends Manager
 
         $result = $req->fetch();
 
-        return $result;
+        return $result[0];
 
     }
 
@@ -116,17 +116,17 @@ class AdminsManager extends Manager
      *
      * @return bool
      */
-    public function isToken(Admins $admins)
+    public function isToken($token)
     {
 
         $req = $this->getConnexion()->prepare("SELECT id FROM admins WHERE token = :token");
 
-        $req->bindValue(':token', htmlspecialchars($admins->getToken()), \PDO::PARAM_STR);
+        $req->bindValue(':token', htmlspecialchars($token), \PDO::PARAM_STR);
         $req->execute();
 
         $result = $req->fetch();
 
-        return !empty($result);
+        return $result;
 
     }
 }

@@ -59,14 +59,13 @@ class UpDatePostAction
             $this->request->attributes->get(0),
             $this->request->get('title'),
             $this->request->get('content'),
-            $this->request->get('posted'),
-            ''
+            $this->session->get('admin')->getPseudo()
         );
+
 
         $response = new Response(
             TwigService::getTwig()->render('UpdatePostView.html.twig', [
-                'post' => $this->postManager->updatePost(
-                    $this->postBuilder->getPost()
+                'post' => $this->postManager->updatePost($this->postBuilder->getPost()
                 )
             ])
         );

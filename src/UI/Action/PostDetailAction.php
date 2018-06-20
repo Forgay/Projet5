@@ -39,9 +39,10 @@ class PostDetailAction
 
     public function __invoke()
     {
+
            $response = new Response(
             TwigService::getTwig()->render('PostView.html.twig', [
-                'post' => $this->postManager->getPost($this->request->attributes->all()),
+                'post' => $this->postManager->getPost($this->request->attributes->get(0)),
                 'comments' => $this->commentManager->getCommentById($this->request->attributes->all())
             ])
         );

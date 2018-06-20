@@ -14,15 +14,12 @@ class ResetContactService
      * @var Admins
      */
     private $admins;
+
     /**
-     * @var
+     * @var Mailer
      */
     private $mailer;
 
-    /**
-     * @var Contact
-     */
-    private $contact;
     /**
      * @var AdminsManager
      */
@@ -48,7 +45,8 @@ class ResetContactService
     public function sendMail()
 
     {
-        $transport = (new \Swift_SmtpTransport($this->config['host'], $this->config['port'], $this->config['encryption']))
+
+        $transport = (new \Swift_SmtpTransport($this->config['host'], $this->config['port']))
             ->setUsername($this->config['username'])
             ->setPassword($this->config['password']);
         //
@@ -56,12 +54,13 @@ class ResetContactService
 
         $message = (new Swift_Message('Reinitialisation mot de passe'))
             ->setFrom('gthareau1@gmail.com')
-            ->setTo($this->contact->getEmail())
+            ->setTo($this->admins->getEmail())
             ->setBody(
-                '<h4> Demande de ' . $this->contact->getFirstname() . '</h4>
-                        <p> lien pour réinitialiser votre mot de passe' . 'http://127.0.0.1:8085/reset/password/' . '$this->adminsManager->getToken($this->admins)' . '</p>',
-                'text/html'
+                TwigService::getTwig()->render('ResetPassMail.html.twig', [
+                    'pseudo' => $this->admins->getPseudo(),
+                    'token' => $this->adminsManager->getToken($this->admins)
+                ])
             );
-        $this->mailer->send($message);
+        return $this->mailer->send($message);
     }
 }

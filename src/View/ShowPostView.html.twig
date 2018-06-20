@@ -11,11 +11,13 @@
                         {{ post.content }}
                     </div>
                     <div class="col s12 m6 l4">
-                        <img src="/img/posts/{{ post.image }}.jpg" class="materialboxed responsive-img"
+                        <img src="/img/posts/{{ post.image }}" class="materialboxed responsive-img"
                              alt="{{ post.title }}"/>
                         <br/><br/>
                         <a class="btn light-blue waves-effect waves-light indigo lighten-2"
                            href="/post/show/{{ post.id }}">Modifier l'article</a>
+                        <a class="btn light-blue waves-effect waves-light indigo lighten-2"
+                           href="/deletepost/{{ post.id }}">Effacer l'article</a>
                     </div>
                 </div>
             </div>

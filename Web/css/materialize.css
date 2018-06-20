@@ -6531,7 +6531,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
-  opacity: 0;
+  opacity: 1.5;
   pointer-events: none;
 }
 

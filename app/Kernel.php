@@ -5,10 +5,9 @@ namespace App;
 
 
 use App\Routing\Router;
-use Symfony\Component\HttpFoundation\Request;
 use App\Services\TwigService;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
-
 
 class Kernel
 {
@@ -19,14 +18,21 @@ class Kernel
     private $session;
 
 
+
+
+
     public function boot(Request $request)
     {
-        $this->session = $request->getSession();
 
+
+        $this->session = $request->getSession();
+        TwigService::getTwig()->addGlobal('message',$request->getSession());
         return new Router($request);
     }
     public function getSession()
     {
+
         return $this->session;
+
     }
 }

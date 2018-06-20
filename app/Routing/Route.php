@@ -3,8 +3,6 @@
 
 namespace App\Routing;
 
-
-
 class Route
 {
     private $path;
@@ -12,7 +10,12 @@ class Route
     private $params;
     private $secured;
 
-    public function __construct(string $path, string $action, array $params, bool $secured )
+    public function __construct(
+        string $path,
+        string $action,
+        array $params,
+        bool $secured
+    )
     {
         $this->path = $path;
         $this->action = $action;

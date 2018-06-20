@@ -49,7 +49,7 @@ class CommentManager extends Manager
     public function addComment(Comment $comment)
     {
 
-        $req = $this->getConnexion()->prepare("INSERT INTO comments (nom, email, content, postId, dateComment, seen) VALUES (:nom, :email, :content, :postId, NOW(),1)");
+        $req = $this->getConnexion()->prepare("INSERT INTO comments (nom, email, content, postId, dateComment, seen) VALUES (:nom, :email, :content, :postId, NOW(),0)");
 
         $req->bindValue(':nom', $comment->getNom(), \PDO::PARAM_STR);
         $req->bindValue(':email', $comment->getEmail(), \PDO::PARAM_STR);
@@ -64,13 +64,13 @@ class CommentManager extends Manager
     {
         $req = $this->getConnexion()->prepare("UPDATE comments SET  seen=1 WHERE id=?");
 
-        return $req->execute($id);
+        return $req->execute(array($id));
     }
 
     public function delComment($id)
     {
         $req = $this->getConnexion()->prepare("DELETE FROM comments WHERE id=? ");
-        $req->execute($id);
+        $req->execute(array($id));
 
     }
 }

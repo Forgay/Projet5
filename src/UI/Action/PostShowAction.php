@@ -43,7 +43,7 @@ class PostShowAction
         if ($role === 'admin') {
             $response = new Response(
                 TwigService::getTwig()->render('UpdatePostView.html.twig', [
-                    'post' => $this->postManager->getPost($this->request->attributes->all()),
+                    'post' => $this->postManager->getPost($this->request->attributes->get(0)),
                 ])
             );
             return $response->send();

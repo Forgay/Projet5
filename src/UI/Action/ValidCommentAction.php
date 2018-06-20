@@ -35,7 +35,7 @@ class ValidCommentAction
      */
     public function __invoke()
     {
-        $this->commentManager->validComment($this->request->attributes->all());
+        $this->commentManager->validComment($this->request->attributes->get(0));
         $response = new RedirectResponse('/dashboard');
         return $response->send();
     }

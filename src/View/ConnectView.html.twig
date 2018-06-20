@@ -1,4 +1,4 @@
-{% extends 'AdminsLayout.html.twig' %}
+{% extends 'FrontLayout.html.twig' %}
 {% block content %}
     <div class="section">
     <div class="row">
@@ -9,12 +9,12 @@
                 </div>
                 <h4 class="center-align">Se connecter</h4>
                 <form action="/connecting" method="POST">
-                    {% for data in error %}
-                        <div class="errors">
-                            <ul>
-                                <li>{{ data }}</li>
-                            </ul>
-                        </div>
+                    {% for key, flashmessage in message.flashBag.all() %}
+                        {% for message in flashmessage %}
+                            <div class="flash-notice">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
                     {% endfor %}
                     <div class="row">
                         <div class="input-field col s12">
