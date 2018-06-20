@@ -1,5 +1,5 @@
-<?php
 
+<<<<<<< HEAD
 return [
   "host" => 'smtp-relay.sendinblue.com',
   "port" => 587,
@@ -7,3 +7,5 @@ return [
     "username" =>'gthareau1@gmail.com',
     "password" =>'tqShMLXx57Amy2OP'
 ];
+=======
+>>>>>>> master
