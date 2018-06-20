@@ -1,5 +1,5 @@
 # Projet5
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/695accbefd4a4d7a87c4c9c76bbb5fd6)](https://www.codacy.com/app/Forgay/Projet5?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Forgay/Projet5&amp;utm_campaign=Badge_Grade)
 Contexte
 
 Le projet est de développer mon blog professionnel.
