@@ -1,5 +1,4 @@
-
-<<<<<<< HEAD
+<?php
 return [
   "host" => '',
   "port" => ,
@@ -7,5 +6,4 @@ return [
     "username" =>'',
     "password" =>''
 ];
-=======
->>>>>>> master
+
